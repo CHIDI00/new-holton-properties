@@ -143,13 +143,13 @@ const TheTeam: React.FC = () => {
 				{/* </div> */}
 
 				{/* <div className="rounded-md flex flex-col  dark:bg-grid-white/[0.25] items-center justify-center relative overflow-hidden"> */}
-				<div className="container mx-auto w-full flex justify-center items-center">
+				{/* <div className="mx-auto w-full flex justify-center items-center"> */}
 					<InfiniteMovingCards
 						items={teamData}
 						direction="right"
 						speed="slow"
 					/>
-				</div>
+				{/* </div> */}
 				{/* </div> */}
 			</div>
 		</div>

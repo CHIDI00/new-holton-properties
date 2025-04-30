@@ -52,12 +52,12 @@ export const InfiniteMovingCards = ({
 			if (direction === "left") {
 				containerRef.current.style.setProperty(
 					"--animation-direction",
-					"forwards"
+					"reverse"
 				);
 			} else {
 				containerRef.current.style.setProperty(
 					"--animation-direction",
-					"reverse"
+					"forwards"
 				);
 			}
 		}
@@ -77,7 +77,7 @@ export const InfiniteMovingCards = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				"scroller relative z-20 max-w-7xl overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_20%,white_80%,transparent)]",
+				"scroller relative z-20 max-w-full md:h-[55rem] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_0%,white_100%,transparent)]",
 				className
 			)}
 		>
@@ -104,7 +104,7 @@ export const InfiniteMovingCards = ({
 							/>
 						</div>
 
-						<div className="absolute z-10 -bottom-[9%] left-[50%] transform -translate-x-1/2 p-7 bg-[#00000023] backdrop-blur-md w-[80%] flex flex-col justify-center items-center text-center rounded-[2.3rem]">
+						<div className="absolute z-10 -bottom-[9%] left-[50%] transform -translate-x-1/2 p-7 bg-[#0000003b] backdrop-blur-lg w-[80%] flex flex-col justify-center items-center text-center rounded-[2.3rem]">
 							<p className="md:text-[1rem] text-[1.5rem] font-medium uppercase text-white mb-2">
 								{item.position}
 							</p>
