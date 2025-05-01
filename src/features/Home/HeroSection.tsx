@@ -9,6 +9,7 @@ import { ArrowUpRight } from "lucide-react";
 import OurCommitment from "./OurCommitment";
 import Testimonials from "./Testimonials";
 import TheTeam from "./TheTeam";
+import QuickEnquiry from "./QuickEnquiry";
 
 const HeroSection: React.FC = () => {
 	return (
@@ -166,6 +167,7 @@ const HeroSection: React.FC = () => {
 			<OurCommitment />
 			<Testimonials />
 			<TheTeam />
+			<QuickEnquiry />
 		</>
 	);
 };

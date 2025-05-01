@@ -120,7 +120,12 @@ const ProjectPreview: React.FC = () => {
 					</div>
 				</div>
 				<div className="w-[50%] h-full">
-					<img src={image9} alt="" className="img w-full h-full object-cover" />
+					<img
+						src={image9}
+						alt=""
+						draggable="false"
+						className="img w-full h-full object-cover"
+					/>
 				</div>
 			</section>
 
@@ -152,7 +157,12 @@ const ProjectPreview: React.FC = () => {
 					</div>
 				</div>
 				<div className="w-[50%] h-full">
-					<img src={image7} alt="" className="img w-full h-full object-cover" />
+					<img
+						src={image7}
+						alt=""
+						draggable="false"
+						className="img w-full h-full object-cover"
+					/>
 				</div>
 			</section>
 
@@ -184,7 +194,12 @@ const ProjectPreview: React.FC = () => {
 					</div>
 				</div>
 				<div className="w-[50%] h-full">
-					<img src={image3} alt="" className="img w-full h-full object-cover" />
+					<img
+						src={image3}
+						alt=""
+						draggable="false"
+						className="img w-full h-full object-cover"
+					/>
 				</div>
 			</section>
 
@@ -216,7 +231,12 @@ const ProjectPreview: React.FC = () => {
 					</div>
 				</div>
 				<div className="w-[50%] h-full">
-					<img src={image5} alt="" className="img w-full h-full object-cover" />
+					<img
+						src={image5}
+						alt=""
+						draggable="false"
+						className="img w-full h-full object-cover"
+					/>
 				</div>
 			</section>
 		</div>

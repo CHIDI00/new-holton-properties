@@ -37,7 +37,7 @@ const Testimonials: React.FC = () => {
 							style={{ backgroundImage: `url('${project13}')` }}
 						>
 							<h1 className="">
-								<img src={quote} alt="" className="" />
+								<img src={quote} draggable="false" alt="" className="" />
 							</h1>
 						</div>
 					</CircularText>

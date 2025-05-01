@@ -77,7 +77,7 @@ export const InfiniteMovingCards = ({
 		<div
 			ref={containerRef}
 			className={cn(
-				"scroller relative z-20 max-w-full md:h-[55rem] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_0%,white_100%,transparent)]",
+				"scroller relative z-20 max-w-full md:h-[55rem] h-[70rem] overflow-hidden [mask-image:linear-gradient(to_right,transparent,white_0%,white_100%,transparent)]",
 				className
 			)}
 		>
@@ -89,22 +89,26 @@ export const InfiniteMovingCards = ({
 					pauseOnHover && "hover:[animation-play-state:paused]"
 				)}
 			>
-				{items.map((item) => (
+				{items.map((item, index) => (
 					<li
-						className="group relative md:h-[45rem] h-[60rem] bg-[#fbfbfb] block  justify-between items-start rounded-[3rem]  hover:bg-blue-800  bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+						className={cn(
+							"group relative md:h-[45rem] h-[60rem] bg-[#fbfbfb] block  justify-between items-start rounded-[3rem]  hover:bg-blue-800  bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out",
+							index % 2 === 0 ? "add-margin-top" : ""
+						)}
 						// data-aos="fade-right"
 						key={item.id}
 					>
 						<div className="w-full h-full overflow-hidden rounded-[3rem]">
 							<img
 								src={item.image}
-								alt={item.alt}
+								alt={`${item.name} the ${item.position} of Holton properties`}
 								loading="lazy"
+								draggable="false"
 								className="w-full h-full object-cover bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
 							/>
 						</div>
 
-						<div className="absolute z-10 -bottom-[9%] left-[50%] transform -translate-x-1/2 p-7 bg-[#0000003b] backdrop-blur-lg w-[80%] flex flex-col justify-center items-center text-center rounded-[2.3rem]">
+						<div className="absolute z-10 -bottom-[9%] left-[50%] transform -translate-x-1/2 p-7 bg-[#ffffff52] backdrop-blur-xl w-[80%] flex flex-col justify-center items-center text-center rounded-[2.3rem]">
 							<p className="md:text-[1rem] text-[1.5rem] font-medium uppercase text-white mb-2">
 								{item.position}
 							</p>
