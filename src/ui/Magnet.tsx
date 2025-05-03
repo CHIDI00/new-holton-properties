@@ -24,7 +24,7 @@ const Magnet: React.FC<MagnetProps> = ({
 	magnetStrength = 2,
 	activeTransition = "transform 0.3s ease-out",
 	inactiveTransition = "transform 0.5s ease-in-out",
-	wrapperClassName = "",
+	wrapperClassName = "hidden md:block",
 	innerClassName = "",
 	...props
 }) => {
@@ -74,7 +74,7 @@ const Magnet: React.FC<MagnetProps> = ({
 	return (
 		<div
 			ref={magnetRef}
-			className={`${wrapperClassName} hidden md:block`}
+			className={wrapperClassName}
 			style={{ position: "relative", display: "inline-block", zIndex: "10" }}
 			{...props}
 		>

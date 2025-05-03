@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home_page from "./pages/Home_page";
+import About_page from "./pages/About_page";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -23,6 +25,7 @@ function App() {
 			<Routes>
 				<Route element={<AppLayout />}>
 					<Route path="/" element={<Home_page />} />
+					<Route path="about_us" element={<About_page />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

@@ -19,10 +19,10 @@ const HeroSection: React.FC = () => {
 				style={{ backgroundImage: `url(${bg_image})` }}
 			>
 				<div className="absolute inset-0 bg-black bg-opacity-40"></div>
-				<div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-10 bottom-0"></div>
+				<div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-[4] bottom-0"></div>
 				<Navbar />
 
-				<div className="relative z-10 container flex flex-col justify-center items-center md:px-[6.5rem] px-[1rem]">
+				<div className="relative z-[4] container flex flex-col justify-center items-center md:px-[6.5rem] px-[1rem]">
 					<div
 						className="w-full flex flex-col justify-center items-center md:py-52 py-28 border-b-2 border-gray-400"
 						data-aos="fade-up"
