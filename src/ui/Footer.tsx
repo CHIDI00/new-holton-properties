@@ -49,7 +49,7 @@ const Footer: React.FC = () => {
 					<div className="md:w-[30%] flex justify-start items-start md:h-full w-full md:py-0 py-[3rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
 						<ul className="w-full grid grid-cols-2 justify-start items-center md:px-0 px-[5rem] md:text-[1.5rem] text-[2rem] font-bold ">
 							<li className="mb-[1.5rem]">
-								<NavLink to="">About Us</NavLink>
+								<NavLink to="/about_us">About Us</NavLink>
 							</li>
 							<li className="mb-[1.5rem]">
 								<NavLink to="">Why Choose Us</NavLink>
