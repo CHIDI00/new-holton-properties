@@ -3,6 +3,7 @@ import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_13.jpg";
 import { NavLink } from "react-router-dom";
 import Aboutus from "./Aboutus";
+import OurStory from "./OurStory";
 
 const AboutUsContent: React.FC = () => {
 	return (
@@ -40,6 +41,7 @@ const AboutUsContent: React.FC = () => {
 			</div>
 
 			<Aboutus />
+			<OurStory />
 		</>
 	);
 };
