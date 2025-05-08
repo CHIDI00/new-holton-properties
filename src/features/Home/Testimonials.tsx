@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const Testimonials: React.FC = () => {
 	return (
-		<div className="relative w-full bg-gradient-to-b from-[#f5f5f5] to-[#f7f6f6] flex justify-start items-center md:mt-72 mt-44">
+		<div className="relative w-full bg-gradient-to-b from-[#f5f5f5] to-[#fbfbfb] flex justify-start items-center md:mt-72 mt-44">
 			<div className="absolute md:-top-[22%] -top-[15.2rem] left-[50%] transform -translate-x-1/2 p-5 bg-white rounded-full">
 				<div
 					className="absolute w-[30px] h-[30px] md:bottom-[4.55rem] md:-right-[22px] right-[-16px] bottom-[2.6rem] rotate-90 bg-[#fff]"
@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
 				</div>
 			</div>
 
-			<div className="container md:px-[6.5rem] flex flex-col md:flex-row justify-between items-center mx-7 my-[15rem] md:gap-52 gap-20 md:mx-auto">
+			<div className="container md:px-[20rem] flex flex-col md:flex-row justify-between items-center mx-7 my-[15rem] md:gap-52 gap-20 md:mx-auto">
 				<div className="hidden md:flex">
 					<button
 						type="button"

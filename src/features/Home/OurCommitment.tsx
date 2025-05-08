@@ -6,7 +6,7 @@ import { CircleDotDashed, ThumbsUp, Users } from "lucide-react";
 const OurCommitment: React.FC = () => {
 	return (
 		<div className="w-full md:h-[80rem] py-32 flex justify-center items-center">
-			<div className="container md:px-[6.5rem] md:h-full flex flex-col md:flex-row justify-between items-center mx-7 gap-20">
+			<div className="container md:px-[20rem] md:h-full flex flex-col md:flex-row justify-between items-center mx-7 gap-20">
 				<div className="w-full md:hidden flex justify-center items-center gap-5">
 					<div
 						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 mb-6 border-[1.4px] border-[#2A286B] rounded-full text-black"

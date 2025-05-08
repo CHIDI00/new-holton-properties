@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
 				<div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-[4] bottom-0"></div>
 				<Navbar />
 
-				<div className="relative z-[4] container flex flex-col justify-center items-center md:px-[6.5rem] px-[1rem]">
+				<div className="relative z-[4] container flex flex-col justify-center items-center md:px-[20rem] px-[1rem]">
 					<div
 						className="w-full flex flex-col justify-center items-center md:py-52 py-28 border-b-2 border-gray-400"
 						data-aos="fade-up"
