@@ -5,9 +5,13 @@ import journey05 from "../../assets/journey_05.png";
 import journey13 from "../../assets/journey_13.png";
 import journey96 from "../../assets/journey_96.png";
 import journey24 from "../../assets/journey_24.png";
+import backg from "../../assets/bg-holton.jpg";
+
+import image3 from "../../assets/whatweoffer/service-3.png";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import { ArrowUpRight } from "lucide-react";
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -29,7 +33,7 @@ const OurStory: React.FC = () => {
 			const racesElement = racesRef.current;
 			if (!racesElement) return 0;
 
-			const totalOffset = 15 * 2 * 16; // 15rem left & right margin * 16px (default rem)
+			const totalOffset = 15 * 2 * 16;
 			return -(racesElement.scrollWidth + totalOffset - wrapperWidth);
 		};
 
@@ -178,23 +182,171 @@ const OurStory: React.FC = () => {
 				</div>
 			</div>
 
-			<div className="">
+			<div className="z-[4] container flex flex-col justify-center items-center md:px-[11rem] px-[1rem]">
 				<div className=" w-full flex flex-col md:justify-start md:items-start md:gap-5 gap-2">
 					<div
 						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-black"
 						// data-aos="flip-left"
 					>
 						<ScrollVelocity
-							texts={["ABOUT US •"]}
+							texts={["OUR STORY •"]}
 							velocity={12}
 							className="custom-scroll-text"
 						/>
 					</div>
 
 					<h1 className="text-[3rem] text-left leading-tight md:text-[6rem] font-extrabold mt-5">
-						40+ years of a <br />
-						remarkable journey
+						Learn more <br />
+						about us
 					</h1>
+
+					<div className="w-full flex md:flex-row  flex-col justify-between items-start gap-10 mt-10">
+						<div
+							className="group relative md:w-1/3 w-full md:h-[45rem] h-[60rem] bg-[#141333] flex flex-col justify-between items-start rounded-[3rem]   bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out md:py-5 py-10 px-16 pb-20"
+							// data-aos="fade-right"
+						>
+							<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
+								<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
+									<ArrowUpRight />
+								</span>
+								<div
+									className="absolute z-40 w-[30px] h-[30px] top-[-29px] -right-1 rotate-360 bg-[#ce2929]"
+									style={{
+										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+									}}
+								></div>
+								<div
+									className="absolute z-40 w-[30px] h-[30px] bottom-[-1px] -left-12 rotate-200 bg-[#2dff31]"
+									style={{
+										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+									}}
+								></div>
+							</div>
+
+							<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
+								<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
+									01.
+								</p>
+							</div>
+
+							<div className="w-full flex flex-col justify-start items-start gap-5 mt-10 text-[#fff]">
+								<h3 className="md:text-[3.5rem] text-[4rem] md:font-bold font-extrabold">
+									What we do
+								</h3>
+								<p className="md:text-[1.7rem] text-[2rem] font-medium text-gray-200">
+									We maintain this by ensuring transparency and professional
+									conduct in every aspect.
+								</p>
+								<p className="text-[1.7rem] border-b-[2px] border-[#f6f6f6] font-medium my-5">
+									Our Solution
+								</p>
+							</div>
+						</div>
+
+						<div
+							className="group relative md:w-1/3 w-full md:h-[45rem] h-[60rem] bg-[#000] flex flex-col justify-start items-start rounded-[3rem]   bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out md:py-5 py-10 px-16 pb-20 overflow-hidden"
+							// data-aos="fade-right"
+						>
+							<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
+								<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
+									<ArrowUpRight />
+								</span>
+								<div
+									className="absolute z-40 w-[30px] h-[30px] top-[-29px] -right-1 rotate-360 bg-[#ce2929]"
+									style={{
+										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+									}}
+								></div>
+								<div
+									className="absolute z-40 w-[30px] h-[30px] bottom-[-1px] -left-12 rotate-200 bg-[#2dff31]"
+									style={{
+										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+									}}
+								></div>
+							</div>
+
+							<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
+								<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
+									02.
+								</p>
+							</div>
+
+							<div className="w-full flex flex-col justify-start items-start gap-5 mt-10 text-[#fff]">
+								<h3 className="md:text-[3rem] text-[4rem] md:font-bold font-extrabold">
+									What we do
+								</h3>
+								<p className="md:text-[1.4rem] text-[2rem] font-medium text-gray-200">
+									We maintain this by ensuring transparency and professional
+									conduct in every aspect.
+								</p>
+								<p className="text-[1.4rem] border-b-[2px] border-[#f6f6f6] font-medium md:my-2 my-5">
+									Our Solution
+								</p>
+							</div>
+
+							<div
+								className="absolute inset-0 bg-no-repeat bg-left-bottom scale-100 group-hover:scale-105 transition-transform duration-500 ease-in-out"
+								style={{
+									backgroundImage: `url(${image3})`,
+									backgroundSize: "auto",
+									backgroundPosition: "-40px calc(100% + 30px)",
+									zIndex: 0,
+								}}
+							></div>
+						</div>
+
+						<div
+							className="group relative md:w-1/3 w-full md:h-[45rem] h-[60rem] bg-[#000] flex flex-col justify-between items-start rounded-[3rem]   bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out md:py-5 py-10 px-16 pb-20"
+							// data-aos="fade-right"
+							style={{
+								backgroundImage: `url(${backg})`,
+								backgroundSize: "cover",
+							}}
+						>
+							<div className="absolute inset-0 bg-black bg-opacity-60 rounded-[3rem]"></div>
+
+							<div className="z-[4] flex flex-col justify-between items-start w-full h-full">
+								<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
+									<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
+										<ArrowUpRight />
+									</span>
+									<div
+										className="absolute z-40 w-[30px] h-[30px] top-[-29px] -right-1 rotate-360 bg-[#ce2929]"
+										style={{
+											clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+										}}
+									></div>
+									<div
+										className="absolute z-40 w-[30px] h-[30px] bottom-[-1px] -left-12 rotate-200 bg-[#2dff31]"
+										style={{
+											clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
+										}}
+									></div>
+								</div>
+
+								<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
+									<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
+										03.
+									</p>
+								</div>
+
+								<div className="w-full flex flex-col justify-start items-start gap-5 mt-10 text-[#fff]">
+									<h3 className="md:text-[3.5rem] text-[4rem] md:font-bold font-extrabold">
+										What we do
+									</h3>
+									<p className="md:text-[1.7rem] text-[2rem] font-medium text-gray-200">
+										We maintain this by ensuring transparency and professional
+										conduct in every aspect.
+									</p>
+									<p className="text-[1.7rem] border-b-[2px] border-[#f6f6f6] font-medium my-5">
+										Our Solution
+									</p>
+								</div>
+							</div>
+
+							{/* <div className="absolute inset-0 bg-no-repeat bg-left-bottom scale-100 group-hover:scale-105 transition-transform duration-500 ease-in-out"></div> */}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

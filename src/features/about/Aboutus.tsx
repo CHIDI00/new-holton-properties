@@ -7,7 +7,7 @@ import CountUp from "../../ui/CountUp";
 const Aboutus: React.FC = () => {
 	return (
 		<div className="w-full">
-			<div className="md:w-[75%] w-full mx-auto md:px-0 px-[2rem]   ">
+			<div className="container md:px-[11rem] w-full mx-auto px-[2rem]   ">
 				<div className="w-full flex flex-col justify-start items-start">
 					<div className="w-full flex justify-between items-center md:gap-10 gap-10 md:flex-row flex-col md:py-[4rem] py-[4rem]">
 						<div className="w-full md:w-[40%] flex flex-col md:justify-start md:items-start justify-center items-center md:gap-5 gap-2">

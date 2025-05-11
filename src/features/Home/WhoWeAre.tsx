@@ -7,7 +7,7 @@ import CountUp from "../../ui/CountUp";
 const WhoWeAre: React.FC = () => {
 	return (
 		<div className="bg-white w-full md:py-48 py-28 px-4">
-			<div className="container mx-auto md:px-[6.5rem] px-[1rem]">
+			<div className="container mx-auto md:px-[11rem] px-[1rem]">
 				<div className="flex md:flex-row flex-col justify-between items-start">
 					<div
 						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full"
@@ -154,7 +154,7 @@ const WhoWeAre: React.FC = () => {
 						</div>
 
 						<div
-							className="w-full h-[100%] flex flex-col justify-between items-start gap-5 p-14 rounded-[3rem] bg-gray-100 bg-cover"
+							className="hidden w-full h-[100%] md:flex flex-col justify-between items-start gap-5 p-14 rounded-[3rem] bg-gray-100 bg-cover"
 							style={{
 								backgroundImage: `url(https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/h1_img-2.jpg)`,
 							}}

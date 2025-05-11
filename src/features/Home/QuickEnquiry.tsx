@@ -27,7 +27,7 @@ const QuickEnquiry: React.FC = () => {
 					></div>
 				</div>
 
-				<div className="relative flex flex-col justify-center items-center md:w-[75%] w-[95%] md:h-[80%] h-[85%] bg-white rounded-[3rem] overflow-hidden">
+				<div className="relative flex flex-col justify-center items-center md:w-[85%] w-[95%] md:h-[80%] h-[85%] bg-white rounded-[3rem] overflow-hidden">
 					<img src={sketch1} alt="" className="absolute left-[-35%] bottom-0" />
 					<img
 						src={sketch2}

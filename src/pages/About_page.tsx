@@ -3,7 +3,7 @@ import AboutUsContent from "../features/about/AboutUsContent";
 
 const About_page: React.FC = () => {
 	return (
-		<div className="w-full bg-[#fff]">
+		<div className="w-full bg-[#fff] overflow-hidden">
 			<AboutUsContent />
 		</div>
 	);

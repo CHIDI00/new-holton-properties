@@ -44,7 +44,7 @@ const Testimonials: React.FC = () => {
 				</div>
 			</div>
 
-			<div className="container md:px-[20rem] flex flex-col md:flex-row justify-between items-center mx-7 my-[15rem] md:gap-52 gap-20 md:mx-auto">
+			<div className="container md:px-[11rem] flex flex-col md:flex-row justify-between items-center mx-7 my-[15rem] md:gap-52 gap-20 md:mx-auto">
 				<div className="hidden md:flex">
 					<button
 						type="button"

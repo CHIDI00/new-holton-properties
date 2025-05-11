@@ -4,6 +4,7 @@ import bg_image from "../../assets/project_13.jpg";
 import { NavLink } from "react-router-dom";
 import Aboutus from "./Aboutus";
 import OurStory from "./OurStory";
+import Testimonials from "../Home/Testimonials";
 
 const AboutUsContent: React.FC = () => {
 	return (
@@ -42,6 +43,7 @@ const AboutUsContent: React.FC = () => {
 
 			<Aboutus />
 			<OurStory />
+			<Testimonials />
 		</>
 	);
 };
