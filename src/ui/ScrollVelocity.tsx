@@ -115,7 +115,7 @@ const VelocityText = ({
 		baseX.set(baseX.get() + moveBy);
 	});
 
-	const spans: JSX.Element[] = [];
+	const spans = [];
 	for (let i = 0; i < numCopies; i++) {
 		spans.push(
 			<span
