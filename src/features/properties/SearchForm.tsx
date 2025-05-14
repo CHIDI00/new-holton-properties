@@ -12,9 +12,7 @@ const SearchForm: React.FC = () => {
 					id=""
 					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
-					<option selected value>
-						Property Type
-					</option>
+					<option selected>Property Type</option>
 					<option value="building">Building</option>
 					<option value="villa">Villa</option>
 					<option value="office">Office</option>
@@ -26,9 +24,7 @@ const SearchForm: React.FC = () => {
 					id=""
 					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
-					<option selected value>
-						Location
-					</option>
+					<option selected>Location</option>
 					<option value="chevron">Chevron</option>
 					<option value="aja">Aja</option>
 					<option value="lekki">Lekki</option>
@@ -40,9 +36,7 @@ const SearchForm: React.FC = () => {
 					id=""
 					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
-					<option selected value>
-						Price Range
-					</option>
+					<option selected>Price Range</option>
 					<option value="N100M - N300.4M">N100M - N300.4M</option>
 					<option value="N400.5M - N700.7M">N400.5M - N700.7M</option>
 					<option value="N800M - N1.7B">N800M - N1.7B</option>

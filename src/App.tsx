@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home_page from "./pages/Home_page";
 import About_page from "./pages/About_page";
+import Property_page from "./pages/Property_page";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Property_page from "./pages/Property_page";
 
 function App() {
 	// useEffect(() => {
