@@ -1,4 +1,4 @@
-import React, {
+import {
 	useRef,
 	useLayoutEffect,
 	useState,
@@ -13,7 +13,6 @@ import {
 	useMotionValue,
 	useVelocity,
 	useAnimationFrame,
-	// MotionValue,
 } from "framer-motion";
 
 function useElementWidth<T extends HTMLElement>(ref: React.RefObject<T>) {
@@ -102,7 +101,7 @@ const VelocityText = ({
 	});
 
 	const directionFactor = useRef(1);
-	useAnimationFrame((delta) => {
+	useAnimationFrame((_t, delta) => {
 		let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
 		if (velocityFactor.get() < 0) {

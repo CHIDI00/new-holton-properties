@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 						</li>
 						<li>
 							<NavLink
-								to="about_us"
+								to="/about_us"
 								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								About
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 						</li>
 						<li>
 							<NavLink
-								to="property_grid"
+								to="/property_grid"
 								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								Properties

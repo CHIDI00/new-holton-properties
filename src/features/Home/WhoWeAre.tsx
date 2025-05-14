@@ -15,7 +15,7 @@ const WhoWeAre: React.FC = () => {
 					>
 						<ScrollVelocity
 							texts={[`WHO WE ARE •`]}
-							velocity={20}
+							velocity={10}
 							className="custom-scroll-text"
 						/>
 					</div>
