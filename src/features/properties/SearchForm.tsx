@@ -2,15 +2,15 @@ import React from "react";
 
 const SearchForm: React.FC = () => {
 	return (
-		<div className="container mx-auto md:px-[11rem] px-4">
+		<div className="container mx-auto md:px-[11rem] px-6">
 			<form
 				action="submit"
-				className="w-full flex md:flex-nowrap  justify-start items-center gap-10"
+				className="w-full grid md:grid-cols-4 grid-cols-2 justify-center items-center md:my-10 gap-10"
 			>
 				<select
 					name=""
 					id=""
-					className="md:w-1/4 w-1/2 py-7 px-8 my-6 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected value>
 						Property Type
@@ -24,7 +24,7 @@ const SearchForm: React.FC = () => {
 				<select
 					name=""
 					id=""
-					className="md:w-1/4 w-1/2 py-7 px-8 my-6 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected value>
 						Location
@@ -38,7 +38,7 @@ const SearchForm: React.FC = () => {
 				<select
 					name=""
 					id=""
-					className="md:w-1/4 w-1/2 py-7 px-8 my-6 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected value>
 						Price Range
@@ -50,7 +50,7 @@ const SearchForm: React.FC = () => {
 					<option value="N10B - N15.5B">N10B - N15.5B</option>
 				</select>
 
-				<button className="md:w-1/4 w-1/2 h-full bg-[#2A286B] text-3xl rounded-full text-white font-semibold px-10 py-5 ml-6  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
+				<button className="md:w-full w-full bg-[#2A286B] text-3xl rounded-full text-white font-semibold py-7 px-8  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
 					Search
 				</button>
 			</form>
