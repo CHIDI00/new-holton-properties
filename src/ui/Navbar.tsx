@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/"
-								className="text-2xl font-semibold text-black hover:text-gray-400"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								Home
 							</NavLink>
@@ -29,15 +29,23 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="about_us"
-								className="text-2xl font-semibold text-black hover:text-gray-400"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								About
 							</NavLink>
 						</li>
 						<li>
 							<NavLink
+								to="property_grid"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
+							>
+								Properties
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
 								to="#services"
-								className="text-2xl font-semibold text-black hover:text-gray-400"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								Services
 							</NavLink>
@@ -45,7 +53,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="#contact"
-								className="text-2xl font-semibold text-black hover:text-gray-400"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
 								Contact
 							</NavLink>
@@ -54,8 +62,11 @@ const Navbar: React.FC = () => {
 				</div>
 
 				<div className="h-full hidden lg:flex justify-between items-center">
-					<p className="text-2xl">
-						<span>Call us:</span> +(234) 90 7223 8263
+					<p className="text-2xl text-black">
+						Call us:{" "}
+						<span className="text-gray-400 border-b-[1px] border-[#2A286B]">
+							+(234) 90 7223 8263
+						</span>
 					</p>
 					<button className="h-full bg-[#2A286B] text-2xl rounded-full text-white font-semibold px-10 py-5 ml-6  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
 						Get In Touch
@@ -107,7 +118,7 @@ const Navbar: React.FC = () => {
 							</li>
 							<li>
 								<NavLink
-									to="/properties"
+									to="/property_grid"
 									className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
 									onClick={() => setMobileMenuOpen(false)}
 								>
@@ -143,8 +154,11 @@ const Navbar: React.FC = () => {
 							</li>
 						</ul>
 						<div className="h-full flex justify-between items-center px-7">
-							<p className="text-4xl">
-								<span>Call us:</span> +(234) 90 7223 8263
+							<p className="text-4xl text-black">
+								Call us:{" "}
+								<span className="text-gray-200 border-b-2 border-[#2A286B]">
+									+(234) 90 7223 8263
+								</span>
 							</p>
 							<button className="h-full bg-[#2A286B] text-3xl rounded-full text-white font-semibold px-10 py-5 ml-6  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
 								Get In Touch
