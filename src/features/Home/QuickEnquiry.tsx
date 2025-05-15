@@ -28,17 +28,18 @@ const QuickEnquiry: React.FC = () => {
 				</div>
 
 				<div className="relative flex flex-col justify-center items-center md:w-[85%] w-[95%] md:h-[80%] h-[85%] bg-white rounded-[3rem] overflow-hidden">
-					<img src={sketch1} alt="" className="absolute left-[-35%] bottom-0" />
+					<img src={sketch1} alt="" data-aos="fade-right" className="absolute left-[-35%] bottom-0" />
 					<img
 						src={sketch2}
 						alt=""
+						data-aos="fade-left"
 						className="absolute right-[-20%] bottom-0"
 					/>
 
 					<div className="md:w-[60%] w-full flex flex-col justify-center items-center gap-10 p-10 pt-16 mx-auto z-10">
 						<div
 							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-black"
-							// data-aos="flip-left"
+							data-aos="flip-left"
 						>
 							<ScrollVelocity
 								texts={["QUICK ENQUIRY •"]}
@@ -52,7 +53,7 @@ const QuickEnquiry: React.FC = () => {
 						</h1>
 					</div>
 
-					<form action="submit" className="md:w-[55%] w-full z-10">
+					<form action="submit" className="md:w-[55%] w-full z-10 py-7">
 						<div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-10">
 							<input
 								type="text"

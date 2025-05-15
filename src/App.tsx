@@ -8,6 +8,7 @@ import Property_page from "./pages/Property_page";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Projects_page from "./pages/Projects_page";
 
 function App() {
 	// useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/" element={<Home_page />} />
 					<Route path="about_us" element={<About_page />} />
 					<Route path="property_grid" element={<Property_page />} />
+					<Route path="project_grid" element={<Projects_page />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

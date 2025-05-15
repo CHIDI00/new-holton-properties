@@ -39,7 +39,23 @@ const Navbar: React.FC = () => {
 								to="/property_grid"
 								className="text-3xl font-semibold text-black hover:text-gray-400"
 							>
+								Shortlet
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to="/property_grid"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
+							>
 								Properties
+							</NavLink>
+						</li>
+						<li>
+							<NavLink
+								to="/project_grid"
+								className="text-3xl font-semibold text-black hover:text-gray-400"
+							>
+								Projects
 							</NavLink>
 						</li>
 						<li>
@@ -132,6 +148,15 @@ const Navbar: React.FC = () => {
 									onClick={() => setMobileMenuOpen(false)}
 								>
 									Shortlets
+								</NavLink>
+							</li>
+							<li>
+								<NavLink
+									to="/project_grid"
+									className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+									onClick={() => setMobileMenuOpen(false)}
+								>
+									Projects
 								</NavLink>
 							</li>
 							<li>
