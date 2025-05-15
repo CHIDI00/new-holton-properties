@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Home
 							</NavLink>
@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/about_us"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								About
 							</NavLink>
@@ -37,7 +37,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/property_grid"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Shortlet
 							</NavLink>
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/property_grid"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Properties
 							</NavLink>
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="/project_grid"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Projects
 							</NavLink>
@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="#services"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Services
 							</NavLink>
@@ -69,7 +69,7 @@ const Navbar: React.FC = () => {
 						<li>
 							<NavLink
 								to="#contact"
-								className="text-3xl font-semibold text-black hover:text-gray-400"
+								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Contact
 							</NavLink>
