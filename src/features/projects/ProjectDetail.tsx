@@ -121,6 +121,48 @@ const ProjectDetail: React.FC = () => {
 						/>
 					</div>
 				</div>
+
+				<div className="w-full flex flex-col md:flex-row justify-between items-start gap-28">
+					<div className="md:w-2/3 w-full">
+						<p className="md:text-[5rem] text-[3.5rem] font-bold mb-5">
+							Project Description
+						</p>
+						<p className="md:text-[1.8rem] text-[2rem] font-medium text-gray-500">
+							{project?.projectDescription}
+						</p>
+					</div>
+
+					<div className="md:w-1/3 w-full">
+						<p className="md:text-[2.5rem] text-[2.5rem] font-bold mb-5">
+							Key Details
+						</p>
+
+						<ul className="list-disc pl-10 flex flex-col justify-start items-start gap-3">
+							<li className="marker:text-blue-800 md:marker:text-4xl marker:text-5xl md:text-[1.8rem] text-[2rem] font-medium text-gray-500 gap-4">
+								<span className="text-black font-bold">Location:</span>{" "}
+								{project?.location}
+							</li>
+							<li className="marker:text-blue-800 md:marker:text-4xl marker:text-5xl md:text-[1.8rem] text-[2rem] font-medium text-gray-500 gap-4">
+								<span className="text-black font-bold">
+									Total Built-Up Area:
+								</span>{" "}
+								{project?.projectArea}
+							</li>
+							<li className="marker:text-blue-800 md:marker:text-4xl marker:text-5xl md:text-[1.8rem] text-[2rem] font-medium text-gray-500 gap-4">
+								<span className="text-black font-bold">Number of Floors:</span>{" "}
+								{project?.numberOfFloor}
+							</li>
+							<li className="marker:text-blue-800 md:marker:text-4xl marker:text-5xl md:text-[1.8rem] text-[2rem] font-medium text-gray-500 gap-4">
+								<span className="text-black font-bold">Special Features:</span>{" "}
+								{project?.specialFeatures}
+							</li>
+							<li className="marker:text-blue-800 md:marker:text-4xl marker:text-5xl md:text-[1.8rem] text-[2rem] font-medium text-gray-500 gap-4">
+								<span className="text-black font-bold">Amenities:</span>{" "}
+								{project?.Amenities}
+							</li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

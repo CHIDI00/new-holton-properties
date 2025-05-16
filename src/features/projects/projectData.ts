@@ -25,6 +25,10 @@ interface Project {
 	images: string[];
 	location: string;
 	propertyName: string;
+	projectDescription: string;
+	numberOfFloor: string;
+	specialFeatures: string;
+	Amenities: string;
 }
 
 export const projectData: Project[] = [
@@ -42,6 +46,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "New York, NY",
 		propertyName: "Greenview Apartments",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -57,6 +66,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Mixed-Use Development",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -72,6 +86,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Premier Office Tower",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -87,6 +106,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Urban Heights Residence",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -102,6 +126,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Apartment Building",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -117,6 +146,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Commercial & Residential Building",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -132,6 +166,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Residential Complex",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -147,6 +186,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Eden Estate",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -162,6 +206,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Office Building",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -177,6 +226,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Vista at Councill Square",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -192,6 +246,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Residential Building",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -207,6 +266,11 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Luxury Apartment",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
@@ -222,5 +286,10 @@ export const projectData: Project[] = [
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
 		propertyName: "Mixed-Use Development",
+		numberOfFloor: "20, including two underground levels for parking.",
+		specialFeatures: "Eco-friendly design, rooftop garden",
+		Amenities: "Gym, pool, parking, 24/7 security",
+		projectDescription:
+			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 ];
