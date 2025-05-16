@@ -48,8 +48,8 @@ const ProjectDetail: React.FC = () => {
 					</h1>
 				</div>
 
-				<div className="container mx-auto md:px-0 flex md:flex-nowrap flex-wrap shrink-0 md:justify-between justify-start items-center md:gap-2 gap-4 md:py-5 px-7">
-					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+				<div className="container mx-auto md:px-0 flex md:flex-nowrap flex-wrap shrink-0 md:justify-between justify-start items-center md:gap-2 md:py-5">
+					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<ChartArea />
 						</span>
@@ -60,7 +60,7 @@ const ProjectDetail: React.FC = () => {
 							<p className="md:text-[1.6rem] text-[2rem]">{project?.status}</p>
 						</div>
 					</div>
-					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<Building />
 						</span>
@@ -73,7 +73,7 @@ const ProjectDetail: React.FC = () => {
 							</p>
 						</div>
 					</div>
-					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<LandPlot />
 						</span>
@@ -86,7 +86,7 @@ const ProjectDetail: React.FC = () => {
 							</p>
 						</div>
 					</div>
-					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<Calendar />
 						</span>
@@ -99,7 +99,7 @@ const ProjectDetail: React.FC = () => {
 							</p>
 						</div>
 					</div>
-					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<ChartArea />
 						</span>
