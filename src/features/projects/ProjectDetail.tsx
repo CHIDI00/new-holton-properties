@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_12.jpg";
 import { NavLink, useParams } from "react-router-dom";
-import { ChartArea, MapPin } from "lucide-react";
+import { Building, Calendar, ChartArea, LandPlot, MapPin } from "lucide-react";
 import { projectData } from "./projectData";
 
 const ProjectDetail: React.FC = () => {
@@ -48,15 +48,77 @@ const ProjectDetail: React.FC = () => {
 					</h1>
 				</div>
 
-				<div className="w-full flex flex-wrap justify-between items-center">
-					<div className="">
-						<span>
+				<div className="container mx-auto md:px-0 flex md:flex-nowrap flex-wrap shrink-0 md:justify-between justify-start items-center md:gap-2 gap-4 md:py-5 px-7">
+					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<ChartArea />
 						</span>
-						<div className="">
-							<p>Status</p>
-							<p>{project?.status}</p>
+						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
+							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+								Status
+							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">{project?.status}</p>
 						</div>
+					</div>
+					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
+							<Building />
+						</span>
+						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
+							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+								Project Type
+							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">
+								{project?.projectType}
+							</p>
+						</div>
+					</div>
+					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
+							<LandPlot />
+						</span>
+						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
+							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+								Project Area
+							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">
+								{project?.projectArea}
+							</p>
+						</div>
+					</div>
+					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
+							<Calendar />
+						</span>
+						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
+							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+								Commencement date
+							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">
+								{project?.startDate}
+							</p>
+						</div>
+					</div>
+					<div className="md:p-2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
+						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
+							<ChartArea />
+						</span>
+						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
+							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+								Price Range
+							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">{project?.price}</p>
+						</div>
+					</div>
+				</div>
+
+				<div className="w-full md:h-[60rem] h-[50rem] md:my-16 ">
+					<div className="w-full h-full flex justify-center items-center rounded-[3rem] overflow-hidden">
+						<img
+							src={project?.cardImage}
+							alt={project?.alt}
+							className="rounded-[3rem] object-cover"
+						/>
 					</div>
 				</div>
 			</div>

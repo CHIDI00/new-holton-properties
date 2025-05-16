@@ -16,8 +16,11 @@ interface Project {
 	id: number;
 	status: string;
 	description: string;
-	name: string;
+	projectType: string;
+	projectArea: string;
+	startDate: string;
 	cardImage: string;
+	price: string;
 	alt: string;
 	images: string[];
 	location: string;
@@ -30,7 +33,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A modern apartment building with state-of-the-art amenities and stunning views.",
-		name: "Apartment Building",
+		projectType: "Apartment Building",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image1,
 		alt: "Apartment Building",
 		images: [image1, image2, image3, image4],
@@ -42,7 +48,10 @@ export const projectData: Project[] = [
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image2,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -54,7 +63,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image3,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -66,7 +78,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image4,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -78,7 +93,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image5,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -90,7 +108,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image6,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -102,7 +123,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image7,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -114,7 +138,10 @@ export const projectData: Project[] = [
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image8,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -126,7 +153,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image9,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -138,7 +168,10 @@ export const projectData: Project[] = [
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image10,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -150,7 +183,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image11,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -162,7 +198,10 @@ export const projectData: Project[] = [
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image12,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
@@ -174,7 +213,10 @@ export const projectData: Project[] = [
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		name: "Office Space",
+		projectType: "Office Space",
+		projectArea: "26,346.74 Sq. Ft.",
+		startDate: "May 21, 2021",
+		price: "$900k - $1,2M",
 		cardImage: image13,
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
