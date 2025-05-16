@@ -1,8 +1,11 @@
 import React from "react";
 import { projectData } from "./projectData";
 import { MapPin } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const ProjectGrid: React.FC = () => {
+	const navigate = useNavigate();
+
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
@@ -11,6 +14,9 @@ const ProjectGrid: React.FC = () => {
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden"
 						key={project.id}
 						data-aos="fade-up"
+						onClick={() =>
+							navigate(`/project_grid/project_detail/${project.id}`)
+						}
 					>
 						<div
 							className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat rounded-[3rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"

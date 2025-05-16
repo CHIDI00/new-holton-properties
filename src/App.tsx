@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { initSmoothScroll } from "./scroll/scroll";
+// import { initSmoothScroll } from "./scroll/scroll";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home_page from "./pages/Home_page";
@@ -12,9 +12,9 @@ import Projects_page from "./pages/Projects_page";
 import ProjectDetail from "./features/projects/ProjectDetail";
 
 function App() {
-	useEffect(() => {
-		initSmoothScroll();
-	}, []);
+	// useEffect(() => {
+	// 	initSmoothScroll();
+	// }, []);
 
 	useEffect(() => {
 		AOS.init({
