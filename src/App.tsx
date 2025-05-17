@@ -10,6 +10,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Projects_page from "./pages/Projects_page";
 import ProjectDetail from "./features/projects/ProjectDetail";
+import PropertyDetail from "./features/properties/PropertyDetail";
 
 function App() {
 	// useEffect(() => {
@@ -32,7 +33,7 @@ function App() {
 					<Route path="property_grid" element={<Property_page />} />
 					<Route
 						path="property_grid/detail/:propertyId"
-						element={<ProjectDetail />}
+						element={<PropertyDetail />}
 					/>
 					<Route path="project_grid" element={<Projects_page />} />
 					<Route

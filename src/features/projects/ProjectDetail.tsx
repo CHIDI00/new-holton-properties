@@ -13,66 +13,6 @@ import {
 } from "lucide-react";
 import { projectData } from "./projectData";
 
-// type FeaturesAmenities = {
-// 	id: number;
-// 	title: string;
-// 	icon: JSX.Element;
-// 	desscription: string;
-// };
-
-// const features: FeaturesAmenities[] = [
-// 	{
-// 		id: 1,
-// 		title: "24x7 Security",
-// 		icon: <ShieldUser size={40} />,
-// 		desscription:
-// 			"Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
-// 	},
-// 	{
-// 		id: 2,
-// 		title: "Surveillance System",
-// 		icon: <Cctv size={40} />,
-// 		desscription: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
-// 	},
-// 	{
-// 		id: 3,
-// 		title: "Fitness Center",
-// 		icon: <Dumbbell size={40} />,
-// 		desscription: "Consectetur quae ab illoentore veritatis",
-// 	},
-// 	{
-// 		id: 4,
-// 		title: "Children's play area",
-// 		icon: <Fence size={40} />,
-// 		desscription: "Totam rem aperiam, eaque ipsa quae ab illo inventore.",
-// 	},
-// 	{
-// 		id: 5,
-// 		title: "24 hour maintenance",
-// 		icon: <Wrench size={40} />,
-// 		desscription: "Consectetur quae ab illoentore veritatis",
-// 	},
-// 	{
-// 		id: 6,
-// 		title: "Swimming Pool",
-// 		icon: <WavesLadder size={40} />,
-// 		desscription: "Totam rem aperiam, eaque ipsa quae ab illo inventore.",
-// 	},
-// 	{
-// 		id: 7,
-// 		title: "Firefighting System",
-// 		icon: <BellElectric size={40} />,
-// 		desscription:
-// 			"Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
-// 	},
-// 	{
-// 		id: 8,
-// 		title: "Landscape Garden",
-// 		icon: <TreePalm size={40} />,
-// 		desscription: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
-// 	},
-// ];
-
 const ProjectDetail: React.FC = () => {
 	// Get the projectId from the URL Parameters
 	const { projectId } = useParams();
