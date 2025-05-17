@@ -2,7 +2,15 @@ import React from "react";
 import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_12.jpg";
 import { NavLink, useParams } from "react-router-dom";
-import { Building, Calendar, ChartArea, LandPlot, MapPin } from "lucide-react";
+import {
+	Building,
+	Calendar,
+	ChartArea,
+	Expand,
+	Image,
+	LandPlot,
+	MapPin,
+} from "lucide-react";
 import { projectData } from "./projectData";
 
 // type FeaturesAmenities = {
@@ -275,6 +283,22 @@ const ProjectDetail: React.FC = () => {
 						</div>
 					</div>
 				)}
+
+				<div className="w-full flex flex-col justify-center items-center">
+					<div className="w-full flex justify-between items-center">
+						<p className="md:text-[5rem] text-[3.5rem] font-bold mb-5">Media</p>
+
+						<div className="flex md:gap-5 gap-6">
+							<button className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl rounded-full text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black  hover:bg-[#2A286B] hover:border-[#2A286B] hover:text-[#fff] transition-all ease-in-out duration-300">
+								<Image /> Photos
+							</button>
+
+							<button className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl rounded-full text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black  hover:bg-[#2A286B] hover:border-[#2A286B] hover:text-[#fff] transition-all ease-in-out duration-300">
+								<Expand /> Plans
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

@@ -30,6 +30,10 @@ function App() {
 					<Route path="/" element={<Home_page />} />
 					<Route path="about_us" element={<About_page />} />
 					<Route path="property_grid" element={<Property_page />} />
+					<Route
+						path="property_grid/detail/:propertyId"
+						element={<ProjectDetail />}
+					/>
 					<Route path="project_grid" element={<Projects_page />} />
 					<Route
 						path="project_grid/project_detail/:projectId"

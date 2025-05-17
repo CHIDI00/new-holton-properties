@@ -5,7 +5,6 @@ import { projectData } from "./projectData";
 
 const ProjectGrid: React.FC = () => {
 	const navigate = useNavigate();
-	// const Icon = projectData.features.icon;
 
 	return (
 		<div className="w-full py-12">
@@ -39,9 +38,6 @@ const ProjectGrid: React.FC = () => {
 								</p>
 								<h1 className="md:text-7xl text-7xl text-white pt-6 font-bold">
 									{project.propertyName}
-									{/* {project.features?.map((feature) => (
-										<Icon key={feature.id} size={40} />
-									))} */}
 								</h1>
 							</div>
 						</div>

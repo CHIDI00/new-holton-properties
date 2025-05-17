@@ -1,23 +1,55 @@
 import React from "react";
+import image8 from "../../assets/project_8.jpg";
+import { MapPin } from "lucide-react";
 
 const PropertyList: React.FC = () => {
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
-				<div className="w-full md:h-[47rem] h-[50rem] bg-red-200 rounded-[3rem]"></div>
+				<div
+					className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden cursor-pointer"
+					data-aos="fade-up"
+					// onClick={() =>
+					// 	navigate(`/project_grid/project_detail/${project.id}`)
+					// }
+				>
+					<div
+						className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat rounded-[3rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"
+						style={{ backgroundImage: `url(${image8})` }}
+					></div>
+					<div className="absolute flex flex-col justify-between items-center z-[4] bg-gradient-to-b from-[#00000000] md:to-[#000000d2] to-[#000000e8] w-full h-full md:p-12 md:px-16 p-16">
+						<div className="w-full flex justify-start items-start">
+							<span className="bg-[#2A286B] rounded-full md:text-[1.2rem] text-2xl text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase">
+								For Sale
+							</span>
+						</div>
+
+						<div className="w-full">
+							<div className="w-full flex justify-between items-center border-b-2 border-gray-400 pb-8">
+								<p className="md:text-[1.4rem] text-[2rem] font-bold text-white flex items-center gap-4  ">
+									<span className="text-blue-700">
+										<MapPin />
+									</span>
+									Lekki Phase 2
+								</p>
+								<p className="md:text-[1.4rem] text-[2rem] font-bold text-white">
+									₦ 50,000,000
+								</p>
+							</div>
+							<h1 className="md:text-3xl text-4xl text-white pt-6 font-bold">
+								Greenview Apartments
+							</h1>
+							<div className="w-full flex justify-start items-start gap-10">
+								<p className="text-white md:text-[1.4rem] text-[1.8rem] pt-6 font-bold">
+									Bedroom 3
+								</p>
+								<p className="text-white md:text-[1.4rem] text-[1.8rem] pt-6 font-bold">
+									Bathroom 4
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
