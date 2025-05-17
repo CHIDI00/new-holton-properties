@@ -11,6 +11,7 @@ import image10 from "../../assets/project_10.jpg";
 import image11 from "../../assets/project_11.jpg";
 import image12 from "../../assets/project_12.jpg";
 import image13 from "../../assets/project_13.jpg";
+import { JSX } from "react";
 
 interface Project {
 	id: number;
@@ -29,6 +30,14 @@ interface Project {
 	numberOfFloor: string;
 	specialFeatures: string;
 	Amenities: string;
+	features?: [
+		{
+			id: number;
+			title: string;
+			icon: JSX.Element;
+			desscription: string;
+		}
+	];
 }
 
 export const projectData: Project[] = [
