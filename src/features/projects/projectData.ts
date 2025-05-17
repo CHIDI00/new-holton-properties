@@ -11,7 +11,14 @@ import image10 from "../../assets/project_10.jpg";
 import image11 from "../../assets/project_11.jpg";
 import image12 from "../../assets/project_12.jpg";
 import image13 from "../../assets/project_13.jpg";
-import { JSX } from "react";
+import ShieldUser from "../../assets/icons/shielduser.png";
+import Cctv from "../../assets/icons/cctv.png";
+import Dumbbell from "../../assets/icons/dumbbell.png";
+import Fence from "../../assets/icons/fence.png";
+import Wrench from "../../assets/icons/wrench.png";
+import WavesLadder from "../../assets/icons/wavesladder.png";
+import BellElectric from "../../assets/icons/bellelectric.png";
+import TreePalm from "../../assets/icons/treepalm.png";
 
 interface Project {
 	id: number;
@@ -30,14 +37,12 @@ interface Project {
 	numberOfFloor: string;
 	specialFeatures: string;
 	Amenities: string;
-	features?: [
-		{
-			id: number;
-			title: string;
-			icon: JSX.Element;
-			desscription: string;
-		}
-	];
+	featuresAmenities?: {
+		id: number;
+		title: string;
+		icon: string;
+		description: string;
+	}[];
 }
 
 export const projectData: Project[] = [
@@ -60,6 +65,58 @@ export const projectData: Project[] = [
 		Amenities: "Gym, pool, parking, 24/7 security",
 		projectDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
+		featuresAmenities: [
+			{
+				id: 1,
+				title: "24x7 Security",
+				icon: ShieldUser,
+				description:
+					"Sed ut perspiciatis unde omnis iste natus error sit voluptatem",
+			},
+			{
+				id: 2,
+				title: "Surveillance System",
+				icon: Cctv,
+				description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
+			},
+			{
+				id: 3,
+				title: "Fitness Center",
+				icon: Dumbbell,
+				description: "Consectetur quae ab illoentore veritatis",
+			},
+			{
+				id: 4,
+				title: "Children's play area",
+				icon: Fence,
+				description: "Totam rem aperiam, eaque ipsa quae ab illo inventore.",
+			},
+			{
+				id: 5,
+				title: "24 hour maintenance",
+				icon: Wrench,
+				description: "Consectetur quae ab illoentore veritatis",
+			},
+			{
+				id: 6,
+				title: "Swimming Pool",
+				icon: WavesLadder,
+				description: "Totam rem aperiam, eaque ipsa quae ab illo inventore.",
+			},
+			{
+				id: 7,
+				title: "Firefighting System",
+				icon: BellElectric,
+				description:
+					"Sed ut perspiciatis unde omnis iste natus error sit voluptatem.",
+			},
+			{
+				id: 8,
+				title: "Landscape Garden",
+				icon: TreePalm,
+				description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur.",
+			},
+		],
 	},
 	{
 		id: 2,
@@ -82,7 +139,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 3,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -102,7 +159,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 4,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -122,7 +179,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 5,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -142,7 +199,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 6,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -162,7 +219,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 7,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -182,7 +239,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 8,
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -202,7 +259,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 9,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -222,7 +279,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 10,
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -242,7 +299,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 11,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -262,7 +319,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 12,
 		status: "Completed",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
@@ -282,7 +339,7 @@ export const projectData: Project[] = [
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
-		id: 2,
+		id: 13,
 		status: "Under construction",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
