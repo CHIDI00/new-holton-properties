@@ -152,7 +152,7 @@ const PropertyDetail: React.FC = () => {
 						</p>
 					</div>
 
-					<div className="md:w-[40%] w-full">
+					<div className="md:w-[40%] w-full pb-20">
 						<p className="md:text-[2.5rem] text-[2.5rem] font-bold mb-5">
 							Amenities
 						</p>
