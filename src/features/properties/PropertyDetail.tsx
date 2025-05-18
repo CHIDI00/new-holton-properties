@@ -7,6 +7,7 @@ import { NavLink } from "react-router-dom";
 import {
 	ChartArea,
 	Check,
+	DollarSign,
 	Expand,
 	Image,
 	LandPlot,
@@ -118,7 +119,7 @@ const PropertyDetail: React.FC = () => {
 					</div> */}
 					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
-							<ChartArea />
+							<DollarSign />
 						</span>
 						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
 							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">

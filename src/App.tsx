@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { initSmoothScroll } from "./scroll/scroll";
+// import { initSmoothScroll } from "./scroll/scroll";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./ui/AppLayout";
 import Home_page from "./pages/Home_page";
@@ -14,9 +14,9 @@ import PropertyDetail from "./features/properties/PropertyDetail";
 import ScrollToTop from "./ui/ScrollToTop";
 
 function App() {
-	useEffect(() => {
-		initSmoothScroll();
-	}, []);
+	// useEffect(() => {
+	// 	initSmoothScroll();
+	// }, []);
 
 	useEffect(() => {
 		AOS.init({

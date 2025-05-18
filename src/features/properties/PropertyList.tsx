@@ -3,13 +3,24 @@ import { MapPin } from "lucide-react";
 import { propertyData } from "./propertyData";
 import { useNavigate } from "react-router-dom";
 
-const PropertyList: React.FC = () => {
+interface PropertyListProps {
+	limit: number;
+	currentPage: number;
+}
+const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 	const navigate = useNavigate();
+
+	// Calculate the correct slice of shortlets based on pagination
+	const startIndex = (currentPage - 1) * limit;
+	const endIndex = startIndex + limit;
+	const displayData = limit
+		? propertyData.slice(startIndex, endIndex)
+		: propertyData;
 
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
-				{propertyData.map((property) => (
+				{displayData.map((property) => (
 					<div
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden cursor-pointer"
 						data-aos="fade-up"
@@ -54,6 +65,8 @@ const PropertyList: React.FC = () => {
 					</div>
 				))}
 			</div>
+
+			<div className=""></div>
 		</div>
 	);
 };
