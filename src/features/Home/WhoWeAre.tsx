@@ -7,7 +7,7 @@ import CountUp from "../../ui/CountUp";
 const WhoWeAre: React.FC = () => {
 	return (
 		<div className="bg-white w-full md:py-48 py-28 px-4">
-			<div className="container mx-auto md:px-[6.5rem] px-[1rem]">
+			<div className="container mx-auto md:px-[11rem] px-[1rem]">
 				<div className="flex md:flex-row flex-col justify-between items-start">
 					<div
 						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full"
@@ -15,7 +15,7 @@ const WhoWeAre: React.FC = () => {
 					>
 						<ScrollVelocity
 							texts={[`WHO WE ARE •`]}
-							velocity={12}
+							velocity={10}
 							className="custom-scroll-text"
 						/>
 					</div>
@@ -86,14 +86,14 @@ const WhoWeAre: React.FC = () => {
 							data-aos="fade-up"
 						>
 							<p className="text-2xl border-b-[1px] w-full pb-6 uppercase">
-								global reach
+								Years of experience
 							</p>
 
 							<div className="w-full">
 								<h1 className="text-7xl flex justify-start items-start">
 									<CountUp
 										from={0}
-										to={85}
+										to={10}
 										separator=","
 										direction="up"
 										duration={1}
@@ -101,7 +101,7 @@ const WhoWeAre: React.FC = () => {
 									/>{" "}
 									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
 								</h1>
-								<p className="text-gray-400 text-2xl">offices worldwide</p>
+								<p className="text-gray-400 text-2xl">Over a decade</p>
 							</div>
 						</div>
 
@@ -110,14 +110,14 @@ const WhoWeAre: React.FC = () => {
 							data-aos="fade-up"
 						>
 							<p className="text-2xl border-b-[1px] w-full pb-6 uppercase">
-								Local Expertise
+								Client Satisfaction
 							</p>
 
 							<div className="w-full">
 								<h1 className="text-7xl flex justify-start items-start">
 									<CountUp
 										from={0}
-										to={1500}
+										to={500}
 										separator=","
 										direction="up"
 										duration={1}
@@ -125,7 +125,7 @@ const WhoWeAre: React.FC = () => {
 									/>{" "}
 									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
 								</h1>
-								<p className="text-gray-400 text-2xl">employees</p>
+								<p className="text-gray-400 text-2xl">satisfied</p>
 							</div>
 						</div>
 
@@ -154,7 +154,7 @@ const WhoWeAre: React.FC = () => {
 						</div>
 
 						<div
-							className="w-full h-[100%] flex flex-col justify-between items-start gap-5 p-14 rounded-[3rem] bg-gray-100 bg-cover"
+							className="hidden w-full h-[100%] md:flex flex-col justify-between items-start gap-5 p-14 rounded-[3rem] bg-gray-100 bg-cover"
 							style={{
 								backgroundImage: `url(https://demo2.wpopal.com/spaciaz/wp-content/uploads/2025/03/h1_img-2.jpg)`,
 							}}

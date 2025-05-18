@@ -13,10 +13,9 @@ import {
 	useMotionValue,
 	useVelocity,
 	useAnimationFrame,
-	MotionValue,
 } from "framer-motion";
 
-function useElementWidth(ref: React.RefObject<HTMLElement>): number {
+function useElementWidth<T extends HTMLElement>(ref: React.RefObject<T>) {
 	const [width, setWidth] = useState(0);
 
 	useLayoutEffect(() => {
@@ -88,7 +87,7 @@ const VelocityText = ({
 	);
 
 	const copyRef = useRef<HTMLSpanElement>(null);
-	const copyWidth = useElementWidth(copyRef);
+	const copyWidth = useElementWidth(copyRef as React.RefObject<HTMLElement>);
 
 	function wrap(min: number, max: number, v: number): number {
 		const range = max - min;
@@ -102,7 +101,7 @@ const VelocityText = ({
 	});
 
 	const directionFactor = useRef(1);
-	useAnimationFrame((t, delta) => {
+	useAnimationFrame((_t, delta) => {
 		let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
 
 		if (velocityFactor.get() < 0) {
@@ -115,7 +114,7 @@ const VelocityText = ({
 		baseX.set(baseX.get() + moveBy);
 	});
 
-	const spans: React.ReactElement[] = [];
+	const spans = [];
 	for (let i = 0; i < numCopies; i++) {
 		spans.push(
 			<span

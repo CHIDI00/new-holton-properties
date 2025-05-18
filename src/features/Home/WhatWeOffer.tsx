@@ -21,12 +21,12 @@ const services: Service[] = [
 	},
 	{
 		id: 2,
-		title: "Project Management",
+		title: "Property Management",
 		image: image2,
 	},
 	{
 		id: 3,
-		title: "Investment & Capital",
+		title: "Interior Design",
 		image: image3,
 	},
 ];
@@ -34,7 +34,7 @@ const services: Service[] = [
 const services2: Service[] = [
 	{
 		id: 4,
-		title: "Construction Management",
+		title: "Brokerage",
 		image: image4,
 	},
 	{
@@ -47,7 +47,7 @@ const services2: Service[] = [
 const WhatWeOffer: React.FC = () => {
 	return (
 		<div className="w-full flex flex-col justify-center items-center md:py-48 py-28 bg-[#edecec]">
-			<div className="container mx-auto md:px-[6.5rem] px-[2rem]">
+			<div className="container mx-auto md:px-[11rem] px-[2rem]">
 				<div className="w-full flex flex-col justify-center items-start">
 					<div className="w-full flex justify-center items-center">
 						<div
