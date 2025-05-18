@@ -31,10 +31,7 @@ interface Property {
 	numberOfFloor: string;
 	specialFeatures: string;
 	Amenities: string[];
-<<<<<<< HEAD
 	video?: string;
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 }
 
 export const propertyData: Property[] = [
@@ -50,10 +47,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image1,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Apartment Building",
 		images: [image1, image2, image3, image4],
 		location: "New York, NY",
@@ -76,10 +70,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image2,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -102,10 +93,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image3,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -128,10 +116,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image4,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -154,10 +139,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image5,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -180,10 +162,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image6,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -206,10 +185,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image7,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -232,10 +208,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image8,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -258,10 +231,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image9,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -284,10 +254,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image10,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -310,10 +277,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image11,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -336,10 +300,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image12,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
@@ -362,10 +323,7 @@ export const propertyData: Property[] = [
 		startDate: "May 21, 2021",
 		price: "$900k - $1,2M",
 		cardImage: image13,
-<<<<<<< HEAD
 		// video: windbreaker,
-=======
->>>>>>> 4186b74ab8cacf9ca719684acbdbe4345cafbb3a
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
