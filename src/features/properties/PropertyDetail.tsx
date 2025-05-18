@@ -195,24 +195,24 @@ const PropertyDetail: React.FC = () => {
 						</div>
 					</div>
 
-					{property?.video && (
-						<div className="w-full flex flex-col justify-start  items-start my-10">
-							<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
-								<Video /> Video
-							</p>
-							<div className="aspect-video w-full mx-auto rounded-[3rem]  my-10">
-								<iframe
-									width="100%"
-									height="100%"
-									src="https://www.youtube-nocookie.com/embed/25IqJxAY32g?si=JRgZ9oedkbXU7Mvz"
-									title="YouTube video player"
-									frameBorder="0"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									referrerPolicy="strict-origin-when-cross-origin"
-									allowFullScreen
-								></iframe>
+					{/* {property?.video && ( */}
+					<div className="w-full flex flex-col justify-start  items-start my-10">
+						<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
+							<Video /> Video
+						</p>
+						<div className="aspect-video w-full mx-auto rounded-[3rem]  my-10">
+							<iframe
+								width="100%"
+								height="100%"
+								src="https://www.youtube.com/embed/25IqJxAY32g?si=O-ZI5C4tadcMBZgn"
+								title="YouTube video player"
+								frameBorder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerPolicy="strict-origin-when-cross-origin"
+								allowFullScreen
+							></iframe>
 
-								{/* <video
+							{/* <video
 									controls
 									poster={property?.cardImage}
 									className="w-full rounded-3xl"
@@ -220,9 +220,9 @@ const PropertyDetail: React.FC = () => {
 									<source src={property?.video} type="video/mp4" />
 									Your browser does not support the video tag.
 								</video> */}
-							</div>
 						</div>
-					)}
+					</div>
+					{/* // )} */}
 				</div>
 			</div>
 		</div>
