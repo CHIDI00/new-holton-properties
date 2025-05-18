@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { propertyData } from "../features/properties/propertyData";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const Pagination = () => {
+const Pagination: React.FC = () => {
 	// Pagination state
 	const [currentPage, setCurrentPage] = useState(1);
 	const [itemsPerPage] = useState(9);
