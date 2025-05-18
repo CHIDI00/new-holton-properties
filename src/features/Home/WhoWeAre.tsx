@@ -86,14 +86,14 @@ const WhoWeAre: React.FC = () => {
 							data-aos="fade-up"
 						>
 							<p className="text-2xl border-b-[1px] w-full pb-6 uppercase">
-								global reach
+								Years of experience
 							</p>
 
 							<div className="w-full">
 								<h1 className="text-7xl flex justify-start items-start">
 									<CountUp
 										from={0}
-										to={85}
+										to={10}
 										separator=","
 										direction="up"
 										duration={1}
@@ -101,7 +101,7 @@ const WhoWeAre: React.FC = () => {
 									/>{" "}
 									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
 								</h1>
-								<p className="text-gray-400 text-2xl">offices worldwide</p>
+								<p className="text-gray-400 text-2xl">Over a decade</p>
 							</div>
 						</div>
 
@@ -110,14 +110,14 @@ const WhoWeAre: React.FC = () => {
 							data-aos="fade-up"
 						>
 							<p className="text-2xl border-b-[1px] w-full pb-6 uppercase">
-								Local Expertise
+								Client Satisfaction
 							</p>
 
 							<div className="w-full">
 								<h1 className="text-7xl flex justify-start items-start">
 									<CountUp
 										from={0}
-										to={1500}
+										to={500}
 										separator=","
 										direction="up"
 										duration={1}
@@ -125,7 +125,7 @@ const WhoWeAre: React.FC = () => {
 									/>{" "}
 									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
 								</h1>
-								<p className="text-gray-400 text-2xl">employees</p>
+								<p className="text-gray-400 text-2xl">satisfied</p>
 							</div>
 						</div>
 

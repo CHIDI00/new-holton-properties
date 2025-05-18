@@ -28,11 +28,12 @@ const HeroSection: React.FC = () => {
 						data-aos="fade-up"
 					>
 						<h1 className="md:text-[8rem] text-[6rem] mb-5 font-extrabold text-center text-white leading-none">
-							Shaping future <br /> through excellence
+							Transforming dreams <br /> into addresses
 						</h1>
 						<p className="md:text-3xl text-[2.5rem] text-center text-gray-300 font-bold leading-tight">
-							We are a top 25 builder and developer fully invested in our
-							customers’ success and improving the communities we serve.
+							{/* We are a top 25 builder and developer fully invested in our
+							customers’ success and improving the communities we serve. */}
+							As a leading builder and developer, we invest wholeheartedly in our clients’ prosperity and in the growth of the communities we serve.
 						</p>
 					</div>
 

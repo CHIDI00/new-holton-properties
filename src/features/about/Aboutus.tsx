@@ -222,7 +222,7 @@ const Aboutus: React.FC = () => {
 								<h3 className="md:text-[7rem] text-[5rem] font-bold flex justify-start items-start leading-none">
 									<CountUp
 										from={0}
-										to={2.5}
+										to={4.5}
 										separator=","
 										direction="up"
 										duration={1}

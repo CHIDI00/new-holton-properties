@@ -87,10 +87,10 @@ const Footer: React.FC = () => {
 					<div className="md:w-[30%] h-full flex flex-col md:justify-start justify-center md:items-start items-center md:h-full w-full md:py-0 py-[3rem] gap-[7rem]">
 						<div className="w-full flex flex-col md:justify-start md:items-start justify-center items-center gap-[1rem]">
 							<p className="md:text-[3.2rem] text-[3rem] font-bold border-b-[1px] border-blue-700">
-								+(090) 767-564 73
+								+(090) 782-388-24
 							</p>
 							<p className="md:text-[3.2rem] text-[3rem] font-bold border-b-[1px] border-blue-700">
-								holton@gmail.com
+								holtonrealty@gmail.com
 							</p>
 						</div>
 
