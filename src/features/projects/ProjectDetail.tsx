@@ -16,9 +16,13 @@ import { projectData } from "./projectData";
 
 const ProjectDetail: React.FC = () => {
 	// Get the projectId from the URL Parameters
-	const { projectId } = useParams();
+	const { projectIdSlug } = useParams();
 
-	const project = projectData.find((p) => p.id === parseInt(projectId ?? "0"));
+	const projectId = projectIdSlug ? projectIdSlug.split("-")[0] : "";
+
+	const project = projectData.find((p) => p.id.toString() === projectId);
+
+	// const project = projectData.find((p) => p.id === parseInt(projectId ?? "0"));
 
 	return (
 		<div>

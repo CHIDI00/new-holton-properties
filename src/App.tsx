@@ -34,12 +34,12 @@ function App() {
 					<Route path="about_us" element={<About_page />} />
 					<Route path="property_grid" element={<Property_page />} />
 					<Route
-						path="property_grid/detail/:propertyId"
+						path="property_grid/detail/:propertyIdSlug"
 						element={<PropertyDetail />}
 					/>
 					<Route path="project_grid" element={<Projects_page />} />
 					<Route
-						path="project_grid/project_detail/:projectId"
+						path="project_grid/project_detail/:projectIdSlug"
 						element={<ProjectDetail />}
 					/>
 				</Route>

@@ -16,11 +16,16 @@ import {
 
 const PropertyDetail: React.FC = () => {
 	// Get the propertyId from the URL Parameters
-	const { propertyId } = useParams();
+	const { propertyIdSlug } = useParams();
 
-	const property = propertyData.find(
-		(p) => p.id === parseInt(propertyId ?? "0")
-	);
+	// Split the ID from the slug
+	const propertyId = propertyIdSlug ? propertyIdSlug.split("-")[0] : "";
+
+	const property = propertyData.find((p) => p.id.toString() === propertyId);
+
+	// const property = propertyData.find(
+	// 	(p) => p.id === Number(propertyId ?? "0")
+	// );
 
 	return (
 		<div>

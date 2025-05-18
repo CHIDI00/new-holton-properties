@@ -6,6 +6,16 @@ import { projectData } from "./projectData";
 const ProjectGrid: React.FC = () => {
 	const navigate = useNavigate();
 
+	interface Slugify {
+		(text: string): string;
+	}
+
+	const slugify: Slugify = (text: string): string =>
+		text
+			.toLowerCase()
+			.replace(/ /g, "-")
+			.replace(/[^\w-]+/g, "");
+
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
@@ -15,7 +25,11 @@ const ProjectGrid: React.FC = () => {
 						key={project.id}
 						data-aos="fade-up"
 						onClick={() =>
-							navigate(`/project_grid/project_detail/${project.id}`)
+							navigate(
+								`/project_grid/project_detail/${project.id}-${slugify(
+									project.propertyName
+								)}`
+							)
 						}
 					>
 						<div

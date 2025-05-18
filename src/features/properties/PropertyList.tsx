@@ -10,6 +10,16 @@ interface PropertyListProps {
 const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 	const navigate = useNavigate();
 
+	interface Slugify {
+		(text: string): string;
+	}
+
+	const slugify: Slugify = (text: string): string =>
+		text
+			.toLowerCase()
+			.replace(/ /g, "-")
+			.replace(/[^\w-]+/g, "");
+
 	// Calculate the correct slice of shortlets based on pagination
 	const startIndex = (currentPage - 1) * limit;
 	const endIndex = startIndex + limit;
@@ -24,7 +34,13 @@ const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 					<div
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden cursor-pointer"
 						data-aos="fade-up"
-						onClick={() => navigate(`/property_grid/detail/${property.id}`)}
+						onClick={() =>
+							navigate(
+								`/property_grid/detail/${property.id}-${slugify(
+									property.propertyName
+								)}`
+							)
+						}
 					>
 						<div
 							className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat rounded-[3rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"
