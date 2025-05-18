@@ -80,19 +80,7 @@ const PropertyDetail: React.FC = () => {
 							<p className="md:text-[1.6rem] text-[2rem]">{property?.status}</p>
 						</div>
 					</div>
-					{/* <div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
-						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
-							<Building />
-						</span>
-						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
-							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
-								property Type
-							</p>
-							<p className="md:text-[1.6rem] text-[2rem]">
-								{property?.propertyType}
-							</p>
-						</div>
-					</div> */}
+
 					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<LandPlot />
@@ -106,19 +94,7 @@ const PropertyDetail: React.FC = () => {
 							</p>
 						</div>
 					</div>
-					{/* <div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
-						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
-							<Calendar />
-						</span>
-						<div className="flex flex-col md:justify-start md:items-start justify-center items-center">
-							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
-								Commencement date
-							</p>
-							<p className="md:text-[1.6rem] text-[2rem]">
-								{property?.startDate}
-							</p>
-						</div>
-					</div> */}
+
 					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<DollarSign />
@@ -174,16 +150,6 @@ const PropertyDetail: React.FC = () => {
 				<div className="w-full flex flex-col justify-center items-center">
 					<div className="w-full flex justify-between items-center">
 						<p className="md:text-[5rem] text-[3.5rem] font-bold mb-5">Media</p>
-
-						{/* <div className="flex md:gap-5 gap-6">
-							<button className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl rounded-full text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black  hover:bg-[#2A286B] hover:border-[#2A286B] hover:text-[#fff] transition-all ease-in-out duration-300">
-								<Image /> Photos
-							</button>
-
-							<button className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl rounded-full text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black  hover:bg-[#2A286B] hover:border-[#2A286B] hover:text-[#fff] transition-all ease-in-out duration-300">
-								Plans
-							</button>
-						</div> */}
 					</div>
 
 					<div className="w-full flex flex-col justify-start  items-start my-10">
@@ -200,7 +166,7 @@ const PropertyDetail: React.FC = () => {
 						<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
 							<Video /> Video
 						</p>
-						<div className="aspect-video w-full mx-auto rounded-[3rem]  my-10">
+						<div className="aspect-video w-full mx-auto rounded-[1rem] overflow-hidden my-10">
 							<iframe
 								width="100%"
 								height="100%"
@@ -211,15 +177,6 @@ const PropertyDetail: React.FC = () => {
 								referrerPolicy="strict-origin-when-cross-origin"
 								allowFullScreen
 							></iframe>
-
-							{/* <video
-									controls
-									poster={property?.cardImage}
-									className="w-full rounded-3xl"
-								>
-									<source src={property?.video} type="video/mp4" />
-									Your browser does not support the video tag.
-								</video> */}
 						</div>
 					</div>
 					{/* // )} */}
