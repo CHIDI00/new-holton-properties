@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import ScrollVelocity from "../../ui/ScrollVelocity";
-import journey83 from "../../assets/journey_83.png";
-import journey05 from "../../assets/journey_05.png";
-import journey13 from "../../assets/journey_13.png";
-import journey96 from "../../assets/journey_96.png";
-import journey24 from "../../assets/journey_24.png";
-import backg from "../../assets/bg-holton.jpg";
+import journey83 from "../../assets/journey_83.webp";
+import journey05 from "../../assets/journey_05.webp";
+import journey13 from "../../assets/journey_13.webp";
+import journey96 from "../../assets/journey_96.webp";
+import journey24 from "../../assets/journey_24.webp";
+import backg from "../../assets/bg-holton.webp";
 
-import image3 from "../../assets/whatweoffer/service-3.png";
+import image3 from "../../assets/whatweoffer/service-3.webp";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";

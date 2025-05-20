@@ -1,5 +1,5 @@
 import React from "react";
-import bg_image from "../../assets/bg-holton2.jpg";
+import bg_image from "../../assets/bg-holton2.webp";
 import ScrollVelocity from "../../ui/ScrollVelocity";
 import { Gem, Rocket } from "lucide-react";
 import CountUp from "../../ui/CountUp";

@@ -1,10 +1,10 @@
 import React from "react";
 import ScrollVelocity from "../../ui/ScrollVelocity";
-import image1 from "../../assets/whatweoffer/service-1.png";
-import image2 from "../../assets/whatweoffer/service-2.png";
-import image3 from "../../assets/whatweoffer/service-3.png";
-import image4 from "../../assets/whatweoffer/service-4.png";
-import image5 from "../../assets/whatweoffer/service-5.png";
+import image1 from "../../assets/whatweoffer/service-1.webp";
+import image2 from "../../assets/whatweoffer/service-2.webp";
+import image3 from "../../assets/whatweoffer/service-3.webp";
+import image4 from "../../assets/whatweoffer/service-4.webp";
+import image5 from "../../assets/whatweoffer/service-5.webp";
 import { ArrowUpRight } from "lucide-react";
 
 type Service = {

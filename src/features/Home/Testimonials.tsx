@@ -1,6 +1,6 @@
 import React from "react";
 import CircularText from "../../ui/CircularText";
-import project13 from "../../assets/project_13.jpg";
+import project13 from "../../assets/project_13.webp";
 import quote from "../../assets/quotesvg.svg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 

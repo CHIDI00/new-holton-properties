@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../ui/Navbar";
-import bg_image from "../../assets/project_11.jpg";
-import plan from "../../assets/plan/project_plan_1.jpg";
+import bg_image from "../../assets/project_11.webp";
+import plan from "../../assets/plan/project_plan_1.webp";
 import { useParams } from "react-router-dom";
 import { propertyData } from "./propertyData";
 import { NavLink } from "react-router-dom";

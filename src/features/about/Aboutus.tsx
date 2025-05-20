@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollVelocity from "../../ui/ScrollVelocity";
-import about1 from "../../assets/about_1.jpg";
+import about1 from "../../assets/about_1.webp";
 import { ArrowUpRight } from "lucide-react";
 import CountUp from "../../ui/CountUp";
 

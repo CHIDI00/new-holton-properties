@@ -1,5 +1,5 @@
 import React from "react";
-import image6 from "../../assets/project_6.jpg";
+import image6 from "../../assets/project_6.webp";
 import ScrollVelocity from "../../ui/ScrollVelocity";
 import { CircleDotDashed, ThumbsUp, Users } from "lucide-react";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../ui/Navbar";
 import { NavLink } from "react-router-dom";
-import bg_image from "../../assets/project_12.jpg";
+import bg_image from "../../assets/project_12.webp";
 
 const ProjectHeader: React.FC = () => {
 	return (

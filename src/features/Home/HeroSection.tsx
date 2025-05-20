@@ -1,5 +1,5 @@
 import React from "react";
-import bg_image from "../../assets/bg-holton2.jpg";
+import bg_image from "../../assets/bg-holton2.webp";
 import Navbar from "../../ui/Navbar";
 import WhoWeAre from "./WhoWeAre";
 import WhatWeOffer from "./WhatWeOffer";
@@ -33,7 +33,9 @@ const HeroSection: React.FC = () => {
 						<p className="md:text-3xl text-[2.5rem] text-center text-gray-300 font-bold leading-tight">
 							{/* We are a top 25 builder and developer fully invested in our
 							customers’ success and improving the communities we serve. */}
-							As a leading builder and developer, we invest wholeheartedly in our clients’ prosperity and in the growth of the communities we serve.
+							As a leading builder and developer, we invest wholeheartedly in
+							our clients’ prosperity and in the growth of the communities we
+							serve.
 						</p>
 					</div>
 

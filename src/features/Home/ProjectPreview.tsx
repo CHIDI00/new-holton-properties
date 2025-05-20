@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import image9 from "../../assets/project_9.jpg";
-import image7 from "../../assets/project_7.jpg";
-import image3 from "../../assets/project_3.jpg";
-import image5 from "../../assets/project_5.jpg";
+import image9 from "../../assets/project_9.webp";
+import image7 from "../../assets/project_7.webp";
+import image3 from "../../assets/project_3.webp";
+import image5 from "../../assets/project_5.webp";
 import ScrollVelocity from "../../ui/ScrollVelocity";
 import { MapPin } from "lucide-react";
 import { useGSAP } from "@gsap/react";

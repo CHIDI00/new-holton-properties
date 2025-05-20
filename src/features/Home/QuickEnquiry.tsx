@@ -1,7 +1,7 @@
 import React from "react";
-import project3 from "../../assets/project_3.jpg";
-import sketch1 from "../../assets/sketch1.png";
-import sketch2 from "../../assets/sketch2.png";
+import project3 from "../../assets/project_3.webp";
+import sketch1 from "../../assets/sketch1.webp";
+import sketch2 from "../../assets/sketch2.webp";
 import ScrollVelocity from "../../ui/ScrollVelocity";
 import { ArrowUpRight } from "lucide-react";
 
@@ -28,7 +28,12 @@ const QuickEnquiry: React.FC = () => {
 				</div>
 
 				<div className="relative flex flex-col justify-center items-center md:w-[85%] w-[95%] md:h-[80%] h-[85%] bg-white rounded-[3rem] overflow-hidden">
-					<img src={sketch1} alt="" data-aos="fade-right" className="absolute left-[-35%] bottom-0" />
+					<img
+						src={sketch1}
+						alt=""
+						data-aos="fade-right"
+						className="absolute left-[-35%] bottom-0"
+					/>
 					<img
 						src={sketch2}
 						alt=""

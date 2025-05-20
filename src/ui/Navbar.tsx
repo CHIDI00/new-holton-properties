@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../assets/HOLTONicon-dark.png";
+import logo from "../assets/HOLTONicon-dark.webp";
 import { AlignCenter, X } from "lucide-react";
 
 const Navbar: React.FC = () => {
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
 						</li>
 						<li>
 							<NavLink
-								to="/property_grid"
+								to="/shortlet_grid"
 								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Shortlet
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
 
 				{/* Mobile Menu */}
 				<div
-					className={`lg:hidden bg-white fixed overflow-y-auto shadow-lg transition-all duration-300 transform  ${
+					className={`lg:hidden h-full bg-white fixed overflow-y-auto shadow-lg transition-all duration-300 transform  ${
 						mobileMenuOpen ? "translate-x-0" : "translate-x-[-100%]"
 					} ${"top-0 left-0 h-full w-full z-50"}`}
 				>
@@ -143,7 +143,7 @@ const Navbar: React.FC = () => {
 							</li>
 							<li>
 								<NavLink
-									to="/shortlets"
+									to="/shortlet_grid"
 									className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
 									onClick={() => setMobileMenuOpen(false)}
 								>

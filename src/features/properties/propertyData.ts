@@ -1,16 +1,16 @@
-import image1 from "../../assets/project_1.jpg";
-import image2 from "../../assets/project_2.jpg";
-import image3 from "../../assets/project_3.jpg";
-import image4 from "../../assets/project_4.jpg";
-import image5 from "../../assets/project_5.jpg";
-import image6 from "../../assets/project_6.jpg";
-import image7 from "../../assets/project_7.jpg";
-import image8 from "../../assets/project_8.jpg";
-import image9 from "../../assets/project_9.jpg";
-import image10 from "../../assets/project_10.jpg";
-import image11 from "../../assets/project_11.jpg";
-import image12 from "../../assets/project_12.jpg";
-import image13 from "../../assets/project_13.jpg";
+import image1 from "../../assets/project_1.webp";
+import image2 from "../../assets/project_2.webp";
+import image3 from "../../assets/project_3.webp";
+import image4 from "../../assets/project_4.webp";
+import image5 from "../../assets/project_5.webp";
+import image6 from "../../assets/project_6.webp";
+import image7 from "../../assets/project_7.webp";
+import image8 from "../../assets/project_8.webp";
+import image9 from "../../assets/project_9.webp";
+import image10 from "../../assets/project_10.webp";
+import image11 from "../../assets/project_11.webp";
+import image12 from "../../assets/project_12.webp";
+import image13 from "../../assets/project_13.webp";
 
 interface Property {
 	id: number;

@@ -1,6 +1,6 @@
 import React from "react";
-import project4 from "../assets/project_4.jpg";
-import logo from "../assets/HOLTONicon-dark.png";
+import project4 from "../assets/project_4.webp";
+import logo from "../assets/HOLTONicon-dark.webp";
 import Magnet from "./Magnet";
 import { NavLink } from "react-router-dom";
 

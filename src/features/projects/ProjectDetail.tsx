@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../../ui/Navbar";
-import bg_image from "../../assets/project_12.jpg";
+import bg_image from "../../assets/project_12.webp";
 import { NavLink, useParams } from "react-router-dom";
 import {
 	Building,

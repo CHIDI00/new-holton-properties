@@ -10,8 +10,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Projects_page from "./pages/Projects_page";
 import ProjectDetail from "./features/projects/ProjectDetail";
-import PropertyDetail from "./features/properties/PropertyDetail";
 import ScrollToTop from "./ui/ScrollToTop";
+import Shortlet_page from "./pages/Shortlet_page";
+import PropertyDetail from "./features/properties/PropertyDetail";
 
 function App() {
 	// useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
 						path="property_grid/detail/:propertyIdSlug"
 						element={<PropertyDetail />}
 					/>
+					<Route path="shortlet_grid" element={<Shortlet_page />} />
 					<Route path="project_grid" element={<Projects_page />} />
 					<Route
 						path="project_grid/project_detail/:projectIdSlug"

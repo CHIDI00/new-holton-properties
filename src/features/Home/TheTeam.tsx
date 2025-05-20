@@ -1,11 +1,11 @@
 import React from "react";
 import ScrollVelocity from "../../ui/ScrollVelocity";
-import team1 from "../../assets/teams/team-1.jpg";
-import team2 from "../../assets/teams/team-2.jpg";
-import team3 from "../../assets/teams/team-3.jpg";
-import team4 from "../../assets/teams/team-4.jpg";
-import team5 from "../../assets/teams/team-5.jpg";
-import team6 from "../../assets/teams/team-6.jpg";
+import team1 from "../../assets/teams/team-1.webp";
+import team2 from "../../assets/teams/team-2.webp";
+import team3 from "../../assets/teams/team-3.webp";
+import team4 from "../../assets/teams/team-4.webp";
+import team5 from "../../assets/teams/team-5.webp";
+import team6 from "../../assets/teams/team-6.webp";
 import { InfiniteMovingCards } from "../../ui/infinite-moving-cards";
 
 // type TeamType = {
