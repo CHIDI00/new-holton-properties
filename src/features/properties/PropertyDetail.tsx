@@ -172,7 +172,7 @@ const PropertyDetail: React.FC = () => {
 							<iframe
 								width="100%"
 								height="100%"
-								src="https://www.youtube.com/embed/25IqJxAY32g?si=O-ZI5C4tadcMBZgn"
+								src={`https://www.youtube.com/embed/${property?.videoUrl}`}
 								title="YouTube video player"
 								frameBorder="0"
 								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

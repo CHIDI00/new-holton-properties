@@ -12,33 +12,33 @@ import image11 from "../../assets/project_11.webp";
 import image12 from "../../assets/project_12.webp";
 import image13 from "../../assets/project_13.webp";
 
-interface Property {
+interface Shortlet {
 	id: number;
 	status: string;
 	description: string;
-	propertyType: string;
+	shortletType: string;
 	numOfBedroom: number;
 	numOfBathroom: number;
-	propertyArea: string;
+	shortletArea: string;
 	cardImage: string;
 	price: string;
 	alt: string;
 	images: string[];
 	location: string;
-	propertyName: string;
-	propertyDescription: string;
+	shortletName: string;
+	shortletDescription: string;
 	Amenities: string[];
 	videoUrl?: string;
 }
 
-export const propertyData: Property[] = [
+export const shortletData: Shortlet[] = [
 	{
 		id: 1,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A modern apartment building with state-of-the-art amenities and stunning views.",
-		propertyType: "Apartment Building",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Apartment Building",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 		price: "$900k - $1,2M",
@@ -47,18 +47,18 @@ export const propertyData: Property[] = [
 		alt: "Apartment Building",
 		images: [image1, image2, image3, image4],
 		location: "New York, NY",
-		propertyName: "Greenview Apartments",
+		shortletName: "Greenview Apartments",
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 2,
-		status: "For sale",
+		status: "Taken",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -68,19 +68,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Mixed-Use Development",
+		shortletName: "Mixed-Use Development",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 3,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -90,19 +90,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Premier Office Tower",
+		shortletName: "Premier Office Tower",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 4,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -112,19 +112,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Urban Heights Residence",
+		shortletName: "Urban Heights Residence",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 5,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -134,19 +134,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Apartment Building",
+		shortletName: "Apartment Building",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 6,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -156,19 +156,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Commercial & Residential Building",
+		shortletName: "Commercial & Residential Building",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 7,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -178,19 +178,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Residential Complex",
+		shortletName: "Residential Complex",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 8,
-		status: "For sale",
+		status: "Taken",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -200,19 +200,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Eden Estate",
+		shortletName: "Eden Estate",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 9,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -222,19 +222,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Office Building",
+		shortletName: "Office Building",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 10,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -244,19 +244,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Vista at Councill Square",
+		shortletName: "Vista at Councill Square",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 11,
-		status: "For sale",
+		status: "Taken",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -266,19 +266,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Residential Building",
+		shortletName: "Residential Building",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 12,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -288,19 +288,19 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Luxury Apartment",
+		shortletName: "Luxury Apartment",
 
 		Amenities: ["Gym", "pool", "parking", "24/7 security"],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 	{
 		id: 13,
-		status: "For sale",
+		status: "Available",
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
-		propertyType: "Office Space",
-		propertyArea: "26,346.74 Sq. Ft.",
+		shortletType: "Office Space",
+		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -310,7 +310,7 @@ export const propertyData: Property[] = [
 		alt: "Office Space",
 		images: [image1, image2, image3, image4],
 		location: "San Francisco, CA",
-		propertyName: "Mixed-Use Development",
+		shortletName: "Mixed-Use Development",
 
 		Amenities: [
 			"Gym",
@@ -326,7 +326,7 @@ export const propertyData: Property[] = [
 			"CCTV",
 			"BQ",
 		],
-		propertyDescription:
+		shortletDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 	},
 ];

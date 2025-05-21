@@ -81,8 +81,6 @@ const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 					</div>
 				))}
 			</div>
-
-			<div className=""></div>
 		</div>
 	);
 };
