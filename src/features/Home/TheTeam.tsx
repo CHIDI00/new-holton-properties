@@ -88,7 +88,7 @@ const TheTeam: React.FC = () => {
 					<InfiniteMovingCards
 						items={teamData}
 						direction="right"
-						speed="slow"
+						speed="normal"
 					/>
 				</div>
 			</div>

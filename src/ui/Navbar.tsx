@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
 				<div
 					className={`lg:hidden h-full bg-white fixed overflow-y-auto shadow-lg transition-all duration-300 transform  ${
 						mobileMenuOpen ? "translate-x-0" : "translate-x-[-100%]"
-					} ${"top-0 left-0 h-full w-full z-50"}`}
+					} ${"top-0 left-0 h-full w-full z-[100]"}`}
 				>
 					<nav className="container   mx-auto px-4 py-4">
 						<div className="w-full flex justify-end items-center mb-10">

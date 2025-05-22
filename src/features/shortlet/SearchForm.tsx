@@ -10,7 +10,7 @@ const SearchForm: React.FC = () => {
 				<select
 					name=""
 					id=""
-					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 appearance-none bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected>Property Type</option>
 					<option value="building">Building</option>
@@ -22,7 +22,7 @@ const SearchForm: React.FC = () => {
 				<select
 					name=""
 					id=""
-					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 appearance-none bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected>Location</option>
 					<option value="chevron">Chevron</option>
@@ -34,7 +34,7 @@ const SearchForm: React.FC = () => {
 				<select
 					name=""
 					id=""
-					className="md:w-full w-full py-7 px-8 bg-gray-100 rounded-full text-3xl font-medium"
+					className="md:w-full w-full py-7 px-8 appearance-none bg-gray-100 rounded-full text-3xl font-medium"
 				>
 					<option selected>Price Range</option>
 					<option value="N100M - N300.4M">N100M - N300.4M</option>

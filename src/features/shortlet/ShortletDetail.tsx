@@ -69,7 +69,7 @@ const ShortletDetail: React.FC = () => {
 					</h1>
 				</div>
 
-				<div className="container mx-auto md:px-0 flex md:flex-nowrap flex-wrap shrink-0 md:justify-start justify-start items-center md:gap-2 md:py-5">
+				<div className="container mx-auto md:px-0 flex md:flex-nowrap flex-wrap shrink-0  justify-start items-center md:gap-2 md:py-5">
 					<div className="md:p-2 md:w-1/5 w-1/2 p-10 flex md:flex-row flex-col justify-center items-center md:gap-5 gap-5 font-bold">
 						<span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
 							<ChartArea />
@@ -108,7 +108,7 @@ const ShortletDetail: React.FC = () => {
 				<div className="w-full flex flex-col md:flex-row justify-between items-start gap-28">
 					<div className="md:w-[60%] w-full">
 						<p className="md:text-[5rem] text-[3.5rem] font-bold mb-5">
-							shortlet Description
+							Shortlet Description
 						</p>
 						<p className="md:text-[1.8rem] text-[2rem] font-bold text-black md:py-8">
 							{shortlet?.shortletName} in {shortlet?.location}

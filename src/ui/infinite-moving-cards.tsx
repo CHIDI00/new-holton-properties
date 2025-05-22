@@ -92,7 +92,7 @@ export const InfiniteMovingCards = ({
 				{items.map((item, index) => (
 					<li
 						className={cn(
-							"group relative md:h-[45rem] h-[60rem] bg-[#fbfbfb] block  justify-between items-start rounded-[3rem]  hover:bg-blue-800  bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out",
+							"group relative md:h-[45rem] h-[50rem] w-[40rem] bg-[#fbfbfb] block  justify-between items-start rounded-[3rem]  hover:bg-blue-800  bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out",
 							index % 2 === 0 ? "add-margin-top" : ""
 						)}
 						// data-aos="fade-right"
