@@ -13,6 +13,7 @@ import ProjectDetail from "./features/projects/ProjectDetail";
 import ScrollToTop from "./ui/ScrollToTop";
 import Shortlet_page from "./pages/Shortlet_page";
 import PropertyDetail from "./features/properties/PropertyDetail";
+import ShortletDetail from "./features/shortlet/ShortletDetail";
 
 function App() {
 	// useEffect(() => {
@@ -39,6 +40,10 @@ function App() {
 						element={<PropertyDetail />}
 					/>
 					<Route path="shortlet_grid" element={<Shortlet_page />} />
+					<Route
+						path="shortlet_grid/detail/:shortletIdSlug"
+						element={<ShortletDetail />}
+					/>
 					<Route path="project_grid" element={<Projects_page />} />
 					<Route
 						path="project_grid/project_detail/:projectIdSlug"

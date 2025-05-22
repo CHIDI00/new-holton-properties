@@ -19,7 +19,6 @@ interface Shortlet {
 	shortletType: string;
 	numOfBedroom: number;
 	numOfBathroom: number;
-	shortletArea: string;
 	cardImage: string;
 	price: string;
 	alt: string;
@@ -38,7 +37,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A modern apartment building with state-of-the-art amenities and stunning views.",
 		shortletType: "Apartment Building",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 		price: "$900k - $1,2M",
@@ -58,7 +56,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -80,7 +77,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -102,7 +98,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -124,7 +119,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -146,7 +140,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -168,7 +161,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -190,7 +182,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -212,7 +203,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -234,7 +224,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -256,7 +245,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -278,7 +266,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
@@ -300,7 +287,6 @@ export const shortletData: Shortlet[] = [
 		description:
 			"A contemporary office space designed for collaboration and innovation.",
 		shortletType: "Office Space",
-		shortletArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
