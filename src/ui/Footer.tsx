@@ -14,15 +14,26 @@ const Footer: React.FC = () => {
 			<div className="absolute w-full h-20 bg-[#fbfbfb] rounded-b-[5rem] z-[4] -top-1"></div>
 
 			<div className="flex flex-col justify-center items-center">
-				<h1 className="text-[6.5rem] font-bold text-white text-center leading-none z-[4] mb-5">
+				<h1
+					className="text-[6.5rem] font-bold text-white text-center leading-none z-[4] mb-5"
+					data-aos="fade-up"
+				>
 					Your dream <br /> home awaits
 				</h1>
-				<p className="text-[1.7rem] text-center text-white font-semibold leading-tight z-[4] mb-10">
+				<p
+					className="text-[1.7rem] text-center text-white font-semibold leading-tight z-[4] mb-10"
+					data-aos="fade-up"
+				>
 					Whether you’re exploring our homes or envisioning something <br />{" "}
 					custom, we’re here to bring your dream to life.
 				</p>
 
-				<Magnet padding={50} disabled={false} magnetStrength={3}>
+				<Magnet
+					padding={50}
+					disabled={false}
+					magnetStrength={3}
+					data-aos="fade-up"
+				>
 					<div className="w-[150px] h-[150px] hidden md:flex justify-center items-center bg-[#111111a2] border-[1px] border-gray-600 backdrop-blur-xl rounded-full text-white p-6">
 						<p className="text-[2rem] text-center font-semibold leading-tight">
 							Get your <br /> free <br /> Quote
@@ -32,12 +43,18 @@ const Footer: React.FC = () => {
 			</div>
 
 			<div className="w-[97%] md:mb-[-250px] mb-[-100px] md:mt-[-100px] mt-[-30px] flex justify-center items-center z-[4]">
-				<h1 className="md:text-[40rem] text-[15rem] leading-none bg-gradient-to-b from-[rgba(255,255,255,0.47)] to-[rgba(0,0,0,0.2)] bg-clip-text text-transparent">
+				<h1
+					className="md:text-[40rem] text-[15rem] leading-none bg-gradient-to-b from-[rgba(255,255,255,0.47)] to-[rgba(0,0,0,0.2)] bg-clip-text text-transparent"
+					data-aos="fade-up"
+				>
 					holton
 				</h1>
 			</div>
 
-			<div className="mt-[6rem] md:w-[97%] md:h-[45rem] w-[95%] bg-white z-[4] rounded-[3rem] flex flex-col justify-center items-center md:px-[2rem] md:py-0 p-[2rem]">
+			<div
+				className="mt-[6rem] md:w-[97%] md:h-[45rem] w-[95%] bg-white z-[4] rounded-[3rem] flex flex-col justify-center items-center md:px-[2rem] md:py-0 p-[2rem]"
+				data-aos="fade-up"
+			>
 				<div className="md:w-[85%] md:h-full w-full flex flex-col md:flex-row justify-between items-center md:py-20">
 					<div className="md:w-1/3 md:h-full w-full flex flex-col md:justify-between md:items-start justify-center items-center px-[2rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200 pb-6 mg:gap-[5rem] ">
 						<img src={logo} alt="holton logo" />

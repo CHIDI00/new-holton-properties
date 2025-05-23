@@ -68,7 +68,7 @@ const Navbar: React.FC = () => {
 						</li>
 						<li>
 							<NavLink
-								to="#contact"
+								to="contact_us"
 								className="text-2xl font-bold text-black hover:text-gray-400"
 							>
 								Contact
@@ -99,7 +99,7 @@ const Navbar: React.FC = () => {
 						type="button"
 						title="Menu"
 						onClick={toggleMobileMenu}
-						className="p-5 bg-[#2A286B] rounded-3xl text-white cursor-pointer"
+						className="p-5 bg-blue-800 rounded-3xl text-white cursor-pointer"
 					>
 						<AlignCenter />
 					</button>
@@ -117,7 +117,7 @@ const Navbar: React.FC = () => {
 								type="button"
 								title="Close Menu"
 								onClick={() => setMobileMenuOpen(false)}
-								className="p-5 bg-[#2A286B] rounded-3xl text-white cursor-pointer"
+								className="p-5 bg-blue-800 rounded-3xl text-white cursor-pointer"
 							>
 								<X />
 							</button>
@@ -170,7 +170,7 @@ const Navbar: React.FC = () => {
 							</li>
 							<li>
 								<NavLink
-									to="/contact-us"
+									to="/contact_us"
 									className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 text-left mx-6"
 									onClick={() => setMobileMenuOpen(false)}
 								>

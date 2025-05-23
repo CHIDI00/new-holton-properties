@@ -52,7 +52,7 @@ function App() {
 						path="project_grid/project_detail/:projectIdSlug"
 						element={<ProjectDetail />}
 					/>
-					<Route path="contact" element={<Contact_page />} />
+					<Route path="contact_us" element={<Contact_page />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
