@@ -41,7 +41,7 @@ export const propertyData: Property[] = [
 		propertyArea: "26,346.74 Sq. Ft.",
 		numOfBedroom: 4,
 		numOfBathroom: 3,
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image1,
 		videoUrl: "25IqJxAY32g",
 		alt: "Apartment Building",
@@ -62,7 +62,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image2,
 
 		alt: "Office Space",
@@ -84,7 +84,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image3,
 
 		alt: "Office Space",
@@ -106,7 +106,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image4,
 
 		alt: "Office Space",
@@ -128,7 +128,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image5,
 
 		alt: "Office Space",
@@ -150,7 +150,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image6,
 
 		alt: "Office Space",
@@ -172,7 +172,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image7,
 
 		alt: "Office Space",
@@ -194,7 +194,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image8,
 
 		alt: "Office Space",
@@ -216,7 +216,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image9,
 
 		alt: "Office Space",
@@ -238,7 +238,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image10,
 
 		alt: "Office Space",
@@ -260,7 +260,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image11,
 
 		alt: "Office Space",
@@ -282,7 +282,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image12,
 
 		alt: "Office Space",
@@ -304,7 +304,7 @@ export const propertyData: Property[] = [
 		numOfBedroom: 4,
 		numOfBathroom: 3,
 
-		price: "$900k - $1,2M",
+		price: "₦200,000,000",
 		cardImage: image13,
 		videoUrl: "25IqJxAY32g",
 		alt: "Office Space",

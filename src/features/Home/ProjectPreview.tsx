@@ -61,11 +61,11 @@ const ProjectPreview: React.FC = () => {
 		>
 			<div className="w-full bg-black md:hidden flex flex-col justify-center items-center gap-10 p-10 pt-16">
 				<div
-					className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-white"
+					className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full text-white"
 					data-aos="flip-left"
 				>
 					<ScrollVelocity
-						texts={["WHAT WE OFFER •"]}
+						texts={["OUR PROJECTS •"]}
 						velocity={12}
 						className="custom-scroll-text"
 					/>
@@ -82,11 +82,11 @@ const ProjectPreview: React.FC = () => {
 				<div className="w-[50%] h-full md:py-28 py-24 md:px-44 px-10 flex flex-col md:justify-between justify-end items-start md:items-center ">
 					<div className="w-full md:flex hidden flex-col justify-start items-start gap-20">
 						<div
-							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-white"
+							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full text-white"
 							data-aos="flip-left"
 						>
 							<ScrollVelocity
-								texts={["WHAT WE OFFER •"]}
+								texts={["OUR PROJECT •"]}
 								velocity={12}
 								className="custom-scroll-text"
 							/>
@@ -108,7 +108,7 @@ const ProjectPreview: React.FC = () => {
 						</h1>
 						<div className="w-full">
 							<p className="md:text-[1.4rem] text-[1.7rem] font-bold text-white flex items-center gap-4 pb-8 border-b-2 border-gray-400">
-								<span className="text-blue-900">
+								<span className="text-blue-600">
 									<MapPin />
 								</span>
 								Lekki, Phase 2
@@ -145,7 +145,7 @@ const ProjectPreview: React.FC = () => {
 						</h1>
 						<div className="w-full">
 							<p className="md:text-[1.4rem] text-[1.7rem] font-bold text-white flex items-center gap-4 pb-8 border-b-2 border-gray-400">
-								<span className="text-blue-900">
+								<span className="text-blue-600">
 									<MapPin />
 								</span>
 								Chevron
@@ -182,7 +182,7 @@ const ProjectPreview: React.FC = () => {
 						</h1>
 						<div className="w-full">
 							<p className="md:text-[1.4rem] text-[1.7rem] font-bold text-white flex items-center gap-4 pb-8 border-b-2 border-gray-400">
-								<span className="text-blue-900">
+								<span className="text-blue-600">
 									<MapPin />
 								</span>
 								Chevron
@@ -219,7 +219,7 @@ const ProjectPreview: React.FC = () => {
 						</h1>
 						<div className="w-full">
 							<p className="md:text-[1.4rem] text-[1.7rem] font-bold text-white flex items-center gap-4 pb-8 border-b-2 border-gray-400">
-								<span className="text-blue-900">
+								<span className="text-blue-600">
 									<MapPin />
 								</span>
 								Chevron

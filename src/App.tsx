@@ -1,19 +1,22 @@
 import { useEffect } from "react";
 // import { initSmoothScroll } from "./scroll/scroll";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import AppLayout from "./ui/AppLayout";
 import Home_page from "./pages/Home_page";
 import About_page from "./pages/About_page";
 import Property_page from "./pages/Property_page";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
+import Contact_page from "./pages/Contact_page";
 import Projects_page from "./pages/Projects_page";
+
 import ProjectDetail from "./features/projects/ProjectDetail";
 import ScrollToTop from "./ui/ScrollToTop";
 import Shortlet_page from "./pages/Shortlet_page";
 import PropertyDetail from "./features/properties/PropertyDetail";
 import ShortletDetail from "./features/shortlet/ShortletDetail";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
 	// useEffect(() => {
@@ -49,6 +52,7 @@ function App() {
 						path="project_grid/project_detail/:projectIdSlug"
 						element={<ProjectDetail />}
 					/>
+					<Route path="contact" element={<Contact_page />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>

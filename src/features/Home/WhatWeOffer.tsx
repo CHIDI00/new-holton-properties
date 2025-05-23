@@ -51,7 +51,7 @@ const WhatWeOffer: React.FC = () => {
 				<div className="w-full flex flex-col justify-center items-start">
 					<div className="w-full flex justify-center items-center">
 						<div
-							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full"
+							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full"
 							data-aos="flip-left"
 						>
 							<ScrollVelocity
@@ -73,7 +73,7 @@ const WhatWeOffer: React.FC = () => {
 							{/* card */}
 							{services.map((service) => (
 								<div
-									className="group relative md:h-full h-[40rem] bg-white flex flex-col justify-between items-start rounded-[3rem] bg-no-repeat bg-left-bottom p-5 overflow-hidden hover:bg-blue-800 transition-all duration-300 ease-linear"
+									className="group relative md:h-full h-[40rem] bg-white flex flex-col justify-between items-start rounded-[3rem] bg-no-repeat bg-left-bottom p-5 overflow-hidden hover:bg-blue-600 transition-all duration-300 ease-linear"
 									key={service.id}
 									data-aos="fade-right"
 								>
@@ -92,7 +92,7 @@ const WhatWeOffer: React.FC = () => {
 									</p>
 
 									<div className="absolute w-24 h-24 right-0 top-0 rounded-bl-[3rem] bg-[#edecec] ">
-										<span className="absolute z-50 top-2 right-2 p-4 bg-white rounded-full group-hover:bg-blue-800 transition-all duration-300 ease-linear group-hover:text-white">
+										<span className="absolute z-50 top-2 right-2 p-4 bg-white rounded-full group-hover:bg-blue-600 transition-all duration-300 ease-linear group-hover:text-white">
 											<ArrowUpRight />
 										</span>
 										<div
@@ -115,7 +115,7 @@ const WhatWeOffer: React.FC = () => {
 						<div className="w-full md:h-[50%]  grid md:grid-cols-2 grid-cols-1 gap-12 ">
 							{services2.map((service) => (
 								<div
-									className="group relative md:h-full h-[40rem] bg-white flex flex-col justify-between items-start rounded-[3rem] bg-no-repeat bg-left-bottom p-5 hover:bg-blue-800 transition-all duration-300 ease-linear overflow-hidden"
+									className="group relative md:h-full h-[40rem] bg-white flex flex-col justify-between items-start rounded-[3rem] bg-no-repeat bg-left-bottom p-5 hover:bg-blue-600 transition-all duration-300 ease-linear overflow-hidden"
 									key={service.id}
 									data-aos="fade-left"
 								>
@@ -134,7 +134,7 @@ const WhatWeOffer: React.FC = () => {
 									</p>
 
 									<div className="absolute w-28 h-28 right-0 top-0 rounded-bl-[3rem] bg-[#edecec] flex justify-end items-start">
-										<span className="p-6 bg-white rounded-full group-hover:bg-blue-800 transition-all duration-300 ease-linear group-hover:text-white">
+										<span className="p-6 bg-white rounded-full group-hover:bg-blue-600 transition-all duration-300 ease-linear group-hover:text-white">
 											<ArrowUpRight />
 										</span>
 										<div
@@ -160,7 +160,7 @@ const WhatWeOffer: React.FC = () => {
 							Discover top-tier real estate development services.
 						</p>
 						<p
-							className="border-b-[1px] border-gray-900 hover:border-blue-900"
+							className="border-b-[1px] border-gray-900 hover:border-blue-600"
 							data-aos="fade-left"
 						>
 							View all services

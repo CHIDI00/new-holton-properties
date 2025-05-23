@@ -9,7 +9,7 @@ const OurCommitment: React.FC = () => {
 			<div className="container md:px-[11rem] md:h-full flex flex-col md:flex-row justify-between items-center mx-7 gap-20">
 				<div className="w-full md:hidden flex justify-center items-center gap-5">
 					<div
-						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 mb-6 border-[1.4px] border-[#2A286B] rounded-full text-black"
+						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 mb-6 border-[1.4px] border-blue-600 rounded-full text-black"
 						data-aos="flip-left"
 					>
 						<ScrollVelocity
@@ -67,7 +67,7 @@ const OurCommitment: React.FC = () => {
 								/>
 							</div>
 						</div>
-						<h1 className="text-black md:text-[6rem] text-[6.5rem] text-center md:text-left font-bold leading-none">
+						<h1 className="text-black md:text-[6rem] text-[5rem] text-center md:text-left font-bold leading-none">
 							What makes us different
 						</h1>
 						<p className="md:text-[1.5rem] text-[2.2rem] text-center md:text-left font-medium text-gray-600 pt-6 mb-10">
@@ -79,7 +79,7 @@ const OurCommitment: React.FC = () => {
 
 					<div className="w-full flex flex-col ">
 						<div className="w-full flex md:flex-row flex-row justify-between md:items-center items-start border-t-[1px] border-gray-300 py-8 gap-11 md:gap-0">
-							<span className="md:p-8 p-10 bg-blue-900 rounded-full text-[4rem] text-white mr-8">
+							<span className="md:p-8 p-10 bg-blue-700 rounded-full text-[4rem] text-white mr-8">
 								<ThumbsUp />
 							</span>
 							<div className="w-full flex flex-col md:flex-row justify-between md:items-center items-start">
@@ -93,7 +93,7 @@ const OurCommitment: React.FC = () => {
 							</div>
 						</div>
 						<div className="w-full flex md:flex-row flex-row justify-between md:items-center items-start border-t-[1px] border-gray-300 py-8 gap-11 md:gap-0">
-							<span className="md:p-8 p-10 bg-blue-900 rounded-full text-[4rem] text-white mr-8">
+							<span className="md:p-8 p-10 bg-blue-700 rounded-full text-[4rem] text-white mr-8">
 								<Users />
 							</span>
 							<div className="w-full flex flex-col md:flex-row justify-between md:items-center items-start">
@@ -107,7 +107,7 @@ const OurCommitment: React.FC = () => {
 							</div>
 						</div>
 						<div className="w-full flex md:flex-row flex-row justify-between md:items-center items-start border-t-[1px] border-gray-300 py-8 gap-11 md:gap-0">
-							<span className="md:p-8 p-10 bg-blue-900 rounded-full text-[4rem] text-white mr-8">
+							<span className="md:p-8 p-10 bg-blue-700 rounded-full text-[4rem] text-white mr-8">
 								<CircleDotDashed />
 							</span>
 							<div className="w-full flex flex-col md:flex-row justify-between md:items-center items-start">

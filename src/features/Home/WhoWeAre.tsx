@@ -10,7 +10,7 @@ const WhoWeAre: React.FC = () => {
 			<div className="container mx-auto md:px-[11rem] px-[1rem]">
 				<div className="flex md:flex-row flex-col justify-between items-start">
 					<div
-						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full"
+						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full"
 						data-aos="flip-left"
 					>
 						<ScrollVelocity
@@ -99,7 +99,7 @@ const WhoWeAre: React.FC = () => {
 										duration={1}
 										className="count-up-text"
 									/>{" "}
-									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
+									<span className="text-5xl ml-2 text-blue-600">+</span>
 								</h1>
 								<p className="text-gray-400 text-2xl">Over a decade</p>
 							</div>
@@ -123,7 +123,7 @@ const WhoWeAre: React.FC = () => {
 										duration={1}
 										className="count-up-text"
 									/>{" "}
-									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
+									<span className="text-5xl ml-2 text-blue-600">+</span>
 								</h1>
 								<p className="text-gray-400 text-2xl">satisfied</p>
 							</div>
@@ -147,7 +147,7 @@ const WhoWeAre: React.FC = () => {
 										duration={1}
 										className="count-up-text"
 									/>{" "}
-									<span className="text-5xl ml-2 text-[#5a55eb]">+</span>
+									<span className="text-5xl ml-2 text-blue-600">+</span>
 								</h1>
 								<p className="text-gray-400 text-2xl">projects done</p>
 							</div>

@@ -48,7 +48,7 @@ const ShortletDetail: React.FC = () => {
 							to="/shortlet_grid"
 							className="hover:text-blue-400 transition-all ease-in duration-300"
 						>
-							Properties
+							Shortlets
 						</NavLink>{" "}
 						• {shortlet?.shortletName}
 					</p>

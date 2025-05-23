@@ -3,7 +3,12 @@ import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { projectData } from "./projectData";
 
-const ProjectGrid: React.FC = () => {
+interface ProjectListProps {
+	limit: number;
+	currentPage: number;
+}
+
+const ProjectGrid: React.FC<ProjectListProps> = ({ limit, currentPage }) => {
 	const navigate = useNavigate();
 
 	interface Slugify {
@@ -16,10 +21,17 @@ const ProjectGrid: React.FC = () => {
 			.replace(/ /g, "-")
 			.replace(/[^\w-]+/g, "");
 
+	// Calculate the correct slice of shortlets based on pagination
+	const startIndex = (currentPage - 1) * limit;
+	const endIndex = startIndex + limit;
+	const displayData = limit
+		? projectData.slice(startIndex, endIndex)
+		: projectData;
+
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
-				{projectData.map((project) => (
+				{displayData.map((project) => (
 					<div
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden"
 						key={project.id}

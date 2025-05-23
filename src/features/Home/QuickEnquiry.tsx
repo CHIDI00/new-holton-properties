@@ -43,7 +43,7 @@ const QuickEnquiry: React.FC = () => {
 
 					<div className="md:w-[60%] w-full flex flex-col justify-center items-center gap-10 p-10 pt-16 mx-auto z-10">
 						<div
-							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-black"
+							className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full text-black"
 							data-aos="flip-left"
 						>
 							<ScrollVelocity
