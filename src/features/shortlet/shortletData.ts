@@ -84,7 +84,7 @@ export const shortletData: Shortlet[] = [
 		cardImage: image3,
 
 		alt: "Office Space",
-		images: [image1, image2, image3, image4],
+		images: [image1, image5, image7, image2],
 		location: "San Francisco, CA",
 		shortletName: "Premier Office Tower",
 

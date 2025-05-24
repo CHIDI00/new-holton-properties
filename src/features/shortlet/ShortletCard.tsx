@@ -3,6 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { shortletData } from "./shortletData";
 import { MapPin } from "lucide-react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+
 interface ShortletCardProps {
 	limit: number;
 	currentPage: number;
@@ -11,17 +17,13 @@ interface ShortletCardProps {
 const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 	const navigate = useNavigate();
 
-	interface Slugify {
-		(text: string): string;
-	}
-
-	const slugify: Slugify = (text: string): string =>
+	const slugify = (text: string): string =>
 		text
 			.toLowerCase()
 			.replace(/ /g, "-")
 			.replace(/[^\w-]+/g, "");
 
-	// Calculate the correct slice of shortlets based on pagination
+	// Pagination slice
 	const startIndex = (currentPage - 1) * limit;
 	const endIndex = startIndex + limit;
 	const displayData = limit
@@ -33,6 +35,7 @@ const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
 				{displayData.map((shortlet) => (
 					<div
+						key={shortlet.id}
 						className="group w-full md:h-[50rem] h-[50rem] bg-gray-100 border-[1px] border-gray-300 rounded-[3rem] overflow-hidden cursor-pointer p-4"
 						data-aos="fade-up"
 						onClick={() =>
@@ -43,14 +46,28 @@ const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 							)
 						}
 					>
+						{/* Swiper Image Carousel */}
 						<div className="w-full relative h-[60%] rounded-[2.5rem] overflow-hidden">
-							<div
-								className="w-full h-full bg-cover bg-center bg-no-repeat rounded-[2.5rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"
-								style={{ backgroundImage: `url(${shortlet.cardImage})` }}
-							></div>
+							<Swiper
+								pagination={{ dynamicBullets: true }}
+								modules={[Pagination]}
+								className="w-full h-full rounded-[2.5rem]"
+							>
+								{shortlet.images.map((img: string, index: number) => (
+									<SwiperSlide key={index}>
+										<img
+											src={img}
+											alt={`Shortlet ${index}`}
+											className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-[2.5rem]"
+										/>
+									</SwiperSlide>
+								))}
+							</Swiper>
+
+							{/* Status Badge */}
 							<div className="absolute top-4 left-4 w-full flex justify-start items-start">
 								<span
-									className={`bg-[#2A286B] rounded-full md:text-[1.2rem] text-[1.3rem] text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase ${
+									className={`rounded-full md:text-[1.2rem] text-[1.3rem] text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase ${
 										shortlet.status.toLowerCase() === "available"
 											? "bg-[#2b6b28]"
 											: "bg-[#2A286B]"
@@ -60,10 +77,12 @@ const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 								</span>
 							</div>
 						</div>
+
+						{/* Bottom Info */}
 						<div className="w-full h-[40%] flex flex-col justify-between items-center z-[4] md:p-12 md:px-16 py-16 px-4">
 							<div className="w-full">
 								<div className="w-full flex justify-between items-center border-b-2 border-gray-400 pb-8">
-									<p className="md:text-[1.4rem] text-[2rem] font-bold text-black flex items-center gap-4  ">
+									<p className="md:text-[1.4rem] text-[2rem] font-bold text-black flex items-center gap-4">
 										<span className="text-blue-700">
 											<MapPin />
 										</span>
