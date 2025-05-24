@@ -58,14 +58,14 @@ const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 										<img
 											src={img}
 											alt={`Shortlet ${index}`}
-											className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105 rounded-[2.5rem]"
+											className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105"
 										/>
 									</SwiperSlide>
 								))}
 							</Swiper>
 
 							{/* Status Badge */}
-							<div className="absolute top-4 left-4 w-full flex justify-start items-start">
+							<div className="absolute top-4 left-4 w-full flex justify-start items-start z-10">
 								<span
 									className={`rounded-full md:text-[1.2rem] text-[1.3rem] text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase ${
 										shortlet.status.toLowerCase() === "available"
