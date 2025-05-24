@@ -6,8 +6,9 @@ import { MapPin } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-import "swiper/swiper.min.css";
-import "swiper/modules/pagination/pagination.min.css";
+import "swiper/swiper.css";
+import "swiper/css/pagination.css";
+import "./swiper-pagination.css"; // Custom pagination styles
 
 interface ShortletCardProps {
 	limit: number;

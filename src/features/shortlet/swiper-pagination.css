@@ -1,0 +1,15 @@
+.swiper-pagination-bullet {
+	background-color: #808080 !important; /* Gray color for inactive dots */
+	opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: #ffffff !important; /* White color for active dot */
+	opacity: 1;
+}
+
+/* Optional: Increase size of pagination dots for better visibility */
+.swiper-pagination-bullet {
+	width: 10px;
+	height: 10px;
+}
