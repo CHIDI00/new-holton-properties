@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
 import "swiper/swiper.css";
-import "swiper/css/pagination.css";
+import "swiper/module/pagination.css";
 import "./swiper-pagination.css"; // Custom pagination styles
 
 interface ShortletCardProps {
