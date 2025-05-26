@@ -1,14 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Carousel } from "flowbite";
 import { useNavigate } from "react-router-dom";
 import { shortletData } from "./shortletData";
 import { MapPin } from "lucide-react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-
-import "swiper";
-import "./pagination.css";
-import "./swiper-pagination.css"; // Custom pagination styles
 
 interface ShortletCardProps {
 	limit: number;
@@ -18,55 +12,163 @@ interface ShortletCardProps {
 const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 	const navigate = useNavigate();
 
-	const slugify = (text: string): string =>
+	interface Slugify {
+		(text: string): string;
+	}
+
+	const slugify: Slugify = (text: string): string =>
 		text
 			.toLowerCase()
 			.replace(/ /g, "-")
 			.replace(/[^\w-]+/g, "");
 
-	// Pagination slice
+	// Calculate the correct slice of shortlets based on pagination
 	const startIndex = (currentPage - 1) * limit;
 	const endIndex = startIndex + limit;
 	const displayData = limit
 		? shortletData.slice(startIndex, endIndex)
 		: shortletData;
 
+	useEffect(() => {
+		// Loop through all shortlet cards and create carousels
+		shortletData.forEach((shortlet) => {
+			const carouselElement = document.getElementById(
+				`carousel-${shortlet.id}`
+			);
+			if (!carouselElement) return;
+
+			// Query items inside this carousel
+			const items = Array.from(
+				carouselElement.querySelectorAll("[data-carousel-item]")
+			).map((el, index) => ({
+				position: index,
+				el: el as HTMLElement,
+			}));
+
+			// Attach buttons
+			const nextBtn = carouselElement.querySelector("[data-carousel-next]");
+			const prevBtn = carouselElement.querySelector("[data-carousel-prev]");
+
+			// Create Carousel
+			const instance = new Carousel(carouselElement as HTMLElement, items, {
+				defaultPosition: 0,
+				interval: 5000,
+			});
+
+			// Add event listeners to buttons
+			if (nextBtn) nextBtn.addEventListener("click", () => instance.next());
+			if (prevBtn) prevBtn.addEventListener("click", () => instance.prev());
+		});
+	}, []);
+
 	return (
 		<div className="w-full py-12">
-			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
+			<div
+				className={` container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14`}
+			>
 				{displayData.map((shortlet) => (
 					<div
-						key={shortlet.id}
+						id={`carousel-${shortlet.id}`}
 						className="group w-full md:h-[50rem] h-[50rem] bg-gray-100 border-[1px] border-gray-300 rounded-[3rem] overflow-hidden cursor-pointer p-4"
 						data-aos="fade-up"
-						onClick={() =>
-							navigate(
-								`/shortlet_grid/detail/${shortlet.id}-${slugify(
-									shortlet.shortletName
-								)}`
-							)
-						}
+						// onClick={() =>
+						// 	navigate(
+						// 		`/shortlet_grid/detail/${shortlet.id}-${slugify(
+						// 			shortlet.shortletName
+						// 		)}`
+						// 	)
+						// }
 					>
-						{/* Swiper Image Carousel */}
-						<div className="w-full relative h-[60%] rounded-[2.5rem] overflow-hidden">
-							<Swiper
-								pagination={{ dynamicBullets: true }}
-								modules={[Pagination]}
-								className="w-full h-full rounded-[2.5rem]"
+						{/* <div className="w-full relative h-[60%] rounded-[2.5rem] overflow-hidden">
+							<div
+								className="w-full h-full bg-cover bg-center bg-no-repeat rounded-[2.5rem] group-hover:scale-105 transition-transform duration-500 ease-in-out bg-red-200"
 							>
-								{shortlet.images.map((img: string, index: number) => (
-									<SwiperSlide key={index}>
-										<img
-											src={img}
-											alt={`Shortlet ${index}`}
-											className="object-cover w-full h-full transition-transform duration-500 ease-in-out group-hover:scale-105"
+								<img
+									src={shortlet.cardImage}
+									alt=""
+									className="object-cover w-full h-full"
+								/>
+							</div>
+							<div className="absolute top-4 left-4 w-full flex justify-start items-start">
+								<span
+									className={`rounded-full md:text-[1.2rem] text-[1.3rem] text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase ${
+										shortlet.status.toLowerCase() === "available"
+											? "bg-[#2b6b28]"
+											: "bg-[#2A286B]"
+									}`}
+								>
+									{shortlet.status}
+								</span>
+							</div>
+						</div> */}
+
+						<div className="w-full relative h-[60%] rounded-[2.5rem] overflow-hidden">
+							<div
+								id={`carousel-${shortlet.id}`}
+								className="relative w-full h-full"
+								data-carousel="static"
+							>
+								<div className="relative h-full overflow-hidden rounded-[2.5rem] z-0">
+									{shortlet.images.map((img, index) => (
+										<div
+											key={index}
+											className={`absolute inset-0 transition-opacity duration-700 ease-in-out opacity-1 `}
+											data-carousel-item={index === 0 ? "active" : ""}
+										>
+											<img
+												src={img}
+												alt={`Image ${index + 1}`}
+												className="object-cover w-full h-full"
+											/>
+										</div>
+									))}
+								</div>
+
+								{/* Prev/Next buttons */}
+								<button
+									type="button"
+									className="absolute top-1/2 left-4 z-[40] flex items-center justify-center p-3 text-white bg-black/30 rounded-full -translate-y-1/2 hover:bg-black/50 focus:outline-none"
+									data-carousel-prev
+								>
+									<svg
+										aria-hidden="true"
+										className="w-12 h-12"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M15 19l-7-7 7-7"
 										/>
-									</SwiperSlide>
-								))}
-							</Swiper>
+									</svg>
+								</button>
+								<button
+									type="button"
+									className="absolute top-1/2 right-4 z-[40] flex items-center justify-center p-3 text-white bg-black/30 rounded-full -translate-y-1/2 hover:bg-black/50 focus:outline-none"
+									data-carousel-next
+								>
+									<svg
+										aria-hidden="true"
+										className="w-12 h-12"
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											strokeWidth="2"
+											d="M9 5l7 7-7 7"
+										/>
+									</svg>
+								</button>
+							</div>
 
 							{/* Status Badge */}
-							<div className="absolute top-4 left-4 w-full flex justify-start items-start z-10">
+							<div className="absolute top-4 left-4 w-full flex justify-start items-start z-[40]">
 								<span
 									className={`rounded-full md:text-[1.2rem] text-[1.3rem] text-white md:px-5 md:py-2 px-7 py-4 font-bold uppercase ${
 										shortlet.status.toLowerCase() === "available"
@@ -79,11 +181,19 @@ const ShortletCard: React.FC<ShortletCardProps> = ({ limit, currentPage }) => {
 							</div>
 						</div>
 
-						{/* Bottom Info */}
-						<div className="w-full h-[40%] flex flex-col justify-between items-center z-[4] md:p-12 md:px-16 py-16 px-4">
+						<div
+							className="w-full h-[40%] flex flex-col justify-between items-center z-[4] md:p-12 md:px-16 py-16 px-4"
+							onClick={() =>
+								navigate(
+									`/shortlet_grid/detail/${shortlet.id}-${slugify(
+										shortlet.shortletName
+									)}`
+								)
+							}
+						>
 							<div className="w-full">
 								<div className="w-full flex justify-between items-center border-b-2 border-gray-400 pb-8">
-									<p className="md:text-[1.4rem] text-[2rem] font-bold text-black flex items-center gap-4">
+									<p className="md:text-[1.4rem] text-[2rem] font-bold text-black flex items-center gap-4  ">
 										<span className="text-blue-700">
 											<MapPin />
 										</span>
