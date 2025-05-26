@@ -6,10 +6,15 @@
 .swiper-pagination-bullet-active {
 	background-color: #ffffff !important; /* White color for active dot */
 	opacity: 1;
+	/* width: 40px; Slightly larger active dot */
 }
 
 /* Optional: Increase size of pagination dots for better visibility */
 .swiper-pagination-bullet {
 	width: 10px;
 	height: 10px;
+}
+.swiper-pagination-bullet-active {
+	width: 35px; /* Slightly larger active dot */
+	border-radius: 5px;
 }
