@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_11.webp";
 import plan from "../../assets/plan/project_plan_1.webp";
@@ -16,7 +16,18 @@ import {
 import GoogleMapEmbed from "../../ui/GoogleMap";
 import { shortletData } from "./shortletData";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
+import "swiper/css/thumbs";
+
+import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+
 const ShortletDetail: React.FC = () => {
+	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
 	// Get the propertyId from the URL Parameters
 	const { shortletIdSlug } = useParams();
 
@@ -95,13 +106,56 @@ const ShortletDetail: React.FC = () => {
 					</div>
 				</div>
 
-				<div className="w-full md:h-[60rem] h-[50rem] md:my-16 ">
-					<div className="w-full h-full flex justify-center items-center rounded-[3rem] overflow-hidden">
-						<img
-							src={shortlet?.cardImage}
-							alt={shortlet?.alt}
-							className="rounded-[3rem] object-cover"
-						/>
+				<div className="w-full md:h-[75rem] h-[50rem] md:my-16 ">
+					<div className="w-full h-full flex flex-col justify-center items-center  overflow-hidden gap-5">
+						<Swiper
+							style={{
+								//@ts-expect-error CSS custom properties are not recognized in TypeScript
+								"--swiper-navigation-color": "#fff",
+								"--swiper-pagination-color": "#fff",
+							}}
+							spaceBetween={10}
+							navigation={true}
+							thumbs={{ swiper: thumbsSwiper }}
+							modules={[FreeMode, Navigation, Thumbs]}
+							className="h-[80%] w-full rounded-[2rem]"
+						>
+							{shortlet?.images.map((img, index) => (
+								<SwiperSlide
+									key={index}
+									className="flex items-center justify-center bg-gray-700"
+								>
+									<img
+										src={img}
+										alt={shortlet?.alt}
+										className="object-cover w-full h-full"
+									/>
+								</SwiperSlide>
+							))}
+						</Swiper>
+
+						<Swiper
+							onSwiper={setThumbsSwiper}
+							spaceBetween={10}
+							slidesPerView={4}
+							freeMode={true}
+							watchSlidesProgress={true}
+							modules={[FreeMode, Navigation, Thumbs]}
+							className="h-[20%] w-full box-border py-2 grid grid-cols-4 gap-1 overflow-hidden"
+						>
+							{shortlet?.images.map((img, index) => (
+								<SwiperSlide
+									key={index}
+									className="w-full h-full opacity-60 [&.swiper-slide-thumb-active]:opacity-100 transition-opacity"
+								>
+									<img
+										src={img}
+										alt={shortlet?.alt}
+										className="rounded-[1rem] h-full w-full"
+									/>
+								</SwiperSlide>
+							))}
+						</Swiper>
 					</div>
 				</div>
 

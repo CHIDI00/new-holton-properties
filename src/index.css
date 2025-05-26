@@ -7,6 +7,10 @@
 		@apply mt-20;
 	}
 }
+.swiper-button-next,
+.swiper-button-prev {
+	@apply text-white md:p-16 p-16 bg-gray-800 bg-opacity-70 rounded-full flex items-center justify-center hover:bg-opacity-100 transition;
+}
 
 /* :root {
 	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
