@@ -11,7 +11,6 @@ import image3 from "../../assets/whatweoffer/service-3.webp";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
-import { ArrowUpRight } from "lucide-react";
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -85,7 +84,7 @@ const OurStory: React.FC = () => {
 			<div ref={racesWrapperRef} className="racesWrapper w-full h-auto">
 				<div
 					ref={racesRef}
-					className="races relative w-fit h-[50rem] flex flex-nowrap justify-start items-start gap-[7rem] scroll-smooth md:mx-[15rem] mr-0"
+					className="races relative w-fit h-[50rem] flex flex-nowrap justify-start items-start gap-[7rem] scroll-smooth md:mx-[15rem]"
 				>
 					<div className="absolute h-1 w-[100%] md:top-[56.5%] top-[62%] bg-gray-200"></div>
 					{/* cards */}
@@ -186,7 +185,7 @@ const OurStory: React.FC = () => {
 				<div className=" w-full flex flex-col md:justify-start md:items-start md:gap-5 gap-2">
 					<div
 						className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-[#2A286B] rounded-full text-black"
-						// data-aos="flip-left"
+						data-aos="flip-left"
 					>
 						<ScrollVelocity
 							texts={["OUR STORY •"]}
@@ -203,9 +202,9 @@ const OurStory: React.FC = () => {
 					<div className="w-full flex md:flex-row  flex-col justify-between items-start gap-10 mt-10">
 						<div
 							className="group relative md:w-1/3 w-full md:h-[45rem] h-[60rem] bg-[#141333] flex flex-col justify-between items-start rounded-[3rem]   bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out md:py-5 py-10 px-16 pb-20"
-							// data-aos="fade-right"
+							data-aos="fade-right"
 						>
-							<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
+							{/* <div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
 								<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
 									<ArrowUpRight />
 								</span>
@@ -221,7 +220,7 @@ const OurStory: React.FC = () => {
 										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
 									}}
 								></div>
-							</div>
+							</div> */}
 
 							<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
 								<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
@@ -245,9 +244,9 @@ const OurStory: React.FC = () => {
 
 						<div
 							className="group relative md:w-1/3 w-full md:h-[45rem] h-[60rem] bg-[#000] flex flex-col justify-start items-start rounded-[3rem]   bg-no-repeat bg-cover group-hover:scale-105 transition-transform duration-500 ease-in-out md:py-5 py-10 px-16 pb-20 overflow-hidden"
-							// data-aos="fade-right"
+							data-aos="fade-right"
 						>
-							<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
+							{/* <div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
 								<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
 									<ArrowUpRight />
 								</span>
@@ -263,7 +262,7 @@ const OurStory: React.FC = () => {
 										clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
 									}}
 								></div>
-							</div>
+							</div> */}
 
 							<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
 								<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
@@ -306,24 +305,6 @@ const OurStory: React.FC = () => {
 							<div className="absolute inset-0 bg-black bg-opacity-60 rounded-[3rem]"></div>
 
 							<div className="z-[4] flex flex-col justify-between items-start w-full h-full">
-								<div className="absolute md:w-24 md:h-24 w-28 h-28 right-0 bottom-0 rounded-tl-[3rem] bg-[#fbfbfb] ">
-									<span className="absolute z-50 bottom-2 right-2 p-4 bg-blue-600 rounded-full group-hover:bg-black transition-all duration-300 ease-linear group-hover:text-white">
-										<ArrowUpRight />
-									</span>
-									<div
-										className="absolute z-40 w-[30px] h-[30px] top-[-29px] -right-1 rotate-360 bg-[#ce2929]"
-										style={{
-											clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
-										}}
-									></div>
-									<div
-										className="absolute z-40 w-[30px] h-[30px] bottom-[-1px] -left-12 rotate-200 bg-[#2dff31]"
-										style={{
-											clipPath: "path('M0 0 Q0,30 30,30 L 0 30 Z')",
-										}}
-									></div>
-								</div>
-
 								<div className="w-full py-5 border-b-[2px] border-[#f6f6f6] ">
 									<p className="md:text-[1.3rem] text-[2rem] text-[#3262ff] font-extrabold">
 										03.
@@ -343,8 +324,6 @@ const OurStory: React.FC = () => {
 									</p>
 								</div>
 							</div>
-
-							{/* <div className="absolute inset-0 bg-no-repeat bg-left-bottom scale-100 group-hover:scale-105 transition-transform duration-500 ease-in-out"></div> */}
 						</div>
 					</div>
 				</div>

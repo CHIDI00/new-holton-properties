@@ -118,7 +118,7 @@ const ShortletDetail: React.FC = () => {
 							navigation={true}
 							thumbs={{ swiper: thumbsSwiper }}
 							modules={[FreeMode, Navigation, Thumbs]}
-							className="h-[80%] w-full rounded-[2rem]"
+							className="h-[85%] w-full rounded-[2rem]"
 						>
 							{shortlet?.images.map((img, index) => (
 								<SwiperSlide
@@ -141,7 +141,7 @@ const ShortletDetail: React.FC = () => {
 							freeMode={true}
 							watchSlidesProgress={true}
 							modules={[FreeMode, Navigation, Thumbs]}
-							className="h-[20%] w-full box-border py-2 grid grid-cols-4 gap-1 overflow-hidden"
+							className="h-[15%] w-full box-border py-2 grid grid-cols-4 gap-1 overflow-hidden"
 						>
 							{shortlet?.images.map((img, index) => (
 								<SwiperSlide
