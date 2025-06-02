@@ -41,20 +41,20 @@ interface ApiShortlet {
 
 const ShortletDetail: React.FC = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-	const { shortletIdSlug } = useParams<{ shortletIdSlug: string }>();
+	const { shortletSlug } = useParams<{ shortletSlug: string }>();
 	const [shortlet, setShortlet] = useState<ApiShortlet | null>(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState<string | null>(null);
 
 	useEffect(() => {
-		if (!shortletIdSlug) {
+		if (!shortletSlug) {
 			setError("No shortlet ID provided");
 			setLoading(false);
 			return;
 		}
 
-		const id = shortletIdSlug.split("-")[0];
-		if (!id) {
+		const slug = shortletSlug;
+		if (!slug) {
 			setError("Invalid shortlet ID format");
 			setLoading(false);
 			return;
@@ -62,10 +62,10 @@ const ShortletDetail: React.FC = () => {
 
 		const fetchShortletDetail = async () => {
 			try {
-				console.log("Fetching data for shortlet ID:", id);
+				console.log("Fetching data for shortlet SLUG:", slug);
 
 				const response = await fetch(
-					"https://holtonrealty.com/admin/api/shortlets",
+					`https://holtonrealty.com/admin/api/shortlet/${shortletSlug}`,
 					{
 						method: "GET",
 						headers: {
@@ -83,13 +83,13 @@ const ShortletDetail: React.FC = () => {
 
 				console.log("Full API Response:", data);
 
-				const foundShortlet = data.find((item: { id: number }) => {
-					if (!item || !item.id) return false;
-					return String(item.id) === id;
+				const foundShortlet = data.find((item: { slug: string }) => {
+					if (!item || !item.slug) return false;
+					return String(item.slug) === slug;
 				});
 
 				if (!foundShortlet) {
-					throw new Error(`Shortlet with ID ${id} not found`);
+					throw new Error(`Shortlet with ID ${slug} not found`);
 				}
 
 				setShortlet(foundShortlet);
@@ -106,7 +106,7 @@ const ShortletDetail: React.FC = () => {
 		};
 
 		fetchShortletDetail();
-	}, [shortletIdSlug]);
+	}, [shortletSlug]);
 
 	// Loading state
 	if (loading) {

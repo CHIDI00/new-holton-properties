@@ -44,7 +44,7 @@ function App() {
 					/>
 					<Route path="shortlet_grid" element={<Shortlet_page />} />
 					<Route
-						path="shortlet_grid/detail/:shortletIdSlug"
+						path="shortlet_grid/detail/:shortletSlug"
 						element={<ShortletDetail />}
 					/>
 					<Route path="project_grid" element={<Projects_page />} />

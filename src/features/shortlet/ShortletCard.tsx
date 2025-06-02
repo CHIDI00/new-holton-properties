@@ -41,9 +41,10 @@ const ShortletCard: React.FC<ShortletCardProps> = ({
 	// Pagination slice
 	const startIndex = (currentPage - 1) * limit;
 	const endIndex = startIndex + limit;
-	const displayData = limit && shortletData
-		? shortletData.slice(startIndex, endIndex)
-		: shortletData;
+	const displayData =
+		limit && shortletData
+			? shortletData.slice(startIndex, endIndex)
+			: shortletData;
 
 	if (!displayData || displayData.length === 0) {
 		return (
@@ -61,9 +62,7 @@ const ShortletCard: React.FC<ShortletCardProps> = ({
 						key={shortlet.id}
 						className="group w-full md:h-[50rem] h-[50rem] bg-gray-100 border-[1px] border-gray-300 rounded-[3rem] overflow-hidden cursor-pointer p-4"
 						data-aos="fade-up"
-						onClick={() =>
-							navigate(`/shortlet_grid/detail/${shortlet.id}-${shortlet.slug}`)
-						}
+						onClick={() => navigate(`/shortlet_grid/detail/${shortlet.slug}`)}
 					>
 						{/* Swiper Image Carousel */}
 						<div className="relative w-full h-[60%] rounded-[2.5rem] overflow-hidden">
