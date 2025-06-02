@@ -1,14 +1,39 @@
 import React from "react";
 import { MapPin } from "lucide-react";
-import { propertyData } from "./propertyData";
 import { useNavigate } from "react-router-dom";
+
+interface Property {
+	id: number;
+	status: string;
+	description: string;
+	propertyType: string;
+	bedrooms: number;
+	bathrooms: number;
+	cardImage: string;
+	price: string;
+	alt: string;
+	image_paths: string[];
+	location: string;
+	name: string;
+	slug: string;
+	plan: string;
+	type: string;
+	shortletDescription: string;
+	features: string[];
+	videoUrl?: string;
+}
 
 interface PropertyListProps {
 	limit: number;
 	currentPage: number;
+	propertyData: Property[];
 }
 
-const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
+const PropertyList: React.FC<PropertyListProps> = ({
+	limit,
+	currentPage,
+	propertyData,
+}) => {
 	const navigate = useNavigate();
 
 	interface Slugify {
@@ -31,21 +56,21 @@ const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 	return (
 		<div className="w-full py-12">
 			<div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
-				{displayData.map((property) => (
+				{displayData?.map((property) => (
 					<div
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden cursor-pointer"
 						data-aos="fade-up"
 						onClick={() =>
 							navigate(
-								`/property_grid/detail/${property.id}-${slugify(
-									property.propertyName
-								)}`
+								`/property_grid/detail/${property.id}-${slugify(property.slug)}`
 							)
 						}
 					>
 						<div
 							className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat rounded-[3rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"
-							style={{ backgroundImage: `url(${property.cardImage})` }}
+							style={{
+								backgroundImage: `url(https://holtonrealty.com/admin/public${property.image_paths[0]})`,
+							}}
 						></div>
 						<div className="absolute flex flex-col justify-between items-center z-[4] bg-gradient-to-b from-[#00000000] md:to-[#000000d2] to-[#000000e8] w-full h-full md:p-12 md:px-16 p-16">
 							<div className="w-full flex justify-start items-start">
@@ -67,14 +92,14 @@ const PropertyList: React.FC<PropertyListProps> = ({ limit, currentPage }) => {
 									</p>
 								</div>
 								<h1 className="md:text-3xl text-4xl text-white pt-6 font-bold">
-									{property.propertyName}
+									{property.name}
 								</h1>
 								<div className="w-full flex justify-start items-start gap-10">
 									<p className="text-white md:text-[1.4rem] text-[1.8rem] pt-6 font-bold">
-										Bedroom {property.numOfBedroom}
+										Bedroom {property.bedrooms}
 									</p>
 									<p className="text-white md:text-[1.4rem] text-[1.8rem] pt-6 font-bold">
-										Bathroom {property.numOfBathroom}
+										Bathroom {property.bathrooms}
 									</p>
 								</div>
 							</div>

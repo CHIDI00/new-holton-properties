@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_11.webp";
-import plan from "../../assets/plan/project_plan_1.webp";
 import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import {
@@ -9,12 +8,10 @@ import {
 	ChartArea,
 	Check,
 	DollarSign,
-	Expand,
 	MapPin,
 	Video,
 } from "lucide-react";
 import GoogleMapEmbed from "../../ui/GoogleMap";
-import { shortletData } from "./shortletData";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -25,16 +22,151 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
+// Define the interface for API response
+interface ApiShortlet {
+	id: number;
+	name: string;
+	slug: string;
+	location: string;
+	price: string;
+	status: string;
+	type: string;
+	bedrooms: number;
+	bathrooms: number;
+	description: string;
+	features: string[];
+	image_paths: string[];
+	videoUrl?: string;
+}
+
 const ShortletDetail: React.FC = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+	const { shortletIdSlug } = useParams<{ shortletIdSlug: string }>();
+	const [shortlet, setShortlet] = useState<ApiShortlet | null>(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState<string | null>(null);
 
-	// Get the propertyId from the URL Parameters
-	const { shortletIdSlug } = useParams();
+	useEffect(() => {
+		if (!shortletIdSlug) {
+			setError("No shortlet ID provided");
+			setLoading(false);
+			return;
+		}
 
-	// Split the ID from the slug
-	const shortletId = shortletIdSlug ? shortletIdSlug.split("-")[0] : "";
+		const id = shortletIdSlug.split("-")[0];
+		if (!id) {
+			setError("Invalid shortlet ID format");
+			setLoading(false);
+			return;
+		}
 
-	const shortlet = shortletData.find((p) => p.id.toString() === shortletId);
+		const fetchShortletDetail = async () => {
+			try {
+				console.log("Fetching data for shortlet ID:", id);
+
+				const response = await fetch(
+					"https://holtonrealty.com/admin/api/shortlets",
+					{
+						method: "GET",
+						headers: {
+							Accept: "application/json",
+						},
+					}
+				);
+
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
+
+				const text = await response.text();
+				const data = JSON.parse(text);
+
+				console.log("Full API Response:", data);
+
+				const foundShortlet = data.find((item: { id: number }) => {
+					if (!item || !item.id) return false;
+					return String(item.id) === id;
+				});
+
+				if (!foundShortlet) {
+					throw new Error(`Shortlet with ID ${id} not found`);
+				}
+
+				setShortlet(foundShortlet);
+				setError(null);
+			} catch (err) {
+				console.error("Error fetching shortlet:", err);
+				setError(
+					err instanceof Error ? err.message : "Failed to fetch shortlet data"
+				);
+				setShortlet(null);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchShortletDetail();
+	}, [shortletIdSlug]);
+
+	// Loading state
+	if (loading) {
+		return (
+			<>
+				<div
+					className={`relative w-full flex flex-col items-center justify-start bg-cover bg-center bg-no-repeat`}
+					style={{ backgroundImage: `url(${bg_image})` }}
+				>
+					<div className="absolute inset-0 bg-black bg-opacity-40"></div>
+					<div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-[4] -bottom-1"></div>
+					<Navbar />
+
+					<div className="w-full flex flex-col md:flex-row justify-between md:items-end gap-5 items-start md:px-[4rem] md:pt-[10rem] pt-16 px-[1rem] md:py-[10rem] py-[8rem] z-[4]">
+						<p className="md:text-[1.4rem] text-[2rem] text-gray-300 font-bold leading-tight">
+							<NavLink
+								to="/"
+								className="hover:text-blue-400 transition-all ease-in duration-300"
+							>
+								Home
+							</NavLink>{" "}
+							•{" "}
+							<NavLink
+								to="/shortlet_grid"
+								className="hover:text-blue-400 transition-all ease-in duration-300"
+							>
+								Shortlets
+							</NavLink>{" "}
+							• {shortlet?.name}
+						</p>
+					</div>
+				</div>
+				<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+					<div className="text-2xl font-bold text-gray-600">
+						Loading shortlet details...
+					</div>
+				</div>
+			</>
+		);
+	}
+
+	// Error state
+	if (error) {
+		return (
+			<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="text-2xl font-bold text-red-600">Error: {error}</div>
+			</div>
+		);
+	}
+
+	// If shortlet not found
+	if (!shortlet) {
+		return (
+			<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="text-2xl font-bold text-gray-600">
+					Shortlet not found
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div>
@@ -61,7 +193,7 @@ const ShortletDetail: React.FC = () => {
 						>
 							Shortlets
 						</NavLink>{" "}
-						• {shortlet?.shortletName}
+						• {shortlet?.name}
 					</p>
 				</div>
 			</div>
@@ -76,7 +208,7 @@ const ShortletDetail: React.FC = () => {
 					</p>
 
 					<h1 className="md:text-[7rem] text-[5rem] leading-none font-bold">
-						{shortlet?.shortletName}
+						{shortlet?.name}
 					</h1>
 				</div>
 
@@ -120,18 +252,20 @@ const ShortletDetail: React.FC = () => {
 							modules={[FreeMode, Navigation, Thumbs]}
 							className="h-[85%] w-full rounded-[2rem]"
 						>
-							{shortlet?.images.map((img, index) => (
-								<SwiperSlide
-									key={index}
-									className="flex items-center justify-center bg-gray-700"
-								>
-									<img
-										src={img}
-										alt={shortlet?.alt}
-										className="object-cover w-full h-full"
-									/>
-								</SwiperSlide>
-							))}
+							{Object.values(shortlet?.image_paths || {}).map(
+								(img: string, index: number) => (
+									<SwiperSlide
+										key={index}
+										className="flex items-center justify-center bg-gray-700"
+									>
+										<img
+											src={`https://holtonrealty.com/admin/public${img}`}
+											alt={shortlet?.name}
+											className="object-cover w-full h-full"
+										/>
+									</SwiperSlide>
+								)
+							)}
 						</Swiper>
 
 						<Swiper
@@ -143,18 +277,20 @@ const ShortletDetail: React.FC = () => {
 							modules={[FreeMode, Navigation, Thumbs]}
 							className="h-[15%] w-full box-border py-2 grid grid-cols-4 gap-1 overflow-hidden"
 						>
-							{shortlet?.images.map((img, index) => (
-								<SwiperSlide
-									key={index}
-									className="w-full h-full opacity-60 [&.swiper-slide-thumb-active]:opacity-100 transition-opacity"
-								>
-									<img
-										src={img}
-										alt={shortlet?.alt}
-										className="rounded-[1rem] h-full w-full"
-									/>
-								</SwiperSlide>
-							))}
+							{Object.values(shortlet?.image_paths || {}).map(
+								(img: string, index: number) => (
+									<SwiperSlide
+										key={index}
+										className="w-full h-full opacity-60 [&.swiper-slide-thumb-active]:opacity-100 transition-opacity"
+									>
+										<img
+											src={`https://holtonrealty.com/admin/public${img}`}
+											alt={shortlet?.name}
+											className="rounded-[1rem] h-full w-full"
+										/>
+									</SwiperSlide>
+								)
+							)}
 						</Swiper>
 					</div>
 				</div>
@@ -165,10 +301,10 @@ const ShortletDetail: React.FC = () => {
 							Shortlet Description
 						</p>
 						<p className="md:text-[1.8rem] text-[2rem] font-bold text-black md:py-8">
-							{shortlet?.shortletName} in {shortlet?.location}
+							{shortlet?.name} in {shortlet?.location}
 						</p>
 						<p className="md:text-[1.5rem] text-[2rem] font-medium text-gray-500">
-							{shortlet?.shortletDescription}
+							{shortlet?.description}
 						</p>
 					</div>
 
@@ -178,10 +314,13 @@ const ShortletDetail: React.FC = () => {
 						</p>
 
 						<ul className="grid md:grid-cols-3 grid-cols-2 md:gap-y-10 gap-y-8 justify-start items-start gap-5">
-							{shortlet?.Amenities.map((amenity) => (
-								<li className="md:text-[1.5rem] text-[2rem] font-medium gap-5 flex justify-start items-center">
+							{shortlet?.features.map((feature, index) => (
+								<li
+									key={index}
+									className="md:text-[1.5rem] text-[2rem] font-medium gap-5 flex justify-start items-center"
+								>
 									<Check color="red" />
-									{amenity}
+									{feature}
 								</li>
 							))}
 						</ul>
@@ -193,14 +332,14 @@ const ShortletDetail: React.FC = () => {
 						<p className="md:text-[5rem] text-[3.5rem] font-bold mb-5">Media</p>
 					</div>
 
-					<div className="w-full flex flex-col justify-start  items-start my-10">
+					{/* <div className="w-full flex flex-col justify-start  items-start my-10">
 						<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
 							<Expand /> Plan
 						</p>
 						<div className="w-full flex justify-center items-center">
-							<img src={plan} alt="" />
+							<img src={shortlet.plan} alt="" />
 						</div>
-					</div>
+					</div> */}
 
 					{/* {shortlet?.video && ( */}
 					<div className="w-full flex flex-col justify-start  items-start my-10">

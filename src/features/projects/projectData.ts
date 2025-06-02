@@ -37,6 +37,7 @@ interface Project {
 	numberOfFloor: string;
 	specialFeatures: string;
 	Amenities: string;
+	videoUrl?: string;
 	featuresAmenities?: {
 		id: number;
 		title: string;
@@ -63,6 +64,7 @@ export const projectData: Project[] = [
 		numberOfFloor: "20, including two underground levels for parking.",
 		specialFeatures: "Eco-friendly design, rooftop garden",
 		Amenities: "Gym, pool, parking, 24/7 security",
+		videoUrl: "25IqJxAY32g",
 		projectDescription:
 			"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia conseuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur quae ab illoentore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreue laudantium",
 		featuresAmenities: [
