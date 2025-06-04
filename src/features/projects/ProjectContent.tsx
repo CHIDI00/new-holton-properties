@@ -20,7 +20,15 @@ interface ApiProjects {
 	slug: string;
 	plan: string;
 	area: string;
-	features: string[];
+	start_date: string;
+	number_of_floors: string;
+	special_features: string;
+	amenities: {
+		icon: string;
+		title: string;
+		description: string;
+	}[];
+	features: string;
 	video_url?: string;
 }
 
@@ -123,7 +131,11 @@ const ProjectContent: React.FC = () => {
 		<div>
 			<ProjectHeader />
 			<ProjectSearch />
-			<ProjectGrid limit={itemsPerPage} currentPage={currentPage} />
+			<ProjectGrid
+				limit={itemsPerPage}
+				currentPage={currentPage}
+				projectData={projectData}
+			/>
 
 			{/* Pagination Controls */}
 			<div className=" container mx-auto md:px-[11rem] flex justify-start items-center mt-8 mb-16 gap-5 text-[2rem] font-bold px-[2rem]">

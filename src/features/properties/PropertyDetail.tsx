@@ -145,10 +145,10 @@ const PropertyDetail: React.FC = () => {
 							</NavLink>{" "}
 							•{" "}
 							<NavLink
-								to="/shortlet_grid"
+								to="/property_grid"
 								className="hover:text-blue-400 transition-all ease-in duration-300"
 							>
-								Shortlets
+								Property
 							</NavLink>{" "}
 							• {property?.name}
 						</p>
