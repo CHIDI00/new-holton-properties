@@ -10,6 +10,7 @@ interface ApiShortlet {
 	name: string;
 	slug: string;
 	location: string;
+	lat_long: string;
 	price: string;
 	status: string;
 	type: string;
@@ -18,7 +19,7 @@ interface ApiShortlet {
 	description: string;
 	features: string[];
 	image_paths: string[];
-	videoUrl?: string;
+	video_url?: string;
 }
 
 const ShortletContent: React.FC = () => {

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../ui/Navbar";
 import bg_image from "../../assets/project_11.webp";
 import plan from "../../assets/plan/project_plan_1.webp";
 import { useParams } from "react-router-dom";
-import { propertyData } from "./propertyData";
+// import { propertyData } from "./propertyData";
 import { NavLink } from "react-router-dom";
 import {
 	ArrowUpRight,
@@ -26,16 +26,162 @@ import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
+// Define the interface for API response
+interface ApiProperty {
+	id: number;
+	status: string;
+	description: string;
+	type: string;
+	bedrooms: number;
+	bathrooms: number;
+	price: string;
+	image_paths: string[];
+	location: string;
+	lat_long: string;
+	name: string;
+	slug: string;
+	plan: string;
+	area: string;
+	features: string[];
+	video_url?: string;
+}
+
 const PropertyDetail: React.FC = () => {
 	const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+	const { propertySlug } = useParams<{ propertySlug: string }>();
+	const [property, setProperty] = useState<ApiProperty | null>(null);
+	const [loading, setLoading] = useState(true);
+	const [error, setError] = useState<string | null>(null);
+
+	useEffect(() => {
+		if (!propertySlug) {
+			setError("No property ID provided");
+			setLoading(false);
+			return;
+		}
+
+		const slug = propertySlug;
+		if (!slug) {
+			setError("Invalid property ID format");
+			setLoading(false);
+			return;
+		}
+
+		const fetchPropertyDetail = async () => {
+			try {
+				console.log("Fetching data for property SLUG:", slug);
+
+				const response = await fetch(
+					`https://holtonrealty.com/admin/api/property/${propertySlug}`,
+					{
+						method: "GET",
+						headers: {
+							Accept: "application/json",
+						},
+					}
+				);
+
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
+
+				const text = await response.text();
+				const data = JSON.parse(text);
+
+				console.log("Full API Response:", data);
+
+				const foundProperty = data.find((item: { slug: string }) => {
+					if (!item || !item.slug) return false;
+					return String(item.slug) === slug;
+				});
+
+				if (!foundProperty) {
+					throw new Error(`Property with ID ${slug} not found`);
+				}
+
+				setProperty(foundProperty);
+				setError(null);
+			} catch (err) {
+				console.error("Error fetching property:", err);
+				setError(
+					err instanceof Error ? err.message : "Failed to fetch property data"
+				);
+				setProperty(null);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchPropertyDetail();
+	}, [propertySlug]);
 
 	// Get the propertyId from the URL Parameters
-	const { propertyIdSlug } = useParams();
+	// const { propertySlug } = useParams();
 
 	// Split the ID from the slug
-	const propertyId = propertyIdSlug ? propertyIdSlug.split("-")[0] : "";
+	// const slug = propertySlug ? propertySlug : "";
 
-	const property = propertyData.find((p) => p.id.toString() === propertyId);
+	// const property = propertyData.find((p) => p.slug.toString() === slug);
+
+	// Loading state
+	if (loading) {
+		return (
+			<>
+				<div
+					className={`relative w-full flex flex-col items-center justify-start bg-cover bg-center bg-no-repeat`}
+					style={{ backgroundImage: `url(${bg_image})` }}
+				>
+					<div className="absolute inset-0 bg-black bg-opacity-40"></div>
+					<div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-[4] -bottom-1"></div>
+					<Navbar />
+
+					<div className="w-full flex flex-col md:flex-row justify-between md:items-end gap-5 items-start md:px-[4rem] md:pt-[10rem] pt-16 px-[1rem] md:py-[10rem] py-[8rem] z-[4]">
+						<p className="md:text-[1.4rem] text-[2rem] text-gray-300 font-bold leading-tight">
+							<NavLink
+								to="/"
+								className="hover:text-blue-400 transition-all ease-in duration-300"
+							>
+								Home
+							</NavLink>{" "}
+							•{" "}
+							<NavLink
+								to="/shortlet_grid"
+								className="hover:text-blue-400 transition-all ease-in duration-300"
+							>
+								Shortlets
+							</NavLink>{" "}
+							• {property?.name}
+						</p>
+					</div>
+				</div>
+				<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+					<div className="text-2xl font-bold text-gray-600">
+						Loading shortlet details...
+					</div>
+				</div>
+			</>
+		);
+	}
+
+	// Error state
+	if (error) {
+		return (
+			<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="text-2xl font-bold text-red-600">Error: {error}</div>
+			</div>
+		);
+	}
+
+	// If shortlet not found
+	if (!property) {
+		return (
+			<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="text-2xl font-bold text-gray-600">
+					Property not found
+				</div>
+			</div>
+		);
+	}
 
 	return (
 		<div>
@@ -62,7 +208,7 @@ const PropertyDetail: React.FC = () => {
 						>
 							Properties
 						</NavLink>{" "}
-						• {property?.propertyName}
+						• {property?.name}
 					</p>
 				</div>
 			</div>
@@ -77,7 +223,7 @@ const PropertyDetail: React.FC = () => {
 					</p>
 
 					<h1 className="md:text-[7rem] text-[5rem] leading-none font-bold">
-						{property?.propertyName}
+						{property?.name}
 					</h1>
 				</div>
 
@@ -102,9 +248,7 @@ const PropertyDetail: React.FC = () => {
 							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
 								property Area
 							</p>
-							<p className="md:text-[1.6rem] text-[2rem]">
-								{property?.propertyArea}
-							</p>
+							<p className="md:text-[1.6rem] text-[2rem]">{property?.area}</p>
 						</div>
 					</div>
 
@@ -135,14 +279,14 @@ const PropertyDetail: React.FC = () => {
 							modules={[FreeMode, Navigation, Thumbs]}
 							className="h-[85%] w-full rounded-[2rem]"
 						>
-							{property?.images.map((img, index) => (
+							{property?.image_paths.map((img, index) => (
 								<SwiperSlide
 									key={index}
 									className="flex items-center justify-center bg-gray-700"
 								>
 									<img
-										src={img}
-										alt={property?.propertyName}
+										src={`https://holtonrealty.com/admin/public${img}`}
+										alt={property?.name}
 										className="object-cover w-full h-full"
 									/>
 								</SwiperSlide>
@@ -158,14 +302,14 @@ const PropertyDetail: React.FC = () => {
 							modules={[FreeMode, Navigation, Thumbs]}
 							className="h-[15%] w-full box-border py-2 grid grid-cols-4 gap-1 overflow-hidden"
 						>
-							{property?.images.map((img, index) => (
+							{property?.image_paths.map((img, index) => (
 								<SwiperSlide
 									key={index}
 									className="w-full h-full opacity-60 [&.swiper-slide-thumb-active]:opacity-100 transition-opacity"
 								>
 									<img
 										src={img}
-										alt={property?.propertyName}
+										alt={property?.name}
 										className="object-cover rounded-[1rem] h-full w-full"
 									/>
 								</SwiperSlide>
@@ -180,10 +324,10 @@ const PropertyDetail: React.FC = () => {
 							Property Description
 						</p>
 						<p className="md:text-[1.8rem] text-[2rem] font-bold text-black md:py-8">
-							{property?.propertyName} in {property?.location}
+							{property?.name} in {property?.location}
 						</p>
 						<p className="md:text-[1.5rem] text-[2rem] font-medium text-gray-500">
-							{property?.propertyDescription}
+							{property?.description}
 						</p>
 					</div>
 
@@ -193,7 +337,7 @@ const PropertyDetail: React.FC = () => {
 						</p>
 
 						<ul className="grid md:grid-cols-3 grid-cols-2 md:gap-y-10 gap-y-8 justify-start items-start gap-5">
-							{property?.Amenities.map((amenity) => (
+							{property?.features.map((amenity) => (
 								<li className="md:text-[1.5rem] text-[2rem] font-medium gap-5 flex justify-start items-center">
 									<Check color="red" />
 									{amenity}
@@ -218,23 +362,25 @@ const PropertyDetail: React.FC = () => {
 					</div>
 
 					{/* {property?.video && ( */}
-					<div className="w-full flex flex-col justify-start  items-start my-10">
-						<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
-							<Video /> Video
-						</p>
-						<div className="aspect-video w-full mx-auto rounded-[1rem] overflow-hidden my-10">
-							<iframe
-								width="100%"
-								height="100%"
-								src={`https://www.youtube.com/embed/${property?.videoUrl}`}
-								title="YouTube video player"
-								frameBorder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerPolicy="strict-origin-when-cross-origin"
-								allowFullScreen
-							></iframe>
+					{property.video_url && (
+						<div className="w-full flex flex-col justify-start  items-start my-10">
+							<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
+								<Video /> Video
+							</p>
+							<div className="aspect-video w-full mx-auto rounded-[1rem] overflow-hidden my-10">
+								<iframe
+									width="100%"
+									height="100%"
+									src={`https://www.youtube.com/embed/${property?.video_url}`}
+									title="YouTube video player"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+								></iframe>
+							</div>
 						</div>
-					</div>
+					)}
 					{/* // )} */}
 				</div>
 
@@ -283,7 +429,7 @@ const PropertyDetail: React.FC = () => {
 						</form>
 					</div>
 					<div className="md:w-[50%] w-full rounded-[3rem]">
-						<GoogleMapEmbed location={property?.location ?? ""} />
+						<GoogleMapEmbed lat_long={property?.lat_long ?? ""} />
 					</div>
 				</div>
 			</div>

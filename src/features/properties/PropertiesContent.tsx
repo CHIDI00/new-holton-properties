@@ -9,21 +9,19 @@ interface ApiProperties {
 	id: number;
 	status: string;
 	description: string;
-	propertyType: string;
+	type: string;
 	bedrooms: number;
 	bathrooms: number;
-	cardImage: string;
 	price: string;
-	alt: string;
 	image_paths: string[];
 	location: string;
+	lat_long: string;
 	name: string;
 	slug: string;
 	plan: string;
-	type: string;
-	shortletDescription: string;
+	area: string;
 	features: string[];
-	videoUrl?: string;
+	video_url?: string;
 }
 
 const PropertiesContent: React.FC = () => {

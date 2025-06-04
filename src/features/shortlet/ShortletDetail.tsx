@@ -28,6 +28,7 @@ interface ApiShortlet {
 	name: string;
 	slug: string;
 	location: string;
+	lat_long: "6.663628510864267, 3.5143298292724436";
 	price: string;
 	status: string;
 	type: string;
@@ -36,7 +37,7 @@ interface ApiShortlet {
 	description: string;
 	features: string[];
 	image_paths: string[];
-	videoUrl?: string;
+	video_url?: string;
 }
 
 const ShortletDetail: React.FC = () => {
@@ -342,23 +343,25 @@ const ShortletDetail: React.FC = () => {
 					</div> */}
 
 					{/* {shortlet?.video && ( */}
-					<div className="w-full flex flex-col justify-start  items-start my-10">
-						<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
-							<Video /> Video
-						</p>
-						<div className="aspect-video w-full mx-auto rounded-[1rem] overflow-hidden my-10">
-							<iframe
-								width="100%"
-								height="100%"
-								src={`https://www.youtube.com/embed/${shortlet?.videoUrl}`}
-								title="YouTube video player"
-								frameBorder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerPolicy="strict-origin-when-cross-origin"
-								allowFullScreen
-							></iframe>
+					{shortlet.video_url && (
+						<div className="w-full flex flex-col justify-start  items-start my-10">
+							<p className="flex justify-center items-center bg-[#ffffff] md:text-xl text-3xl text-black font-bold px-8 pl-8 py-4 gap-4 border-[1px] border-black rounded-full">
+								<Video /> Video
+							</p>
+							<div className="aspect-video w-full mx-auto rounded-[1rem] overflow-hidden my-10">
+								<iframe
+									width="100%"
+									height="100%"
+									src={`https://www.youtube.com/embed/${shortlet?.video_url}`}
+									title="YouTube video player"
+									frameBorder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+								></iframe>
+							</div>
 						</div>
-					</div>
+					)}
 					{/* // )} */}
 				</div>
 
@@ -407,7 +410,7 @@ const ShortletDetail: React.FC = () => {
 						</form>
 					</div>
 					<div className="md:w-[50%] w-full rounded-[3rem]">
-						<GoogleMapEmbed location={shortlet?.location ?? ""} />
+						<GoogleMapEmbed lat_long={shortlet?.lat_long ?? ""} />
 					</div>
 				</div>
 			</div>

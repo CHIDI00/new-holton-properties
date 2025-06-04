@@ -14,6 +14,7 @@ interface Shortlet {
 	name: string;
 	slug: string;
 	location: string;
+	lat_long: string;
 	price: string;
 	status: string;
 	type: string;
@@ -22,7 +23,7 @@ interface Shortlet {
 	description: string;
 	features: string[];
 	image_paths: string[];
-	videoUrl?: string;
+	video_url?: string;
 }
 
 interface ShortletCardProps {

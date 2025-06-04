@@ -6,21 +6,19 @@ interface Property {
 	id: number;
 	status: string;
 	description: string;
-	propertyType: string;
+	type: string;
 	bedrooms: number;
 	bathrooms: number;
-	cardImage: string;
 	price: string;
-	alt: string;
 	image_paths: string[];
 	location: string;
+	lat_long: string;
 	name: string;
 	slug: string;
 	plan: string;
-	type: string;
-	shortletDescription: string;
+	area: string;
 	features: string[];
-	videoUrl?: string;
+	video_url?: string;
 }
 
 interface PropertyListProps {
@@ -36,15 +34,15 @@ const PropertyList: React.FC<PropertyListProps> = ({
 }) => {
 	const navigate = useNavigate();
 
-	interface Slugify {
-		(text: string): string;
-	}
+	// interface Slugify {
+	// 	(text: string): string;
+	// }
 
-	const slugify: Slugify = (text: string): string =>
-		text
-			.toLowerCase()
-			.replace(/ /g, "-")
-			.replace(/[^\w-]+/g, "");
+	// const slugify: Slugify = (text: string): string =>
+	// 	text
+	// 		.toLowerCase()
+	// 		.replace(/ /g, "-")
+	// 		.replace(/[^\w-]+/g, "");
 
 	// Calculate the correct slice of shortlets based on pagination
 	const startIndex = (currentPage - 1) * limit;
@@ -60,11 +58,7 @@ const PropertyList: React.FC<PropertyListProps> = ({
 					<div
 						className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden cursor-pointer"
 						data-aos="fade-up"
-						onClick={() =>
-							navigate(
-								`/property_grid/detail/${property.id}-${slugify(property.slug)}`
-							)
-						}
+						onClick={() => navigate(`/property_grid/detail/${property.slug}`)}
 					>
 						<div
 							className="absolute top-0 left-0 w-full h-full bg-cover bg-center bg-no-repeat rounded-[3rem] group-hover:scale-105 transition-transform duration-500 ease-in-out"

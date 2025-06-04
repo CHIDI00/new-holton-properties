@@ -39,7 +39,7 @@ function App() {
 					<Route path="about_us" element={<About_page />} />
 					<Route path="property_grid" element={<Property_page />} />
 					<Route
-						path="property_grid/detail/:propertyIdSlug"
+						path="property_grid/detail/:propertySlug"
 						element={<PropertyDetail />}
 					/>
 					<Route path="shortlet_grid" element={<Shortlet_page />} />
