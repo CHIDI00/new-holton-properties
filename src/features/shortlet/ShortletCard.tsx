@@ -8,6 +8,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./swiper-pagination.css";
+import { formatCurrency } from "../../utils/helper";
 
 interface Shortlet {
 	id: number;
@@ -110,7 +111,7 @@ const ShortletCard: React.FC<ShortletCardProps> = ({
 										{shortlet.location}
 									</p>
 									<p className="md:text-[1.4rem] text-[2rem] font-bold text-black">
-										{shortlet.price}
+										{formatCurrency(shortlet.price)}
 									</p>
 								</div>
 								<h1 className="md:text-3xl text-4xl text-black pt-6 font-bold">

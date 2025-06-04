@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import { formatCurrency } from "../../utils/helper";
 
 interface Property {
 	id: number;
@@ -82,7 +83,7 @@ const PropertyList: React.FC<PropertyListProps> = ({
 										{property.location}
 									</p>
 									<p className="md:text-[1.4rem] text-[2rem] font-bold text-white">
-										{property.price}
+										{formatCurrency(property.price)}
 									</p>
 								</div>
 								<h1 className="md:text-3xl text-4xl text-white pt-6 font-bold">

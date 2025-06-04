@@ -21,6 +21,7 @@ import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
+import { formatCurrency } from "../../utils/helper";
 
 // Define the interface for API response
 interface ApiShortlet {
@@ -234,7 +235,9 @@ const ShortletDetail: React.FC = () => {
 							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
 								Price Range
 							</p>
-							<p className="md:text-[1.6rem] text-[2rem]">{shortlet?.price}</p>
+							<p className="md:text-[1.6rem] text-[2rem]">
+								{formatCurrency(shortlet?.price)}
+							</p>
 						</div>
 					</div>
 				</div>

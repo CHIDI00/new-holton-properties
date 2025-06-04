@@ -16,6 +16,7 @@ import {
 	Video,
 } from "lucide-react";
 import GoogleMapEmbed from "../../ui/GoogleMap";
+import { formatCurrency } from "../../utils/helper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -260,7 +261,9 @@ const PropertyDetail: React.FC = () => {
 							<p className="md:text-[1.6rem] text-[2rem] text-gray-400">
 								Price Range
 							</p>
-							<p className="md:text-[1.6rem] text-[2rem]">{property?.price}</p>
+							<p className="md:text-[1.6rem] text-[2rem]">
+								{formatCurrency(property?.price)}
+							</p>
 						</div>
 					</div>
 				</div>
