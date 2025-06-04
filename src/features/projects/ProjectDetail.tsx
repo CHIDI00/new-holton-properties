@@ -13,6 +13,7 @@ import {
 	MapPin,
 } from "lucide-react";
 import { formatCurrency } from "../../utils/helper";
+import Loader from "../../ui/Loader";
 
 // Define the interface for API response
 interface ApiProjects {
@@ -142,9 +143,9 @@ const ProjectDetail: React.FC = () => {
 						</p>
 					</div>
 				</div>
-				<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="container h-[40rem] mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
 					<div className="text-2xl font-bold text-gray-600">
-						Loading shortlet details...
+						<Loader />
 					</div>
 				</div>
 			</>
@@ -154,8 +155,31 @@ const ProjectDetail: React.FC = () => {
 	// Error state
 	if (error) {
 		return (
-			<div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
-				<div className="text-2xl font-bold text-red-600">Error: {error}</div>
+			<div className="container h-[40rem] mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
+				<div className="text-2xl font-bold text-red-600 flex flex-col justify-center items-center">
+					<p className="text-5xl">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="70"
+							height="70"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							className="lucide lucide-unplug-icon lucide-unplug"
+						>
+							<path d="m19 5 3-3" />
+							<path d="m2 22 3-3" />
+							<path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" />
+							<path d="M7.5 13.5 10 11" />
+							<path d="M10.5 16.5 13 14" />
+							<path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z" />
+						</svg>
+					</p>
+					<p>Connection failed </p>
+				</div>
 			</div>
 		);
 	}

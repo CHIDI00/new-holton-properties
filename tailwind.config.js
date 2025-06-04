@@ -44,6 +44,26 @@ export default {
 					},
 				},
 			},
+			// Custom radial gradient definition
+			backgroundImage: {
+				"loader-dot-gradient":
+					"radial-gradient(farthest-side, transparent calc(95% - 3px), #fff calc(100% - 3px) 98%, transparent 101%)",
+			},
+			// Custom animation keyframes
+			keyframes: {
+				l9: {
+					"0%": { backgroundPosition: "0 50%, 50% 50%, 100% 50%" },
+					"20%": { backgroundPosition: "0 0, 50% 50%, 100% 50%" },
+					"40%": { backgroundPosition: "0 100%, 50% 0, 100% 50%" },
+					"60%": { backgroundPosition: "0 50%, 50% 100%, 100% 0" },
+					"80%": { backgroundPosition: "0 50%, 50% 50%, 100% 100%" },
+					"100%": { backgroundPosition: "0 50%, 50% 50%, 100% 50%" },
+				},
+			},
+			// Apply the custom animation
+			animation: {
+				"l9-animation": "l9 1s infinite alternate",
+			},
 		},
 	},
 	plugins: [require("flowbite/plugin")],
