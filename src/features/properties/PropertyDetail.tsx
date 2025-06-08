@@ -39,7 +39,8 @@ interface ApiProperty {
 	price: string;
 	image_paths: string[];
 	location: string;
-	lat_long: string;
+	lat: number;
+	lng: number;
 	name: string;
 	slug: string;
 	plan: string;
@@ -456,7 +457,10 @@ const PropertyDetail: React.FC = () => {
 						</form>
 					</div>
 					<div className="md:w-[50%] w-full rounded-[3rem]">
-						<GoogleMapEmbed lat_long={property?.lat_long ?? ""} />
+						<GoogleMapEmbed
+							lat={property?.lat ?? ""}
+							lng={property?.lng ?? ""}
+						/>
 					</div>
 				</div>
 			</div>

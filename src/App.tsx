@@ -26,10 +26,10 @@ const ShortletDetail = lazy(() => import("./features/shortlet/ShortletDetail"));
 
 function App() {
 	useEffect(() => {
-		// AOS.init({
-		// 	duration: 1000,
-		// 	once: true,
-		// });
+		AOS.init({
+			duration: 1000,
+			once: true,
+		});
 	}, []);
 
 	return (

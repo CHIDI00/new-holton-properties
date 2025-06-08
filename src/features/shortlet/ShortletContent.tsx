@@ -3,7 +3,7 @@ import SHortletHeader from "./SHortletHeader";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import ShortletCard from "./ShortletCard";
 import Loader from "../../ui/Loader"; // Assuming this path is correct
-import FilterForm from "../../ui/FIlterForm";
+import FilterForm from "../../ui/FilterForm";
 
 // Define the interface for API response
 interface ApiShortlet {
@@ -11,7 +11,8 @@ interface ApiShortlet {
 	name: string;
 	slug: string;
 	location: string;
-	lat_long: string;
+	lat: number;
+	lng: number;
 	price: string;
 	status: string;
 	type: string;

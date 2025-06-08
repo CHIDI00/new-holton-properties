@@ -13,7 +13,8 @@ interface Property {
 	price: string;
 	image_paths: string[];
 	location: string;
-	lat_long: string;
+	lat: number;
+	lng: number;
 	name: string;
 	slug: string;
 	plan: string;

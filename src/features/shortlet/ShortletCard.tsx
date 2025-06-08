@@ -15,7 +15,8 @@ interface Shortlet {
 	name: string;
 	slug: string;
 	location: string;
-	lat_long: string;
+	lat: number;
+	lng: number;
 	price: string;
 	status: string;
 	type: string;
@@ -79,7 +80,7 @@ const ShortletCard: React.FC<ShortletCardProps> = ({
 											<img
 												src={`https://holtonrealty.com/admin/public${img}`}
 												alt={`Shortlet ${index}`}
-												loading='lazy'
+												loading="lazy"
 												className="object-cover w-full h-full transition-transform duration-500 ease-in-out"
 											/>
 										</SwiperSlide>

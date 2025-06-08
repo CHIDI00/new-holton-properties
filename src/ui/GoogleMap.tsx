@@ -1,9 +1,10 @@
 interface GoogleMapEmbedProps {
-	lat_long: string;
+	lat: number;
+	lng: number;
 }
 
-const GoogleMapEmbed: React.FC<GoogleMapEmbedProps> = ({ lat_long }) => {
-	const mapUrl = `https://www.google.com/maps?q=${lat_long}&hl=es;z=14&output=embed`;
+const GoogleMapEmbed: React.FC<GoogleMapEmbedProps> = ({ lat, lng }) => {
+	const mapUrl = `https://www.google.com/maps?q=${lat},${lng}&hl=es;z=14&output=embed`;
 
 	return (
 		<iframe
