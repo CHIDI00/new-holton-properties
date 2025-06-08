@@ -28,8 +28,7 @@ interface ApiProjects {
 	price: string;
 	image_paths: string[];
 	location: string;
-	lat: number;
-	lng: number;
+	lat_long: string;
 	name: string;
 	slug: string;
 	plan: string;
@@ -463,10 +462,7 @@ const ProjectDetail: React.FC = () => {
 								</form>
 							</div>
 							<div className="md:w-[50%] w-full rounded-[3rem]">
-								<GoogleMapEmbed
-									lat={project?.lat ?? ""}
-									lng={project?.lng ?? ""}
-								/>
+								<GoogleMapEmbed lat_long={project?.lat_long ?? ""} />
 							</div>
 						</div>
 					</div>

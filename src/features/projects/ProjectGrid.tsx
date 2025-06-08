@@ -13,8 +13,7 @@ interface Project {
 	price: string;
 	image_paths: string[];
 	location: string;
-	lat: number;
-	lng: number;
+	lat_long: string;
 	name: string;
 	slug: string;
 	plan: string;

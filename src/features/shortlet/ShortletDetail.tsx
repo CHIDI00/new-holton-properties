@@ -30,6 +30,7 @@ interface ApiShortlet {
 	name: string;
 	slug: string;
 	location: string;
+	lat_long: "6.663628510864267, 3.5143298292724436";
 	lat: number;
 	lng: number;
 	price: string;
@@ -438,10 +439,7 @@ const ShortletDetail: React.FC = () => {
 						</form>
 					</div>
 					<div className="md:w-[50%] w-full rounded-[3rem]">
-						<GoogleMapEmbed
-							lat={shortlet?.lat ?? ""}
-							lng={shortlet?.lng ?? ""}
-						/>
+						<GoogleMapEmbed lat_long={shortlet?.lat_long ?? ""} />
 					</div>
 				</div>
 			</div>

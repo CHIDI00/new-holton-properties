@@ -11,8 +11,7 @@ interface ApiShortlet {
 	name: string;
 	slug: string;
 	location: string;
-	lat: number;
-	lng: number;
+	lat_long: "6.663628510864267, 3.5143298292724436";
 	price: string;
 	status: string;
 	type: string;
