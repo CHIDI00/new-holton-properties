@@ -1,5 +1,3 @@
-// src/components/SearchForm.tsx (or SearchFormProperties.tsx if you want a separate one)
-
 import React, { useState, useEffect } from "react";
 
 // Define the interface for filter options (consistent across components)
@@ -9,17 +7,16 @@ interface FilterOptions {
   priceRange: string;
 }
 
-// Define props for SearchForm
-interface SearchFormProps {
+// Define props for FilterForm
+interface FilterFormProps {
   onSearch: (filters: FilterOptions) => void; // Callback to pass filter state to parent
   currentFilters: FilterOptions; // To set initial values or show current filters
-  // New props to make this form generic for properties or shortlets
   typeOptions: { value: string; label: string }[];
   locationOptions: { value: string; label: string }[];
   priceRangeOptions: { value: string; label: string }[];
 }
 
-const SearchForm: React.FC<SearchFormProps> = ({
+const FilterForm: React.FC<FilterFormProps> = ({
   onSearch,
   currentFilters,
   typeOptions,
@@ -31,7 +28,7 @@ const SearchForm: React.FC<SearchFormProps> = ({
   const [selectedLocation, setSelectedLocation] = useState(currentFilters.location || "");
   const [selectedPriceRange, setSelectedPriceRange] = useState(currentFilters.priceRange || "");
 
-  // Optional: Update internal state if currentFilters from parent change (e.g., reset filters)
+  // Update internal state if currentFilters from parent change (e.g., reset filters)
   useEffect(() => {
     setSelectedType(currentFilters.type || "");
     setSelectedLocation(currentFilters.location || "");
@@ -143,4 +140,4 @@ const SearchForm: React.FC<SearchFormProps> = ({
   );
 };
 
-export default SearchForm;
+export default FilterForm;

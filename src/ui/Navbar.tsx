@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 			<nav className="flex justify-between items-center bg-white py-5 px-7 w-[95%] mx-auto my-10 rounded-3xl md:rounded-full">
 				<div className=" hidden lg:flex justify-start items-center ">
 					<div className="text-black text-lg font-bold border-r-[.8px] border-gray-200 pr-4 mr-16">
-						<img src={logo} alt="Holton Logo" />
+						<img src={logo} alt="Holton Logo" className="w-54 h-20" />
 					</div>
 					<ul className="flex space-x-10 ">
 						<li>
@@ -92,7 +92,7 @@ const Navbar: React.FC = () => {
 				{/* Mobile Nav button */}
 				<div className="lg:hidden w-full flex justify-between items-center">
 					<div className="text-black text-lg font-bold pr-4 mr-16">
-						<img src={logo} alt="Holton Logo" />
+						<img src={logo} alt="Holton Logo" className="w-54 h-20" />
 					</div>
 
 					<button

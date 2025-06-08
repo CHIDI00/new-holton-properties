@@ -6,7 +6,6 @@ export default {
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
 		"./app/**/*.{js,ts,jsx,tsx,mdx}",
 		"./features/**/*.{js,ts,jsx,tsx,mdx}",
-		"./node_modules/flowbite/**/*.js",
 	],
 	theme: {
 		// screens: {
@@ -66,5 +65,8 @@ export default {
 			},
 		},
 	},
-	plugins: [require("flowbite/plugin")],
+	plugins: [],
+	corePlugins: {
+		preflight: true, // Should be true by default, but verify
+	},
 };
