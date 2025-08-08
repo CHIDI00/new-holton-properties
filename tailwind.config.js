@@ -19,22 +19,6 @@ export default {
     extend: {
       inset: { 13: "26px" },
 
-      keyframes: {
-        animloader: {
-          "0%": {
-            left: "0",
-            transform: "translateX(-100%)",
-          },
-          "100%": {
-            left: "100%",
-            transform: "translateX(0%)",
-          },
-        },
-      },
-      animation: {
-        animloader: "animloader 2s linear infinite",
-      },
-
       animation: {
         "fade-in-up": "fadeInUp 0.5s ease-out forwards",
         scroll:
@@ -70,6 +54,23 @@ export default {
       // Apply the custom animation
       animation: {
         "l9-animation": "l9 1s infinite alternate",
+      },
+    },
+    extend: {
+      keyframes: {
+        animloader: {
+          "0%": {
+            left: "0",
+            transform: "translateX(-100%)",
+          },
+          "100%": {
+            left: "100%",
+            transform: "translateX(0%)",
+          },
+        },
+      },
+      animation: {
+        animloader: "animloader 2s linear infinite",
       },
     },
   },

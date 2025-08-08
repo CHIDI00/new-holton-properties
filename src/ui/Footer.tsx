@@ -3,6 +3,7 @@ import project4 from "../assets/project_4.webp";
 import logo from "../assets/HOLTONicon-dark.webp";
 import Magnet from "./Magnet";
 import { NavLink } from "react-router-dom";
+// import { HashLink } from "react-router-hash-link";
 
 const Footer: React.FC = () => {
   return (
@@ -64,39 +65,39 @@ const Footer: React.FC = () => {
             </p>
           </div>
           <div className="md:w-[30%] flex justify-start items-start md:h-full w-full md:py-0 py-[3rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
-            <ul className="w-full grid grid-cols-2 justify-start items-center md:px-0 px-[5rem] md:text-[1.5rem] text-[2rem] font-bold ">
+            <ul className="w-full grid grid-cols-2 justify-start items-center md:px-0 px-[5rem] md:text-[2rem] text-[2rem] font-bold ">
               <li className="mb-[1.5rem]">
                 <NavLink to="/about_us">About Us</NavLink>
               </li>
               <li className="mb-[1.5rem]">
-                <a href="#whychooseus">Why Choose Us</a>
+                <NavLink to="/">Why Choose Us</NavLink>
               </li>
-              <li className="mb-[1.5rem]">
+              {/* <li className="mb-[1.5rem]">
                 <a href="">Our Team</a>
               </li>
               <li className="mb-[1.5rem]">
                 <a href="">Solutions</a>
-              </li>
+              </li> */}
               <li className="mb-[1.5rem]">
-                <a href="">Partners</a>
+                <a href="/">Partners</a>
               </li>
-              <li className="mb-[1.5rem]">
+              {/* <li className="mb-[1.5rem]">
                 <a href="">Core Values</a>
-              </li>
-              <li className="mb-[1.5rem]">
+              </li> */}
+              {/* <li className="mb-[1.5rem]">
                 <a href="">Our Projects</a>
               </li>
               <li className="mb-[1.5rem]">
                 <a href="">News & Updates</a>
-              </li>
-              <li className="mb-[1.5rem]">
+              </li> */}
+              {/* <li className="mb-[1.5rem]">
                 <a href="">Terms & Conditions</a>
-              </li>
-              <li className="mb-[1.5rem]">
+              </li> */}
+              {/* <li className="mb-[1.5rem]">
                 <a href="">Support Center</a>
-              </li>
+              </li> */}
               <li className="mb-[1.5rem]">
-                <NavLink to="">Contacts</NavLink>
+                <NavLink to="/contact_us">Contacts</NavLink>
               </li>
             </ul>
           </div>
