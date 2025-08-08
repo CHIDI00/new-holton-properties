@@ -3,6 +3,10 @@ import project4 from "../assets/project_4.webp";
 import logo from "../assets/HOLTONicon-dark.webp";
 import Magnet from "./Magnet";
 import { NavLink } from "react-router-dom";
+import facebook from "./../assets/socialIcons/Facebook.png";
+import x from "./../assets/socialIcons/X.png";
+import instagram from "./../assets/socialIcons/Instagram.png";
+import youtube from "./../assets/socialIcons/Youtube.png";
 // import { HashLink } from "react-router-hash-link";
 
 const Footer: React.FC = () => {
@@ -112,14 +116,38 @@ const Footer: React.FC = () => {
               </p>
             </div>
 
-            <div className="flex justify-start items-start gap-[1rem] md:text-[1.1rem] text-gray-400 text-[2rem] transition-all duration-300">
-              <p className="cursor-pointer hover:text-black">Facebook</p>
+            <div className="flex justify-start items-center gap-[1rem] md:text-[3rem] text-gray-400 text-[2rem] transition-all duration-300">
+              <div className="cursor-pointer hover:text-black">
+                <img
+                  src={facebook}
+                  alt="FaceBook"
+                  className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
+                />
+              </div>
               <p>•</p>
-              <p className="cursor-pointer hover:text-black">Instagram</p>
+              <div className="cursor-pointer hover:text-black">
+                <img
+                  src={instagram}
+                  alt="Instagram"
+                  className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
+                />
+              </div>
               <p>•</p>
-              <p className="cursor-pointer hover:text-black">Youtube</p>
+              <div className="cursor-pointer hover:text-black">
+                <img
+                  src={x}
+                  alt="x"
+                  className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
+                />
+              </div>
               <p>•</p>
-              <p className="cursor-pointer hover:text-black">Twitter</p>
+              <div className="cursor-pointer hover:text-black">
+                <img
+                  src={youtube}
+                  alt="Youtube"
+                  className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
+                />
+              </div>
             </div>
           </div>
         </div>
