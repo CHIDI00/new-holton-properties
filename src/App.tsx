@@ -57,7 +57,7 @@ function App() {
             >
               <img src={logo} alt="logo" />
               <div className="relative w-[20rem] h-[5px] bg-blue-950 overflow-hidden my-6 rounded-full">
-                <div className="absolute top-0 left-0 w-[80px] h-full bg-blue-300 animate-animloader" />
+                <div className="absolute top-0 left-0 w-[80px] h-[100%] bg-white animate-animloader rounded-full" />
               </div>
             </div>
           }

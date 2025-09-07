@@ -93,7 +93,11 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink
                   to="/"
-                  className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+                  className={({ isActive }) =>
+                    `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
+                      isActive ? "border-b-2 border-blue-800" : ""
+                    }`
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
@@ -102,7 +106,11 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink
                   to="/property_grid"
-                  className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+                  className={({ isActive }) =>
+                    `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
+                      isActive ? "border-b-2 border-blue-800" : ""
+                    }`
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Properties
@@ -111,7 +119,11 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink
                   to="/shortlet_grid"
-                  className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+                  className={({ isActive }) =>
+                    `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
+                      isActive ? "border-b-2 border-blue-800" : ""
+                    }`
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Shortlets
@@ -120,7 +132,11 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink
                   to="/project_grid"
-                  className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+                  className={({ isActive }) =>
+                    `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
+                      isActive ? "border-b-2 border-blue-800" : ""
+                    }`
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Projects
@@ -129,7 +145,11 @@ const Navbar: React.FC = () => {
               <li>
                 <NavLink
                   to="/about_us"
-                  className="block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6"
+                  className={({ isActive }) =>
+                    `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
+                      isActive ? "border-b-2 border-blue-800" : ""
+                    }`
+                  }
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About us
