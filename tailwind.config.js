@@ -72,6 +72,17 @@ export default {
       animation: {
         animloader: "animloader 2s linear infinite",
       },
+
+      keyframes: {
+        scroll: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) linear infinite var(--animation-direction, forwards)",
+      },
     },
   },
   plugins: [],

@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @layer components {
-	.add-margin-top {
-		@apply mt-20;
-	}
+  .add-margin-top {
+    @apply mt-20;
+  }
 }
 .swiper-button-next,
 .swiper-button-prev {
-	@apply text-white md:p-16 p-16 bg-gray-800 bg-opacity-70 rounded-full flex items-center justify-center hover:bg-opacity-100 transition;
+  @apply flex items-center justify-center p-16 text-white transition bg-gray-800 rounded-full md:p-16 bg-opacity-70 hover:bg-opacity-100;
 }
 
 /* :root {
@@ -68,48 +68,48 @@ button:focus-visible {
 } */
 
 @media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
 
 :root {
-	line-height: 1.5;
-	font-weight: 400;
-	/* color-scheme: light dark; */
-	color: rgba(0, 0, 0, 0.87);
-	/* background-color: #ffffff; */
+  line-height: 1.5;
+  font-weight: 400;
+  /* color-scheme: light dark; */
+  color: rgba(0, 0, 0, 0.87);
+  /* background-color: #ffffff; */
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-	outline: none;
-	box-sizing: border-box;
-	/* transition: 0.3s ease-in-out all; */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  box-sizing: border-box;
+  /* transition: 0.3s ease-in-out all; */
 }
 
 body {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	font-family: "Urbanist", sans-serif;
-	font-weight: 900;
-	font-style: normal;
-	background-color: #fff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  background-color: #fff;
 }
 
 /* ::-webkit-scrollbar {
@@ -117,17 +117,26 @@ body {
 } */
 
 html {
-	scroll-behavior: smooth;
-	font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 @media (max-width: 991px) {
-	html {
-		font-size: 55%;
-	}
+  html {
+    font-size: 55%;
+  }
 }
 @media (max-width: 450px) {
-	html {
-		font-size: 50%;
-	}
+  html {
+    font-size: 50%;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* adjust depending on how much you cloned */
+  }
 }
