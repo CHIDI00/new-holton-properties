@@ -10,8 +10,11 @@ import OurCommitment from "./OurCommitment";
 import Testimonials from "./Testimonials";
 import TheTeam from "./TheTeam";
 import QuickEnquiry from "./QuickEnquiry";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* <Helmet> */}
@@ -45,7 +48,7 @@ const HeroSection: React.FC = () => {
         <div className="absolute w-full h-20 bg-white rounded-t-[5rem] z-[4] bottom-0"></div>
         <Navbar />
 
-        <div className="relative z-[4] container flex flex-col justify-center items-center md:px-[11rem] px-[1rem]">
+        <div className="relative z-[4] container flex flex-col justify-center items-center lg:px-[11rem] md:px-[2rem] px-[1rem]">
           <div
             className="flex flex-col items-center justify-center w-full border-b-2 border-gray-400 md:py-52 py-28"
             data-aos="fade-up"
@@ -63,7 +66,7 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col items-center justify-between w-full py-16 mt-16 text-center md:flex-row md:py-10 ">
             <div className=" md:w-[50%] w-full flex flex-col justify-center items-center md:items-start">
               <h2
-                className="text-[3.5rem] font-bold text-white md:text-left leading-none"
+                className="lg:text-[3.5rem] md:text-[3rem] text-[3.5rem] font-bold text-white md:text-left leading-none"
                 data-aos="fade-right"
               >
                 We develop landmark real estate projects that deliver lasting
@@ -71,6 +74,7 @@ const HeroSection: React.FC = () => {
               </h2>
             </div>
             <button
+              onClick={() => navigate("/about_us")}
               aria-label="View Our Real Estate Services"
               className="flex items-center justify-center px-5 py-2 pl-8 pr-2 mt-10 text-2xl font-bold text-black transition-all duration-300 ease-in-out bg-white rounded-full md:text-xl md:mt-0 hover:bg-blue-800 hover:text-white"
             >

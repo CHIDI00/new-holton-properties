@@ -3,7 +3,11 @@ import ProjectHeader from "./ProjectHeader";
 import FilterForm from "../../ui/FilterForm"; // Use the reusable FilterForm
 import ProjectGrid from "./ProjectGrid";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import Loader from "../../ui/Loader"; // Ensure this path is correct for your Loader component
+import Loader from "../../ui/Loader"; // Ensure th
+import noListings from "../../assets/noListing4.png";
+import projectNotFound from "../../assets/projectNotFound.png";
+
+// is path is correct for your Loader component
 
 // interface for API response
 interface ApiProjects {
@@ -240,28 +244,7 @@ const ProjectContent: React.FC = () => {
         />
         <div className="container h-[40rem] mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
           <div className="flex flex-col items-center justify-center text-2xl font-bold text-red-600">
-            <p className="text-5xl">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="70"
-                height="70"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-unplug-icon lucide-unplug"
-              >
-                <path d="m19 5 3-3" />
-                <path d="m2 22 3-3" />
-                <path d="M6.3 20.3a2.4 2.4 0 0 0 3.4 0L12 18l-6-6-2.3 2.3a2.4 2.4 0 0 0 0 3.4Z" />
-                <path d="M7.5 13.5 10 11" />
-                <path d="M10.5 16.5 13 14" />
-                <path d="m12 6 6 6 2.3-2.3a2.4 2.4 0 0 0 0-3.4l-2.6-2.6a2.4 2.4 0 0 0-3.4 0Z" />
-              </svg>
-            </p>
-            <p>Connection failed: {error}</p>
+            <img src={noListings} alt="" className="w-[30rem] h-[30rem] " />
           </div>
         </div>
       </div>
@@ -355,8 +338,8 @@ const ProjectContent: React.FC = () => {
       )}
       {/* Message if no projects found after filtering */}
       {filteredProjectData.length === 0 && !loading && !error && (
-        <div className="py-20 text-2xl text-center text-gray-500">
-          No projects found matching your criteria.
+        <div className="flex items-center justify-center w-full py-20 text-2xl text-center text-gray-500">
+          <img src={projectNotFound} alt="" className="w-[30rem] h-[30rem] " />
         </div>
       )}
     </div>

@@ -46,8 +46,8 @@ const services2: Service[] = [
 
 const WhatWeOffer: React.FC = () => {
   return (
-    <div
-      id="whatWeOffer"
+    <section
+      id="what-we-offer"
       className="w-full flex flex-col justify-center items-center md:py-48 py-28 bg-[#edecec]"
     >
       <div className="container mx-auto md:px-[11rem] px-[2rem]">
@@ -171,7 +171,7 @@ const WhatWeOffer: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

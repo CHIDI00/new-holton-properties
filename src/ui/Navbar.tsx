@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/HOLTONicon-dark.webp";
 import { AlignCenter, X } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 
 const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,11 +16,13 @@ const Navbar: React.FC = () => {
       <nav className="flex justify-between items-center bg-white py-5 px-7 w-[95%] mx-auto my-10 rounded-3xl md:rounded-full">
         <div className="items-center justify-start hidden lg:flex">
           <div className="text-black text-lg font-bold border-r-[.8px] border-gray-200 pr-4 mr-16">
-            <img src={logo} alt="Holton Logo" className="h-20 w-54" />
+            <HashLink to="/home">
+              <img src={logo} alt="Holton Logo" className="h-20 w-54" />
+            </HashLink>
           </div>
           <ul className="flex space-x-10">
             {[
-              { to: "/", label: "Home" },
+              { to: "/home", label: "Home" },
               { to: "/about_us", label: "About" },
               { to: "/shortlet_grid", label: "Shortlet" },
               { to: "/property_grid", label: "Properties" },
@@ -51,9 +54,15 @@ const Navbar: React.FC = () => {
               +(234) 90 7223 8263
             </span>
           </p>
-          <button className="h-full bg-[#2A286B] text-2xl rounded-full text-white font-semibold px-10 py-5 ml-6  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
-            Get In Touch
-          </button>
+          <a
+            href="https://wa.me/2349078238824?text=Hello%2C%20I%27m%20interested%20in%20your%20real%20estate%20listings.%20Can%20you%20share%20more%20details%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="h-full bg-[#2A286B] text-2xl rounded-full text-white font-semibold px-10 py-5 ml-6  hover:bg-[#534fc9] transition-all ease-in-out duration-300">
+              Get In Touch
+            </button>
+          </a>
         </div>
 
         {/* Mobile Nav button */}
@@ -92,7 +101,7 @@ const Navbar: React.FC = () => {
             <ul className="space-y-4 text-gray-700 md:grid md:grid-cols-2">
               <li>
                 <NavLink
-                  to="/"
+                  to="/home"
                   className={({ isActive }) =>
                     `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
                       isActive ? "border-b-2 border-blue-800" : ""

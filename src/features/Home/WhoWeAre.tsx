@@ -7,8 +7,8 @@ import CountUp from "../../ui/CountUp";
 const WhoWeAre: React.FC = () => {
   return (
     <div id="whychooseus" className="w-full px-4 bg-white md:py-48 py-28">
-      <div className="container mx-auto md:px-[11rem] px-[1rem]">
-        <div className="flex flex-col items-start justify-between md:flex-row">
+      <div className="container mx-auto lg:px-[11rem] md:px-[2rem] px-[1rem]">
+        <div className="flex flex-col items-center justify-between lg:items-start lg:flex-row">
           <div
             className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full"
             data-aos="flip-left"

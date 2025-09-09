@@ -8,6 +8,8 @@ import x from "./../assets/socialIcons/X.png";
 import instagram from "./../assets/socialIcons/Instagram.png";
 import youtube from "./../assets/socialIcons/Youtube.png";
 import { HashLink } from "react-router-hash-link";
+import { scrollWithDelay } from "../lib/helper";
+// import { HashLink } from "react-router-hash-link";
 
 const Footer: React.FC = () => {
   return (
@@ -74,7 +76,9 @@ const Footer: React.FC = () => {
                 <NavLink to="/about_us">About Us</NavLink>
               </li>
               <li className="mb-[1.5rem]">
-                <HashLink to="/#whatWeOffer">Why Choose Us</HashLink>
+                <HashLink to="/home#what-we-offer" scroll={scrollWithDelay}>
+                  Why Choose Us
+                </HashLink>
               </li>
               {/* <li className="mb-[1.5rem]">
                 <a href="">Our Team</a>
