@@ -55,7 +55,7 @@ const ProjectGrid: React.FC<ProjectListProps> = ({
       <div className="container lg:px-[11rem] px-[2rem] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-14">
         {displayData.map((project) => (
           <div
-            className="group relative w-full md:h-[50rem] h-[50rem] bg-red-200 rounded-[3rem] overflow-hidden"
+            className="group relative w-full md:h-[50rem] h-[50rem] bg-blue-200 rounded-[3rem] overflow-hidden"
             key={project.id}
             data-aos="fade-up"
             onClick={() =>
