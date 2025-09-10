@@ -269,7 +269,7 @@ const ProjectContent: React.FC = () => {
 
       {/* Pagination Controls (only show if there's filtered data) */}
       {filteredProjectData.length > 0 && (
-        <div className=" container mx-auto md:px-[11rem] flex justify-start items-center mt-8 mb-16 gap-5 text-[2rem] font-bold px-[2rem]">
+        <div className=" container mx-auto lg:px-[11rem] flex justify-start items-center mt-8 mb-16 gap-5 text-[2rem] font-bold px-[2rem]">
           {currentPage !== 1 && (
             <button
               type="button"
