@@ -9,7 +9,7 @@ const QuickEnquiry: React.FC = () => {
   return (
     <div className="w-full bg-[#fbfbfb] pb-32">
       <div
-        className="relative w-[95%] md:h-[94vh] h-[90vh] flex justify-center items-center mx-auto rounded-[3rem] bg-cover bg-no-repeat"
+        className="relative w-[95%] lg:h-[94vh] md:h-[70vh] h-[90vh] flex justify-center items-center mx-auto rounded-[3rem] bg-cover bg-no-repeat"
         style={{ backgroundImage: `url(${project3})` }}
       >
         <div className="absolute w-80 h-[5rem] left-0 bottom-0 rounded-bl-[3rem] rounded-tr-[3rem] bg-[#fbfbfb] flex justify-end items-start">
@@ -58,31 +58,31 @@ const QuickEnquiry: React.FC = () => {
             </h1>
           </div>
 
-          <form action="submit" className="md:w-[55%] w-full z-10 py-7">
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 px-10">
+          <form action="submit" className="lg:w-[55%] w-full z-10 py-7">
+            <div className="grid w-full grid-cols-1 gap-8 px-10 md:grid-cols-2">
               <input
                 type="text"
                 placeholder="Your Name *"
-                className="w-full md:px-8 md:py-7 md:text-2xl px-9 py-6 text-4xl border-none bg-gray-100 rounded-full font-medium mb-5 mr-8"
+                className="w-full py-6 mb-5 mr-8 text-4xl font-medium bg-gray-100 border-none rounded-full md:px-8 md:py-7 md:text-2xl px-9"
               />
               <input
                 type="email"
                 placeholder="Email *"
-                className="w-full md:px-8 md:py-7 md:text-2xl px-9 py-6 text-4xl border-none bg-gray-100 rounded-full font-medium mb-5 mr-8"
+                className="w-full py-6 mb-5 mr-8 text-4xl font-medium bg-gray-100 border-none rounded-full md:px-8 md:py-7 md:text-2xl px-9"
               />
               <input
                 type="text"
                 placeholder="Phone number *"
-                className="w-full md:px-8 md:py-7 md:text-2xl px-9 py-6 text-4xl border-none bg-gray-100 rounded-full font-medium mb-5 mr-8"
+                className="w-full py-6 mb-5 mr-8 text-4xl font-medium bg-gray-100 border-none rounded-full md:px-8 md:py-7 md:text-2xl px-9"
               />
-              <select className="w-full md:px-8 md:py-7 md:text-2xl text-gray-500 px-9 py-6 text-4xl border-none bg-gray-100 rounded-full font-medium mb-5 mr-8">
+              <select className="w-full py-6 mb-5 mr-8 text-4xl font-medium text-gray-500 bg-gray-100 border-none rounded-full md:px-8 md:py-7 md:text-2xl px-9">
                 <option value="1">You inqure about....</option>
                 <option value="2">Service 1</option>
                 <option value="2">Service 1</option>
                 <option value="2">Service 1</option>
               </select>
             </div>
-            <div className="w-full flex flex-col md:flex-row justify-between items-center gap-10 px-10 py-5 mx-auto">
+            <div className="flex flex-col items-center justify-between w-full gap-10 px-10 py-5 mx-auto md:flex-row">
               <div className="">
                 <p className="text-[1.7rem] font-medium text-gray-600">
                   We're excited to connect with you!{" "}

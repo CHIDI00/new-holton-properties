@@ -41,7 +41,7 @@ const Footer: React.FC = () => {
           magnetStrength={3}
           data-aos="fade-up"
         >
-          <div className="w-[150px] h-[150px] hidden md:flex justify-center items-center bg-[#111111a2] border-[1px] border-gray-600 backdrop-blur-xl rounded-full text-white p-6">
+          <div className="w-[150px] h-[150px] hidden lg:flex justify-center items-center bg-[#111111a2] border-[1px] border-gray-600 backdrop-blur-xl rounded-full text-white p-6">
             <p className="text-[2rem] text-center font-semibold leading-tight">
               Get your <br /> free <br /> Quote
             </p>
@@ -49,9 +49,9 @@ const Footer: React.FC = () => {
         </Magnet>
       </div>
 
-      <div className="w-[97%] md:mb-[-250px] mb-[-100px] md:mt-[-100px] mt-[-30px] flex justify-center items-center z-[4]">
+      <div className="w-[97%] lg:mb-[-250px] md:mb-[-180px] mb-[-100px] lg:mt-[-100px] md:mt-[-50px] mt-[-30px] flex justify-center items-center z-[4]">
         <h1
-          className="md:text-[40rem] text-[15rem] leading-none bg-gradient-to-b from-[rgba(255,255,255,0.47)] to-[rgba(0,0,0,0.2)] bg-clip-text text-transparent"
+          className="lg:text-[40rem] md:text-[30rem] text-[15rem] leading-none bg-gradient-to-b from-[rgba(255,255,255,0.47)] to-[rgba(0,0,0,0.2)] bg-clip-text text-transparent"
           data-aos="fade-up"
         >
           holton
@@ -59,18 +59,18 @@ const Footer: React.FC = () => {
       </div>
 
       <div
-        className="mt-[6rem] md:w-[97%] md:h-[45rem] w-[95%] bg-white z-[4] rounded-[3rem] flex flex-col justify-center items-center md:px-[2rem] md:py-0 p-[2rem]"
+        className="mt-[6rem] md:w-[97%] lg:h-[45rem] w-[95%] bg-white z-[4] rounded-[3rem] flex flex-col justify-center items-center md:px-[2rem] md:py-0 p-[2rem]"
         data-aos="fade-up"
       >
-        <div className="md:w-[85%] md:h-full w-full flex flex-col md:flex-row justify-between items-center md:py-20">
-          <div className="md:w-1/3 md:h-full w-full flex flex-col md:justify-between md:items-start justify-center items-center px-[2rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200 pb-6 mg:gap-[5rem] ">
+        <div className="lg:w-[85%] md:h-full w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between items-center md:py-20">
+          <div className="lg:w-1/3 lg:h-full w-full flex flex-col md:justify-between md:items-start justify-center items-center px-[2rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200 pb-6 mg:gap-[5rem] ">
             <img src={logo} alt="holton logo" />
             <p className="md:text-[1.5rem] text-[2rem] md:text-left text-center py-5 font-medium text-gray-500">
               We are creators of transformative spaces that inspire, innovate,
               and endure.
             </p>
           </div>
-          <div className="md:w-[30%] flex justify-start items-start md:h-full w-full md:py-0 py-[3rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
+          <div className="lg:w-[30%] flex justify-start items-start lg:h-full w-full md:py-0 px-10 py-[3rem] lg:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
             <ul className="w-full grid grid-cols-2 justify-start items-center md:px-0 px-[5rem] md:text-[2rem] text-[2rem] font-bold ">
               <li className="mb-[1.5rem]">
                 <NavLink to="/about_us">About Us</NavLink>
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="md:w-[30%] h-full flex flex-col md:justify-start justify-center md:items-start items-center md:h-full w-full md:py-0 py-[3rem] gap-[7rem]">
+          <div className="lg:w-[30%] h-full flex flex-col md:justify-start justify-center md:items-start items-center md:h-full w-full lg:py-0 py-[3rem] lg:px-0 md:px-10 gap-[7rem]">
             <div className="w-full flex flex-col md:justify-start md:items-start justify-center items-center gap-[1rem]">
               <p className="md:text-[3.2rem] text-[3rem] font-bold border-b-[1px] border-blue-700">
                 +(090) 782-388-24

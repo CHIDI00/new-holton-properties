@@ -87,7 +87,7 @@ const TheTeam: React.FC = () => {
           </h1>
         </div>
 
-        <div className="mx-auto md:w-[80%] w-full flex justify-center items-center">
+        <div className="mx-auto lg:w-[80%] w-full flex justify-center items-center">
           <InfiniteMovingCards
             items={teamData}
             direction="right"

@@ -25,8 +25,12 @@ const FilterForm: React.FC<FilterFormProps> = ({
 }) => {
   // Internal state for the form inputs
   const [selectedType, setSelectedType] = useState(currentFilters.type || "");
-  const [selectedLocation, setSelectedLocation] = useState(currentFilters.location || "");
-  const [selectedPriceRange, setSelectedPriceRange] = useState(currentFilters.priceRange || "");
+  const [selectedLocation, setSelectedLocation] = useState(
+    currentFilters.location || ""
+  );
+  const [selectedPriceRange, setSelectedPriceRange] = useState(
+    currentFilters.priceRange || ""
+  );
 
   // Update internal state if currentFilters from parent change (e.g., reset filters)
   useEffect(() => {
@@ -34,7 +38,6 @@ const FilterForm: React.FC<FilterFormProps> = ({
     setSelectedLocation(currentFilters.location || "");
     setSelectedPriceRange(currentFilters.priceRange || "");
   }, [currentFilters]);
-
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault(); // Prevent default form submission
@@ -46,7 +49,7 @@ const FilterForm: React.FC<FilterFormProps> = ({
   };
 
   return (
-    <div className="container mx-auto md:px-[11rem] px-6">
+    <div className="container mx-auto lg:px-[11rem] px-6">
       <form
         onSubmit={handleSubmit}
         className="w-full grid md:grid-cols-4 grid-cols-2 justify-center items-center md:my-10 gap-10"

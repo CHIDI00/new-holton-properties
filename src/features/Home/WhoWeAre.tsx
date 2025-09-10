@@ -8,7 +8,7 @@ const WhoWeAre: React.FC = () => {
   return (
     <div id="whychooseus" className="w-full px-4 bg-white md:py-48 py-28">
       <div className="container mx-auto lg:px-[11rem] md:px-[2rem] px-[1rem]">
-        <div className="flex flex-col items-center justify-between lg:items-start lg:flex-row">
+        <div className="flex flex-col items-center justify-between w-full lg:items-start lg:flex-row">
           <div
             className="md:max-w-[120px] max-w-[130px] md:py-1 md:px-5 py-4 px-7 border-[1.4px] border-blue-600 rounded-full"
             data-aos="flip-left"
@@ -20,8 +20,11 @@ const WhoWeAre: React.FC = () => {
             />
           </div>
 
-          <div className="md:w-[67%] w-full flex flex-col justify-center items-start md:mt-0 mt-10">
-            <h1 className="md:text-[6.3rem] text-6xl mb-20" data-aos="fade-up">
+          <div className="lg:w-[67%] w-full flex flex-col justify-center items-start lg:mt-0 mt-10">
+            <h1
+              className="lg:text-[6.3rem] md:text-[5rem] text-6xl mb-20"
+              data-aos="fade-up"
+            >
               The largest privately held real estate investors and managers in
               the world
             </h1>

@@ -219,7 +219,7 @@ const ShortletDetail: React.FC = () => {
     return (
       <div className="container mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
         <div className="text-2xl font-bold text-gray-600">
-          Shortlet not found
+          {/* Shortlet not found */}
         </div>
       </div>
     );
@@ -255,7 +255,7 @@ const ShortletDetail: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto md:px-[11rem] md:py-16 px-[2rem]">
+      <div className="container mx-auto lg:px-[11rem] md:py-16 px-[2rem]">
         <div className="w-full border-b-[1px] border-gray-400 pb-12">
           <p className="md:text-[1.7rem] text-[2rem] text-gray-800 font-bold leading-tight flex items-center mb-7 gap-4">
             <span className="text-blue-700">
@@ -264,21 +264,23 @@ const ShortletDetail: React.FC = () => {
             {shortlet?.location}
           </p>
 
-          <h1 className="md:text-[7rem] text-[5rem] leading-none font-bold">
+          <h1 className="lg:text-[7rem] text-[5rem] leading-none font-bold">
             {shortlet?.name}
           </h1>
         </div>
 
-        <div className="container flex flex-wrap items-center justify-start mx-auto md:px-0 md:flex-nowrap shrink-0 md:gap-2 md:py-5">
-          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 md:w-1/5 md:flex-row md:gap-5">
+        <div className="container flex flex-wrap items-center justify-start mx-auto md:px-0 lg:flex-nowrap shrink-0 lg:gap-2 md:gap-20 md:py-5">
+          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 lg:w-1/5 md:w-1/3 md:flex-row md:gap-5">
             <span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
               <ChartArea />
             </span>
             <div className="flex flex-col items-center justify-center md:justify-start md:items-start">
-              <p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+              <p className="lg:text-[1.6rem] text-[2rem] text-gray-400">
                 Status
               </p>
-              <p className="md:text-[1.6rem] text-[2rem]">{shortlet?.status}</p>
+              <p className="lg:text-[1.6rem] text-[2rem] font-extrabold">
+                {shortlet?.status}
+              </p>
             </div>
           </div>
 
@@ -287,10 +289,10 @@ const ShortletDetail: React.FC = () => {
               <DollarSign />
             </span>
             <div className="flex flex-col items-center justify-center md:justify-start md:items-start">
-              <p className="md:text-[1.6rem] text-[2rem] text-gray-400">
+              <p className="lg:text-[1.6rem] text-[2rem] text-gray-400">
                 Price Range
               </p>
-              <p className="md:text-[1.6rem] text-[2rem]">
+              <p className="lg:text-[1.6rem] text-[2rem] font-extrabold">
                 {formatCurrency(shortlet?.price)}
               </p>
             </div>
@@ -424,8 +426,8 @@ const ShortletDetail: React.FC = () => {
         </div>
 
         {/* Map */}
-        <div className="flex flex-col-reverse items-start justify-start w-full gap-16 my-10 md:flex-row">
-          <div className="md:w-[50%] w-full md:h-[700px] h-full rounded-[3rem] border-[1px] border-gray-300 my-10 md:p-24 p-7 py-10">
+        <div className="flex flex-col-reverse items-start justify-start w-full gap-16 my-10 lg:flex-row">
+          <div className="lg:w-[50%] w-full lg:h-[700px] h-full rounded-[3rem] border-[1px] border-gray-300 my-10 md:p-24 p-7 py-10">
             <p className="text-5xl font-bold leading-tight text-center md:text-6xl md:text-left ">
               Request more <br /> information
             </p>
@@ -467,7 +469,7 @@ const ShortletDetail: React.FC = () => {
               </div>
             </form>
           </div>
-          <div className="md:w-[50%] w-full rounded-[3rem]">
+          <div className="lg:w-[50%] w-full rounded-[3rem]">
             <GoogleMapEmbed lat_long={shortlet?.lat_long ?? ""} />
           </div>
         </div>

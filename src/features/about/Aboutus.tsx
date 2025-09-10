@@ -9,7 +9,7 @@ import { scrollWithDelay } from "../../lib/helper";
 const Aboutus: React.FC = () => {
   return (
     <div className="w-full">
-      <div className="container md:px-[11rem] w-full mx-auto px-[2rem]   ">
+      <div className="container lg:px-[11rem] w-full mx-auto px-[2rem]   ">
         <div className="flex flex-col items-start justify-start w-full">
           <div className="w-full flex justify-between items-center md:gap-10 gap-10 md:flex-row flex-col md:py-[4rem] py-[4rem]">
             <div className="w-full md:w-[40%] flex flex-col md:justify-start md:items-start justify-center items-center md:gap-5 gap-2">
@@ -24,7 +24,7 @@ const Aboutus: React.FC = () => {
                 />
               </div>
 
-              <h1 className="text-[3rem] text-center md:text-left leading-tight md:text-[5.5rem] font-extrabold mt-5">
+              <h1 className="lg:text-[3rem]  text-[3rem] text-center md:text-left leading-tight md:text-[4.5rem] font-extrabold mt-5">
                 Shaping the world of things to come
               </h1>
             </div>

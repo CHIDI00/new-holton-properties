@@ -50,7 +50,7 @@ const WhatWeOffer: React.FC = () => {
       id="what-we-offer"
       className="w-full flex flex-col justify-center items-center md:py-48 py-28 bg-[#edecec]"
     >
-      <div className="container mx-auto md:px-[11rem] px-[2rem]">
+      <div className="container mx-auto lg:px-[11rem] px-[2rem]">
         <div className="flex flex-col items-start justify-center w-full">
           <div className="flex items-center justify-center w-full">
             <div

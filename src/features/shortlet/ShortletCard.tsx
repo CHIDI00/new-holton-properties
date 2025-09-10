@@ -55,7 +55,7 @@ const ShortletCard: React.FC<ShortletCardProps> = ({
 
   return (
     <div className="w-full py-12">
-      <div className="container md:px-[11rem] px-[2rem] mx-auto grid md:grid-cols-3 grid-cols-1 gap-14">
+      <div className="container lg:px-[11rem] px-[2rem] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-14">
         {displayData.map((shortlet) => (
           <div
             key={shortlet.id}

@@ -267,23 +267,23 @@ const PropertyDetail: React.FC = () => {
         </div>
       </div>
 
-      <div className="container mx-auto md:px-[11rem] md:py-16 px-[2rem]">
+      <div className="container mx-auto lg:px-[11rem] md:py-16 px-[2rem]">
         <div className="w-full border-b-[1px] border-gray-400 pb-12">
-          <p className="md:text-[1.7rem] text-[2rem] text-gray-800 font-bold leading-tight flex items-center mb-7 gap-4">
+          <p className="lg:text-[1.7rem] text-[2rem] text-gray-800 font-bold leading-tight flex items-center mb-7 gap-4">
             <span className="text-blue-700">
               <MapPin />
             </span>{" "}
             {property?.location}
           </p>
 
-          <h1 className="md:text-[7rem] text-[3rem] leading-none font-bold">
+          <h1 className="lg:text-[7rem] text-[5rem] leading-none font-bold">
             {property?.name}
           </h1>
         </div>
 
-        <div className="container flex flex-wrap items-center justify-start mx-auto md:px-0 md:flex-nowrap shrink-0 md:justify-start md:gap-2 md:py-5">
-          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 md:w-1/5 md:flex-row md:gap-5">
-            <span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
+        <div className="container flex flex-wrap items-center justify-start mx-auto md:px-0 md:flex-nowrap shrink-0 md:justify-start lg:gap-2 md:gap-16 md:py-5">
+          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 lg:w-1/5 md:w-1/3 md:flex-row md:gap-5">
+            <span className="p-5 lg:w-24 lg:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
               <ChartArea />
             </span>
             <div className="flex flex-col items-center justify-center md:justify-start md:items-start">
@@ -294,7 +294,7 @@ const PropertyDetail: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 md:w-1/5 md:flex-row md:gap-5">
+          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 lg:w-1/5 md:w-1/3 md:flex-row md:gap-5">
             <span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
               <LandPlot />
             </span>
@@ -306,7 +306,7 @@ const PropertyDetail: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 md:w-1/5 md:flex-row md:gap-5">
+          <div className="flex flex-col items-center justify-center w-1/2 gap-5 p-10 font-bold md:p-2 lg:w-1/5 md:w-1/3 md:flex-row md:gap-5">
             <span className="p-5 md:w-24 md:h-24 w-28 h-28 text-[2rem] rounded-full border-[1px] border-gray-400 flex justify-center items-center">
               <DollarSign />
             </span>

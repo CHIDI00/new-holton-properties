@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
                   to="/home"
                   className={({ isActive }) =>
                     `block hover:text-[#0B0B1F] font-bold py-5 pb-7 text-5xl mb-9 border-b-2 border-gray-200 text-left mx-6 ${
-                      isActive ? "border-b-2 border-blue-800" : ""
+                      isActive && "border-b-4 border-blue-900"
                     }`
                   }
                   onClick={() => setMobileMenuOpen(false)}
