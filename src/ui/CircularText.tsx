@@ -1,141 +1,130 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 
+// Linear easing function for framer-motion transitions
+const easeLinear = (t: number) => t;
+
 interface CircularTextProps {
-	text: string | string[];
-	spinDuration?: number;
-	onHover?: "slowDown" | "speedUp" | "pause" | "goBonkers";
-	className?: string;
-	children?: React.ReactNode;
+  text: string | string[];
+  spinDuration?: number;
+  onHover?: "slowDown" | "speedUp" | "pause" | "goBonkers";
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const getRotationTransition = (
-	duration: number,
-	from: number,
-	loop: boolean = true
-) => ({
-	from: from,
-	to: from + 360,
-	ease: "linear",
-	duration: duration,
-	type: "tween",
-	repeat: loop ? Infinity : 0,
-});
-
-const getTransition = (duration: number, from: number) => ({
-	rotate: getRotationTransition(duration, from),
-	scale: {
-		type: "spring",
-		damping: 20,
-		stiffness: 300,
-	},
+const getTransition = (duration: number) => ({
+  ease: easeLinear,
+  duration: duration,
+  type: "keyframes" as const,
+  repeat: Infinity,
 });
 
 const CircularText: React.FC<CircularTextProps> = ({
-	text,
-	spinDuration = 20,
-	onHover = "speedUp",
-	className = "",
-	children,
+  text,
+  spinDuration = 20,
+  onHover = "speedUp",
+  className = "",
+  children,
 }) => {
-	const letters = Array.isArray(text)
-		? text.join(" ").split("")
-		: Array.from(text);
+  const letters = Array.isArray(text)
+    ? text.join(" ").split("")
+    : Array.from(text);
 
-	const controls = useAnimation();
-	const [currentRotation, setCurrentRotation] = useState(0);
+  const controls = useAnimation();
+  const [currentRotation, setCurrentRotation] = useState(0);
 
-	useEffect(() => {
-		controls.start({
-			rotate: currentRotation + 360,
-			scale: 1,
-			transition: getTransition(spinDuration, currentRotation),
-		});
-	}, [spinDuration, controls, onHover, text]);
+  useEffect(() => {
+    controls.start({
+      rotate: currentRotation + 360,
+      scale: 1,
+      transition: getTransition(spinDuration),
+    });
+    // eslint-disable-next-line
+  }, [spinDuration, controls, onHover, text]);
 
-	const handleHoverStart = () => {
-		if (!onHover) return;
-		switch (onHover) {
-			case "slowDown":
-				controls.start({
-					rotate: currentRotation + 360,
-					scale: 1,
-					transition: getTransition(spinDuration * 2, currentRotation),
-				});
-				break;
-			case "speedUp":
-				controls.start({
-					rotate: currentRotation + 360,
-					scale: 1,
-					transition: getTransition(spinDuration / 4, currentRotation),
-				});
-				break;
-			case "pause":
-				controls.start({
-					rotate: currentRotation,
-					scale: 1,
-					transition: {
-						rotate: { type: "spring", damping: 20, stiffness: 300 },
-						scale: { type: "spring", damping: 20, stiffness: 300 },
-					},
-				});
-				break;
-			case "goBonkers":
-				controls.start({
-					rotate: currentRotation + 360,
-					scale: 0.8,
-					transition: getTransition(spinDuration / 20, currentRotation),
-				});
-				break;
-			default:
-				break;
-		}
-	};
+  const handleHoverStart = () => {
+    if (!onHover) return;
+    switch (onHover) {
+      case "slowDown":
+        controls.start({
+          rotate: currentRotation + 360,
+          scale: 1,
+          transition: getTransition(spinDuration * 2),
+        });
+        break;
+      case "speedUp":
+        controls.start({
+          rotate: currentRotation + 360,
+          scale: 1,
+          transition: getTransition(spinDuration / 4),
+        });
+        break;
+      case "pause":
+        controls.start({
+          rotate: currentRotation,
+          scale: 1,
+          transition: { type: "spring", damping: 20, stiffness: 300 },
+        });
+        break;
+      case "goBonkers":
+        controls.start({
+          rotate: currentRotation + 360,
+          scale: 0.8,
+          transition: getTransition(spinDuration / 20),
+        });
+        break;
+      default:
+        break;
+    }
+  };
 
-	const handleHoverEnd = () => {
-		controls.start({
-			rotate: currentRotation + 360,
-			scale: 1,
-			transition: getTransition(spinDuration, currentRotation),
-		});
-	};
+  const handleHoverEnd = () => {
+    controls.start({
+      rotate: currentRotation + 360,
+      scale: 1,
+      transition: getTransition(spinDuration),
+    });
+  };
 
-	return (
-		<div className="relative mx-auto md:w-[170px] md:h-[170px] w-[150px] h-[150px]">
-			<motion.div
-				initial={{ rotate: 0 }}
-				className={`rounded-full text-black font-black text-center cursor-pointer origin-center w-full h-full ${className}`}
-				animate={controls}
-				onUpdate={(latest) => setCurrentRotation(Number(latest.rotate))}
-				onMouseEnter={handleHoverStart}
-				onMouseLeave={handleHoverEnd}
-			>
-				{letters.map((letter, i) => {
-					const rotation = (360 / letters.length) * i;
-					const factor = Number((Math.PI / letters.length).toFixed(0));
-					const x = factor * i;
-					const y = factor * i;
-					const transform = `rotateZ(${rotation}deg) translate3d(${x}px, ${y}px, 0)`;
+  const radius = 80;
+  const step = (2 * Math.PI) / letters.length;
 
-					return (
-						<span
-							key={i}
-							className="absolute inline-block inset-0 text-[1rem] font-semibold transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
-							style={{ transform, WebkitTransform: transform }}
-						>
-							{letter}
-						</span>
-					);
-				})}
-			</motion.div>
+  return (
+    <div className={`relative w-[200px] h-[200px] ${className}`}>
+      <motion.div
+        className="absolute inset-0 w-full h-full"
+        animate={controls}
+        onUpdate={(latest) => setCurrentRotation(Number(latest.rotate))}
+        onMouseEnter={handleHoverStart}
+        onMouseLeave={handleHoverEnd}
+        style={{ originX: "50%", originY: "50%" }}
+      >
+        {letters.map((letter, i) => {
+          const angle = i * step - Math.PI / 2;
+          const x = radius * Math.cos(angle) + 100;
+          const y = radius * Math.sin(angle) + 100;
+          const transform = `translate(${x}px, ${y}px) rotate(${
+            (angle * 180) / Math.PI + 90
+          }deg)`;
+          return (
+            <span
+              key={i}
+              className="absolute inline-block inset-0 text-[1rem] font-semibold transition-all duration-500 ease-[cubic-bezier(0,0,0,1)]"
+              style={{ transform, WebkitTransform: transform }}
+            >
+              {letter}
+            </span>
+          );
+        })}
+      </motion.div>
 
-			{children && (
-				<div className="absolute inset-0 flex items-center justify-center">
-					{children}
-				</div>
-			)}
-		</div>
-	);
+      {children && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          {children}
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default CircularText;
