@@ -84,21 +84,23 @@ const ProjectContent: React.FC = () => {
 
   // Define options for the FilterForm dropdowns
   const projectTypeOptions = [
-    { value: "residential", label: "Residential" },
-    { value: "commercial", label: "Commercial" },
-    { value: "mixed-use", label: "Mixed-Use" },
-    { value: "industrial", label: "Industrial" }, // Example: Add more types if applicable
+    { value: "All Types", label: "All Types" },
+    { value: "building", label: "Building" },
+    { value: "villa", label: "Villa" },
+    { value: "office", label: "Office" },
+    { value: "apartment", label: "Apartment" },
   ];
 
   const locationOptions = [
+    { value: "Location", label: "Location" },
     { value: "chevron", label: "Chevron" },
     { value: "aja", label: "Aja" },
     { value: "lekki", label: "Lekki" },
     { value: "island", label: "Island" },
-    { value: "ikoyi", label: "Ikoyi" },
   ];
 
   const priceRangeOptions = [
+    { value: "Select Price Range", label: "Select Price Range" },
     { value: "5000000 - 50000000", label: "₦5M - ₦50M" },
     { value: "60000000 - 100000000", label: "₦60M - ₦100M" },
     { value: "110000000 - 200000000", label: "₦110M - ₦200M" },
@@ -153,14 +155,14 @@ const ProjectContent: React.FC = () => {
     let currentFilteredData = allProjectData;
 
     // Filter by project type
-    if (filters.type) {
+    if (filters.type && filters.type.toLowerCase() !== "all types") {
       currentFilteredData = currentFilteredData.filter(
         (project) => project.type.toLowerCase() === filters.type.toLowerCase()
       );
     }
 
     // Filter by location
-    if (filters.location) {
+    if (filters.location && filters.location.toLowerCase() !== "location") {
       currentFilteredData = currentFilteredData.filter(
         (project) =>
           project.location.toLowerCase() === filters.location.toLowerCase()
@@ -168,7 +170,10 @@ const ProjectContent: React.FC = () => {
     }
 
     // Filter by price range
-    if (filters.priceRange) {
+    if (
+      filters.priceRange &&
+      filters.priceRange.toLowerCase() !== "select price range"
+    ) {
       const [minStr, maxStr] = filters.priceRange.split(" - ");
       let minPrice = 0;
       let maxPrice = Infinity;

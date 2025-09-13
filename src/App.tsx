@@ -2,6 +2,7 @@ import { useEffect, Suspense, lazy } from "react"; // <--- Add Suspense and lazy
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 // import { HelmetProvider } from "react-helmet-async"; // <--- Add HelmetProvider
 
+// Make sure the file exists at src/ui/AppLayout.tsx or adjust the path below if needed
 import AppLayout from "./ui/AppLayout";
 import ScrollToTop from "./ui/ScrollToTop";
 import logo from "./assets/holtonlogo.png";

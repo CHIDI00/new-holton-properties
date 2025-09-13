@@ -74,28 +74,30 @@ const PropertiesContent: React.FC = () => {
 
   // Define options for the SearchForm dropdowns (pass these to SearchForm)
   const propertyTypeOptions = [
+    { value: "All Types", label: "All Types" },
     { value: "building", label: "Building" },
     { value: "villa", label: "Villa" },
+    { value: "office", label: "Office" },
     { value: "apartment", label: "Apartment" },
-    { value: "land", label: "Land" },
-    { value: "commercial", label: "Commercial" },
   ];
 
   const locationOptions = [
+    { value: "Location", label: "Location" },
     { value: "chevron", label: "Chevron" },
     { value: "aja", label: "Aja" },
     { value: "lekki", label: "Lekki" },
     { value: "island", label: "Island" },
-    { value: "ikoyi", label: "Ikoyi" },
   ];
 
   const priceRangeOptions = [
-    { value: "5000000-50000000", label: "₦5M - ₦50M" },
-    { value: "60000000-100000000", label: "₦60M - ₦100M" },
-    { value: "110000000-200000000", label: "₦110M - ₦200M" },
-    { value: "300000000-700000000", label: "₦300M - ₦700M" },
-    { value: "1000000000-5000000000", label: "₦1B - ₦5B" },
-    { value: "5000000000-10000000000", label: "₦5B - ₦10B" },
+    { value: "Select Price Range", label: "Select Price Range" },
+    { value: "5000000 - 50000000", label: "₦5M - ₦50M" },
+    { value: "60000000 - 100000000", label: "₦60M - ₦100M" },
+    { value: "110000000 - 200000000", label: "₦110M - ₦200M" },
+    { value: "300000000 - 700000000", label: "₦300M - ₦700M" },
+    { value: "1000000000 - 5000000000", label: "₦1B - ₦5B" },
+    // Important: The values here must be raw numbers for the parsePriceToNumber function
+    // The labels are for display in the dropdown.
   ];
 
   // Fetch data from API (runs only once on component mount)
@@ -143,14 +145,14 @@ const PropertiesContent: React.FC = () => {
     let currentFilteredData = allPropertyData;
 
     // Filter by property type
-    if (filters.type) {
+    if (filters.type && filters.type.toLowerCase() !== "all types") {
       currentFilteredData = currentFilteredData.filter(
         (property) => property.type.toLowerCase() === filters.type.toLowerCase()
       );
     }
 
     // Filter by location
-    if (filters.location) {
+    if (filters.location && filters.location.toLowerCase() !== "location") {
       currentFilteredData = currentFilteredData.filter(
         (property) =>
           property.location.toLowerCase() === filters.location.toLowerCase()
@@ -158,7 +160,10 @@ const PropertiesContent: React.FC = () => {
     }
 
     // Filter by price range
-    if (filters.priceRange) {
+    if (
+      filters.priceRange &&
+      filters.priceRange.toLowerCase() !== "select price range"
+    ) {
       const [minStr, maxStr] = filters.priceRange.split(" - ");
       let minPrice = 0;
       let maxPrice = Infinity;

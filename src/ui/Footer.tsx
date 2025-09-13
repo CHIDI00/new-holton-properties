@@ -63,14 +63,14 @@ const Footer: React.FC = () => {
         data-aos="fade-up"
       >
         <div className="lg:w-[85%] md:h-full w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between items-center md:py-20">
-          <div className="lg:w-1/3 lg:h-full w-full flex flex-col md:justify-between md:items-start justify-center items-center px-[2rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200 pb-6 mg:gap-[5rem] ">
+          <div className=" lg:h-full w-full flex flex-col md:justify-between md:items-start justify-center items-center px-[2rem] md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200 pb-6 mg:gap-[5rem] ">
             <img src={logo} alt="holton logo" />
             <p className="md:text-[1.5rem] text-[2rem] md:text-left text-center py-5 font-medium text-gray-500">
               We are creators of transformative spaces that inspire, innovate,
               and endure.
             </p>
           </div>
-          <div className="lg:w-[30%] flex justify-start items-start lg:h-full w-full md:py-0 px-10 py-[3rem] lg:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
+          <div className=" flex justify-start items-start lg:h-full w-full md:py-0 px-10 py-[3rem] lg:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-200">
             <ul className="w-full grid grid-cols-2 justify-start items-center md:px-0 px-[5rem] md:text-[2rem] text-[2rem] font-bold ">
               <li className="mb-[1.5rem]">
                 <NavLink to="/about_us">About Us</NavLink>
@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          <div className="lg:w-[30%] h-full flex flex-col md:justify-start justify-center md:items-start items-center md:h-full w-full lg:py-0 py-[3rem] lg:px-0 md:px-10 gap-[7rem]">
+          <div className=" h-full flex flex-col md:justify-start justify-center md:items-start items-center md:h-full w-full lg:py-0 py-[3rem] lg:px-10 md:px-10 gap-[7rem]">
             <div className="w-full flex flex-col md:justify-start md:items-start justify-center items-center gap-[1rem]">
               <p className="md:text-[3.2rem] text-[3rem] font-bold border-b-[1px] border-blue-700">
                 +(090) 782-388-24
@@ -122,19 +122,22 @@ const Footer: React.FC = () => {
 
             <div className="flex justify-start items-center gap-[1rem] md:text-[3rem] text-gray-400 text-[2rem] transition-all duration-300">
               <div className="cursor-pointer hover:text-black">
+                <a href=''>
                 <img
                   src={facebook}
                   alt="FaceBook"
                   className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
-                />
+                /></a>
               </div>
               <p>•</p>
               <div className="cursor-pointer hover:text-black">
+                <a href='https://www.instagram.com/holtonproperties?igsh=MWE5eDZmN2ZhZWg3eQ=='>
+
                 <img
                   src={instagram}
                   alt="Instagram"
                   className="w-12 h-12 transition duration-500 ease-in-out grayscale hover:grayscale-0"
-                />
+                /></a>
               </div>
               <p>•</p>
               <div className="cursor-pointer hover:text-black">

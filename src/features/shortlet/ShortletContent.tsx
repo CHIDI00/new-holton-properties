@@ -72,6 +72,7 @@ const ShortletContent: React.FC = () => {
 
   // Define options for the FIlterForm dropdowns (pass these to FIlterForm)
   const shortletTypeOptions = [
+    { value: "All Types", label: "All Types" },
     { value: "building", label: "Building" },
     { value: "villa", label: "Villa" },
     { value: "office", label: "Office" },
@@ -79,6 +80,7 @@ const ShortletContent: React.FC = () => {
   ];
 
   const locationOptions = [
+    { value: "Location", label: "Location" },
     { value: "chevron", label: "Chevron" },
     { value: "aja", label: "Aja" },
     { value: "lekki", label: "Lekki" },
@@ -86,6 +88,7 @@ const ShortletContent: React.FC = () => {
   ];
 
   const priceRangeOptions = [
+    { value: "Select Price Range", label: "Select Price Range" },
     { value: "5000000 - 50000000", label: "₦5M - ₦50M" },
     { value: "60000000 - 100000000", label: "₦60M - ₦100M" },
     { value: "110000000 - 200000000", label: "₦110M - ₦200M" },
@@ -140,14 +143,14 @@ const ShortletContent: React.FC = () => {
     let currentFilteredData = allShortletData;
 
     // Filter by shortlet type
-    if (filters.type) {
+    if (filters.type && filters.type.toLowerCase() !== "all types") {
       currentFilteredData = currentFilteredData.filter(
         (shortlet) => shortlet.type.toLowerCase() === filters.type.toLowerCase()
       );
     }
 
     // Filter by location
-    if (filters.location) {
+    if (filters.location && filters.location.toLowerCase() !== "location") {
       currentFilteredData = currentFilteredData.filter(
         (shortlet) =>
           shortlet.location.toLowerCase() === filters.location.toLowerCase()
@@ -155,7 +158,10 @@ const ShortletContent: React.FC = () => {
     }
 
     // Filter by price range
-    if (filters.priceRange) {
+    if (
+      filters.priceRange &&
+      filters.priceRange.toLowerCase() !== "select price range"
+    ) {
       const [minStr, maxStr] = filters.priceRange.split(" - ");
       let minPrice = 0;
       let maxPrice = Infinity;
@@ -233,7 +239,6 @@ const ShortletContent: React.FC = () => {
         <div className="container h-[40rem] mx-auto md:px-[11rem] px-[2rem] flex justify-center items-center py-20">
           <div className="flex flex-col items-center justify-center text-2xl font-bold text-blue-800">
             <img src={noListings} alt="" className="w-[30rem] h-[30rem] " />
-            {/* <p>Check your connection and try reloading.</p> */}
           </div>
         </div>
       </div>

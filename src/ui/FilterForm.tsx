@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../components/ui/select";
 // Define the interface for filter options (consistent across components)
 interface FilterOptions {
   location: string;
@@ -52,85 +58,49 @@ const FilterForm: React.FC<FilterFormProps> = ({
     <div className="container mx-auto lg:px-[11rem] px-6">
       <form
         onSubmit={handleSubmit}
-        className="w-full grid md:grid-cols-4 grid-cols-2 justify-center items-center md:my-10 gap-10"
+        className="grid items-center justify-center w-full grid-cols-2 gap-10 md:grid-cols-4 md:my-10"
       >
-        <div className="relative w-full ">
-          <select
-            title="Select Type"
-            name="type"
-            value={selectedType}
-            onChange={(e) => setSelectedType(e.target.value)}
-            className="md:w-full w-full py-7 pl-8 appearance-none rounded-full bg-gray-100 text-3xl font-medium pr-10"
-          >
-            <option value="">Type</option>
+        <Select
+          defaultValue="All Types"
+          onValueChange={(value) => setSelectedType(value)}
+        >
+          <SelectTrigger className="text-black bg-gray-100 border-slate-600">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="text-black bg-gray-100 border-slate-700">
             {typeOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
+              <SelectItem value={option.value}>{option.label}</SelectItem>
             ))}
-          </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
-            <svg
-              className="fill-current h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </div>
-        </div>
+          </SelectContent>
+        </Select>
 
-        <div className="relative w-full ">
-          <select
-            title="Select location"
-            name="location"
-            value={selectedLocation}
-            onChange={(e) => setSelectedLocation(e.target.value)}
-            className="md:w-full w-full py-7 px-8 appearance-none bg-gray-100 rounded-full text-3xl font-medium"
-          >
-            <option value="">Location</option>
+        <Select
+          defaultValue="Location"
+          onValueChange={(value) => setSelectedLocation(value)}
+        >
+          <SelectTrigger className="text-black bg-gray-100 border-slate-600">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="bg-gray-100 border-slate-700">
             {locationOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
+              <SelectItem value={option.value}>{option.label}</SelectItem>
             ))}
-          </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
-            <svg
-              className="fill-current h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </div>
-        </div>
+          </SelectContent>
+        </Select>
 
-        <div className="relative w-full ">
-          <select
-            title="Select price range"
-            name="priceRange"
-            value={selectedPriceRange}
-            onChange={(e) => setSelectedPriceRange(e.target.value)}
-            className="md:w-full w-full py-7 px-8 appearance-none bg-gray-100 rounded-full text-3xl font-medium"
-          >
-            <option value="">Price Range</option>
+        <Select
+          defaultValue="Select Price Range"
+          onValueChange={(value) => setSelectedPriceRange(value)}
+        >
+          <SelectTrigger className="text-black bg-gray-100 border-slate-600">
+            <SelectValue />
+          </SelectTrigger>
+          <SelectContent className="bg-gray-100 border-slate-700">
             {priceRangeOptions.map((option) => (
-              <option key={option.value} value={option.value}>
-                {option.label}
-              </option>
+              <SelectItem value={option.value}>{option.label}</SelectItem>
             ))}
-          </select>
-          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-700">
-            <svg
-              className="fill-current h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-            </svg>
-          </div>
-        </div>
+          </SelectContent>
+        </Select>
 
         <button
           type="submit"

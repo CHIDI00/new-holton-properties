@@ -9,13 +9,13 @@ const Testimonials: React.FC = () => {
     <div className="relative w-full bg-gradient-to-b from-[#f5f5f5] to-[#fbfbfb] flex justify-start items-center md:mt-72 mt-44">
       <div className="absolute md:-top-[22%] -top-[15.2rem] left-[50%] transform -translate-x-1/2 p-5 bg-white rounded-full">
         <div
-          className="absolute w-[30px] h-[30px] md:bottom-[4.55rem] md:-right-[22px] right-[-16px] bottom-[2.6rem] rotate-90 bg-[#fff]"
+          className="absolute w-[30px] h-[30px] md:bottom-[7.5rem] md:-right-[27px] right-[-25px] bottom-[8.6rem] rotate-90 bg-[#fff]"
           style={{
             clipPath: "path('M0 0 Q0,30 20,30 L 0 30 Z')",
           }}
         ></div>
         <div
-          className="absolute w-[30px] h-[30px] md:left-[-22px] md:bottom-[5.5rem] left-[-15.5px] bottom-[3.732rem] rotate-180 bg-[#fff]"
+          className="absolute w-[30px] h-[30px] md:left-[-25px] md:bottom-[8.5rem] left-[-25px] bottom-[9.7rem] rotate-180 bg-[#fff]"
           style={{
             clipPath: "path('M0 0 Q0,20 30,20 L0 20 Z')",
           }}
@@ -33,12 +33,10 @@ const Testimonials: React.FC = () => {
             className="custom-class"
           >
             <div
-              className="w-[75%] h-[75%] bg-red-500 rounded-full bg-cover bg-no-repeat bg-center flex justify-center items-center "
+              className="w-[75%] h-[75%] bg-white rounded-full bg-cover bg-no-repeat bg-center flex justify-center items-center "
               style={{ backgroundImage: `url('${project13}')` }}
             >
-              <h1 className="">
-                <img src={quote} draggable="false" alt="" className="" />
-              </h1>
+              <img src={quote} draggable="false" alt="" className="" />
             </div>
           </CircularText>
         </div>
